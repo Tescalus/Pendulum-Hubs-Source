@@ -3,7 +3,7 @@ loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,35,0)
+v.Velocity = Vector3.new(0,30,0)
 wait(0.5)
 end)
 end
@@ -11,7 +11,7 @@ end
 warn("Netless Activated!")
  -- FLING BELOW!
 
-power = 125000 -- The lower the number, the more stable the torso is, but less fling power.
+power = 7500 -- The lower the number, the more stable the torso is, but less fling power.
 
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
