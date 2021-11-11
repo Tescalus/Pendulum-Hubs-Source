@@ -101,12 +101,7 @@ local t = Instance.new("ScreenGui")
 t.Name = b.HttpService:GenerateGUID()
 t.Parent = b.RunService:IsStudio() and b.Players.LocalPlayer:WaitForChild("PlayerGui") or b.CoreGui
 b.UserInputService.InputBegan:Connect(
-    function(u, v)
-        if u.KeyCode == Enum.KeyCode.Shift and not v then
-            t.Enabled = not t.Enabled
-        end
-    end
-)
+    
 function a:Window(w)
     local x = false
     a.windowCount = a.windowCount + 1
