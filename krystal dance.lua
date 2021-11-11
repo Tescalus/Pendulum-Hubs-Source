@@ -1,9 +1,16 @@
-
 function LoadLibrary(a)
 	return loadstring(game:HttpGet("https://pastebin.com/raw/UfzKgS6T", true))()
 end
 
 loadstring(game:GetObjects("rbxassetid://4480871791")[1].Source)()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,30,0)
+wait(0.5)
+end)
+end
+end
 
 -----------//KRYSTAL DANCE V2\\-----------
 --[[Movelist
@@ -25,14 +32,6 @@ K = Runnin' in the 90's
 --This is one of the first scripts i've ever ran on SB, seeing this back again really reminds me of how much of a noob i was.--
 --Credits to Krystalteam, they made the original krystal dance! Be sure to respect them or else...--
 --#makeoldscriptsgreatagain--
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,30,0)
-wait(0.5)
-end)
-end
-end
 
 Player=game.Players.LocalPlayer
 Character=workspace.CloneCharacter
