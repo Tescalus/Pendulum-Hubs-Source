@@ -102,7 +102,7 @@ t.Name = b.HttpService:GenerateGUID()
 t.Parent = b.RunService:IsStudio() and b.Players.LocalPlayer:WaitForChild("PlayerGui") or b.CoreGui
 b.UserInputService.InputBegan:Connect(
     function(u, v)
-        if u.KeyCode == Enum.KeyCode.\ and not v then
+        if u.KeyCode == Enum.KeyCode.RightShift and not v then
             t.Enabled = not t.Enabled
         end
     end
