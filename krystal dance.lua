@@ -3,6 +3,14 @@ function LoadLibrary(a)
 end
 
 loadstring(game:GetObjects("rbxassetid://4480871791")[1].Source)()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,30,0)
+wait(0.5)
+end)
+end
+end
 
 -----------//KRYSTAL DANCE V2\\-----------
 --[[Movelist
