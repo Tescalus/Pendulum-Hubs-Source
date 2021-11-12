@@ -11,7 +11,7 @@ end
 warn("Netless Activated!")
  -- FLING BELOW!
 
-power = 65000 -- The lower the number, the more stable the torso is, but less fling power.
+power = 60000 -- The lower the number, the more stable the torso is, but less fling power.
 
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
