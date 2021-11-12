@@ -10,7 +10,7 @@ end
 end
  -- FLING BELOW!
 
-power = 25000
+power = 65000
 
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
