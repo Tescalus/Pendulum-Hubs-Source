@@ -35,7 +35,7 @@ end)
 end
 end
 
-power = 35000 -- The lower the number, the more stable the torso is, but less fling power.
+power = 65000 -- The lower the number, the more stable the torso is, but less fling power.
 
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
