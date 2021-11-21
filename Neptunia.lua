@@ -26,7 +26,7 @@ bambam.Force = Vector3.new(power,0,power)
 bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
 -----OPTIONS
 local ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
-local NoSound = true ----- sound or no sound (Background Music)
+local NoSound = false ----- sound or no sound (Background Music)
 local OldModel = false ----- Use Old Model or your accessory
 
 local IsDead = false
