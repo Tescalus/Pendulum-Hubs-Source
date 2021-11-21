@@ -160,7 +160,7 @@ local Cos = math.cos
 local sine = 1
 
 char.MeshPartAccessory.Handle.AccessoryWeld:Destroy()
-local penp = char.Back_AccAccessory.Handle
+local penp = char.MeshPartAccessory.Handle
 local penpw = Instance.new("Weld", penp)
 penpw.Part0 = rarm
 penpw.Part1 = penp
