@@ -40,7 +40,7 @@ local IsDead = false
 local StateMover = true
 
 local playerss = workspace.non
-local SwordAcc = playerss["Back_AccAccessory"].Handle
+local SwordAcc = playerss["MeshPartAccessory"].Handle
 local bbv, bullet
 
 if Bypass == "death" then
@@ -69,9 +69,9 @@ if SwordAcc:FindFirstChild("AccessoryWeld") then
 	SwordAcc:FindFirstChild("AccessoryWeld"):Destroy()
 end
 
-if game.Players.LocalPlayer.Character["Back_AccAccessory"].Handle:FindFirstChild("AccessoryWeld") then
+if game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld") then
 	
-	game.Players.LocalPlayer.Character["Back_AccAccessory"].Handle:FindFirstChild("AccessoryWeld"):Destroy()
+	game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld"):Destroy()
 end
 
 SwordAcc:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
