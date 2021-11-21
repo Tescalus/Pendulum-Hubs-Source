@@ -40,7 +40,7 @@ local IsDead = false
 local StateMover = true
 
 local playerss = workspace.non
-local SwordAcc = playerss["MeshPartAccessory"].Handle
+local SwordAcc = playerss["Back_AccAccessory"].Handle
 local bbv, bullet
 
 if Bypass == "death" then
