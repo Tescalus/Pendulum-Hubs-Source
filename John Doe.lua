@@ -69,9 +69,9 @@ if SwordAcc:FindFirstChild("AccessoryWeld") then
 	SwordAcc:FindFirstChild("AccessoryWeld"):Destroy()
 end
 
-if game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld") then
+if game.Players.LocalPlayer.Character["Back_AccAccessory"].Handle:FindFirstChild("AccessoryWeld") then
 	
-	game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld"):Destroy()
+	game.Players.LocalPlayer.Character["Back_AccAccessory"].Handle:FindFirstChild("AccessoryWeld"):Destroy()
 end
 
 SwordAcc:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
