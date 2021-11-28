@@ -54,7 +54,7 @@ end
 
 function Library:Create(xHubName,xGameName)
     local xHubName = xHubName or "UI Library"
-    local xGameName = xGameName or "By Mapple#3045"
+    local xGameName = xGameName or "By Tescalus#0001"
     local ScreenGui = Instance.new("ScreenGui")
     local Main = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
