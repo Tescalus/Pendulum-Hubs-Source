@@ -48,6 +48,39 @@ Bypass = "death"
 FELOADLIBRARY = {}
 loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+ 
+local hrp = game:GetService("Players").LocalPlayer.Character.Torso
+ 
+hrp.Name = "Torso"
+hrp.Transparency = 0
+hrp.Anchored = false
+if hrp:FindFirstChildOfClass("AlignPosition") then
+hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
+end
+if hrp:FindFirstChildOfClass("AlignOrientation") then
+hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
+end
+local bp = Instance.new("BodyPosition", hrp)
+bp.Position = hrp.Position
+bp.D = 9999999
+bp.P = 999999999999999
+bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+local flinger = Instance.new("BodyAngularVelocity",hrp)
+flinger.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+flinger.P = 1000000000000000000000000000
+ spawn(
+    function()
+        while true do
+            game:GetService("RunService").Heartbeat:Wait()
+            hrp.Velocity = Vector3.new(17,17,17)
+            flinger.AngularVelocity = Vector3.new(10000,10000,10000)
+	 end
+end)
+spawn(function()
+while game:GetService("RunService").Heartbeat:Wait() do
+bp.Position = game:GetService("Players").LocalPlayer.Character.Torso.Position
+end
+end)
 
 Effects = { }
 local Player = game.Players.localPlayer
