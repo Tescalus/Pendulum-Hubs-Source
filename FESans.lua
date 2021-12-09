@@ -26,13 +26,12 @@ plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
+
+
 bullet = workspace[plr.Name]["HumanoidRootPart"]
 bullet.Transparency = 1
 bhandle = bullet
 bullet.Massless = true
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
 
 mouse = plr:GetMouse()
 head = char.Head
@@ -78,8 +77,6 @@ end
             else
        -- repeat 
         game:GetService("RunService").RenderStepped:Wait()
-        bbv.Position = mouse.Hit.p
-        bhandle.Position = mouse.Hit.p
         wait(1)
         --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
         end
@@ -88,31 +85,32 @@ end
          end
          end)
          
-     char.Humanoid.Died:Connect(function()
-         dead = true
-     end)
-     repeat 
-         game:GetService("RunService").RenderStepped:Wait()
-         if dead == false and bhandle.CanCollide == true then
-         bhandle.CanCollide = false
-         end
-         --if lt == true and dead == false then
-         --bhandle.CFrame = char.Torso.CFrame
-         bbv.Position = char.Torso.CFrame.p
-         if ltt == true and dead == false then
-        --bhandle.CFrame = char.Torso.CFrame * CFrame.new(0,0,-6)
-        bhandle.Rotation = char.Torso.Rotation
-         end
-    until char.Humanoid.Health == 0
-    
     spawn(
         function()
             while true do
                 game:GetService("RunService").Heartbeat:Wait()
-                bullet.Velocity = Vector3.new(17,17,17)
+                bullet.Velocity = Vector3.new(0,26,0)
          end
     end)
 
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
 --// Shortcut Variables \\--
 local S = setmetatable({},{__index = function(s,i) return game:service(i) end})
 local CF = {N=CFrame.new,A=CFrame.Angles,fEA=CFrame.fromEulerAnglesXYZ}
