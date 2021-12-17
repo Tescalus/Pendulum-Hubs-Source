@@ -14,131 +14,103 @@ loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,35,0)
+v.Velocity = Vector3.new(0,30,0)
 wait(0.5)
 end)
 end
 end
 warn("Netless Activated!")
- -- FLING BELOW!
+Bypass = "Death"
+plr = game.Players.LocalPlayer
+dead = false
+char = plr.Character
 
-power = 60000 -- The lower the number, the more stable the torso is, but less fling power.
 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+
+bullet = workspace[plr.Name]["HumanoidRootPart"]
+bullet.Transparency = 1
+bhandle = bullet
+bullet.Massless = true
+
+mouse = plr:GetMouse()
+head = char.Head
+camera = workspace.CurrentCamera
+lt = true
+ltt = false
+
+local function IsFirstPerson()
+     return (head.CFrame.p - camera.CFrame.p).Magnitude < 1
+end
+
+     bbv = Instance.new("BodyPosition",bhandle)
+     bbv.Position = char.Torso.CFrame.p
+   
+     
+     
+     mouse.Button1Down:Connect(function()
+         if dead == false then
+        lt = false
+        ltt = false
+     bbav = Instance.new("BodyAngularVelocity",bhandle)
+     bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+     bbav.P = 1000000000000000000000000000
+     bbav.AngularVelocity = Vector3.new(10000000000000000000000000000000,100000000000000000000000000,100000000000000000)
+     game:GetService("Debris"):AddItem(bbav,0.1)
+        if game.Players:GetPlayerFromCharacter(mouse.Target.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+              --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        elseif game.Players:GetPlayerFromCharacter(mouse.Target.Parent.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+            --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+            
+            else
+       -- repeat 
+        game:GetService("RunService").RenderStepped:Wait()
+        wait(1)
+        --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        end
+        wait()
+        lt = true
+         end
+         end)
+         
+    spawn(
+        function()
+            while true do
+                game:GetService("RunService").Heartbeat:Wait()
+                bullet.Velocity = Vector3.new(0,26,0)
+         end
+    end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
 end)
 
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.Torso
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
 
-local IsDead = false
-local StateMover = true
-
-local playerss = workspace.non
-local SwordAcc = playerss["MeshPartAccessory"].Handle
-local bbv, bullet
-
-if Bypass == "death" then
-	
-	bullet = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-	bullet.Transparency = 0
-	bullet.Massless = true
-	
-	if bullet:FindFirstChildOfClass("Attachment") then
-		
-		for _,v in pairs(bullet:GetChildren()) do
-			
-			if v:IsA("Attachment") then
-				
-				v:Destroy()
-			end
-		end
-	end
-
-	bbv = Instance.new("BodyPosition",bullet)
-	bbv.Position = playerss.Torso.CFrame.p
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
-
-if SwordAcc:FindFirstChild("AccessoryWeld") then
-	
-	SwordAcc:FindFirstChild("AccessoryWeld"):Destroy()
-end
-
-if game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld") then
-	
-	game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:FindFirstChild("AccessoryWeld"):Destroy()
-end
-
-SwordAcc:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
-SwordAcc:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation2"
-
-playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, -0, 0.6)
-playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-0, -0, 0)
-
-if Bypass == "death" then
-	
-	coroutine.wrap(function() 
-		
-		while true do
-			
-			if not playerss or not playerss:FindFirstChildOfClass("Humanoid") or playerss:FindFirstChildOfClass("Humanoid").Health <= 0 then 
-				
-				IsDead = true
-				return 
-			end
-				
-			if StateMover then
-					
-				bbv.Position = playerss.Torso.CFrame.p
-	    			bullet.Position = playerss.Torso.CFrame.p
-			end
-			
-			game:GetService("RunService").RenderStepped:wait()
-		end
-	end)()
-end
-
-local CDDF = {}
-
-local DamageFling = function(DmgPer) 
-	
-	if IsDead or Bypass ~= "death" or (DmgPer.Name == playerss.Name and DmgPer.Name == "non") or CDDF[DmgPer] or not DmgPer or not DmgPer:FindFirstChildOfClass("Humanoid") or DmgPer:FindFirstChildOfClass("Humanoid").Health <= 0 then 
-		
-		return
-	end
-
-	CDDF[DmgPer] = true; StateMover = false
-	
-	local PosFling = (DmgPer:FindFirstChild("HumanoidRootPart") and DmgPer:FindFirstChild("HumanoidRootPart") .CFrame.p) or (DmgPer:FindFirstChildOfClass("Part") and DmgPer:FindFirstChildOfClass("Part").CFrame.p)
-	bbav = Instance.new("BodyAngularVelocity",bullet)
-	bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-	bbav.P = 1000000000000000000000000000
-	bbav.AngularVelocity = Vector3.new(100000000000000000000000000000,100000000000000000000000000000,100000000000000000000000000000) -- 100000000000000000, 100000000000000000, 100000000000000000
-	
-	game:GetService("Debris"):AddItem(bbav,0.1)
-	
-	bullet.Rotation = playerss.Torso.Rotation
-	
-	for _ = 1,15 do
-	
-		bbv.Position = PosFling
-		bullet.Position = PosFling
-		wait(0.03)
-	end
-	
-	bbv.Position = playerss.Torso.CFrame.p
-	bullet.Position = playerss.Torso.CFrame.p
-	CDDF[DmgPer] = false; StateMover = true
-end
-
-
-
-
+until attackingwithhrp == false
+end)
+ 
 
 --Player Stuff--
 player = game:GetService("Players").LocalPlayer
