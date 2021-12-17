@@ -180,7 +180,7 @@ local humanoid = game.Workspace.non.Humanoid
 local RbxUtility = LoadLibrary("RbxUtility")
 local Create = RbxUtility.Create
 
-humanoid.WalkSpeed = 13
+humanoid.WalkSpeed = 25
 humanoid.JumpPower = 60 
 humanoid.Animator.Parent = nil
 Character.Animate.Parent = nil
