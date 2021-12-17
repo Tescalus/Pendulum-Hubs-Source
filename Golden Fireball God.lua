@@ -437,7 +437,7 @@ Damagefunc=function(hit,minim,maxim,knockback,Type,Property,Delay,KnockbackType,
                         c.Value=game:service("Players").LocalPlayer
                         c.Parent=h
                         game:GetService("Debris"):AddItem(c,.5)
-                Damage=math.random(minim,maxim)
+                Damage=math.random(0,0)
 --                h:TakeDamage(Damage)
                 blocked=false
                 block=hit.Parent:findFirstChild("Block")
