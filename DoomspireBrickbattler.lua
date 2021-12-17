@@ -10,6 +10,7 @@ end)
 end
 end
 warn("Netless Activated!")
+game.Workspace.non.Humanoid.WalkSpeed = 25
 _G.loop = true
 local player = game.Players.LocalPlayer
 local char = player.Character
