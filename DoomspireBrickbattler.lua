@@ -1135,6 +1135,8 @@ end
 
 
 function dodgeball()
+	game.Workspace.non.Humanoid.Jump = true
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 	Attack = true
 	humanoid.AutoRotate = false
 		local spawnPos = Torso.Position
@@ -1200,6 +1202,8 @@ end
 
 
 function roketlunch()
+	game.Workspace.non.Humanoid.Jump = true
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 	Attack = true
 	humanoid.WalkSpeed = 2
 	humanoid.JumpPower = 0
