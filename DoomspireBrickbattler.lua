@@ -10,7 +10,7 @@ end)
 end
 end
 warn("Netless Activated!")
-game.Workspace.non.Humanoid.WalkSpeed = 25
+game.Workspace.non.Humanoid.WalkSpeed = 20
 _G.loop = true
 local player = game.Players.LocalPlayer
 local char = player.Character
@@ -180,7 +180,7 @@ local humanoid = game.Workspace.non.Humanoid
 local RbxUtility = LoadLibrary("RbxUtility")
 local Create = RbxUtility.Create
 
-humanoid.WalkSpeed = 25
+humanoid.WalkSpeed = 20
 humanoid.JumpPower = 60 
 humanoid.Animator.Parent = nil
 Character.Animate.Parent = nil
@@ -1201,7 +1201,7 @@ end
 
 function roketlunch()
 	Attack = true
-	humanoid.WalkSpeed = 0
+	humanoid.WalkSpeed = 2
 	humanoid.JumpPower = 0
 	RHandle.Transparency = 0
 	Sword.Transparency = 1
