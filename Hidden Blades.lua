@@ -16,7 +16,7 @@ plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
-
+game.Workspace.non.Humanoid.WalkSpeed = 20
 
 bullet = workspace[plr.Name]["HumanoidRootPart"]
 bullet.Transparency = 1
