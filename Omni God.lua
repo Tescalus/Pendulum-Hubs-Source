@@ -11,11 +11,9 @@ end)
 end
 end
 warn("Netless Activated!")
-while true do
-    game.Workspace.non.Humanoid.WalkSpeed = 45
-    wait(0.9)
-    game.Workspace.non.Humanoid.HipHeight = 20
-end
+game.Workspace.non.Humanoid.WalkSpeed = 45
+game.Workspace.non.Humanoid.HipHeight = 7.5
+
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
@@ -188,7 +186,7 @@ r=game:service'RunService'.RenderStepped
 
 
 local Transforming = true
-Human.WalkSpeed = 0
+Human.WalkSpeed = 50
 
 
 Player:ClearCharacterAppearance()
@@ -309,6 +307,7 @@ npctoplayer = Instance.new("Weld",game.Workspace.non.Torso)
 npctoplayer.Part0 = game.Workspace.non.Torso
 npctoplayer.Part1 = torso
 npctoplayer.C0 = CFrame.new(0, 0, -10) * CFrame.Angles(math.rad(0), math.rad(180), math.rad(0))
+
 
 
 local selectionBoxOfTorso = Instance.new("SelectionBox",torso)
