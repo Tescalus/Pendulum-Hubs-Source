@@ -11,6 +11,11 @@ end)
 end
 end
 warn("Netless Activated!")
+while true do
+    game.Workspace.non.Humanoid.Walkspeed = 45
+    wait(0.9)
+    game.Workspace.non.Humanoid.HipHeight = 20
+end
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
@@ -4518,10 +4523,4 @@ part2.Texture = "http://www.roblox.com/asset/?id=358965632"
 wait(0.04)
 part2.Texture = "http://www.roblox.com/asset/?id=358965664" 
 wait(0.04)
-end
-
-while true do
-    game.Workspace.non.Humanoid.Walkspeed = 45
-    wait(0.9)
-    game.Workspace.non.Humanoid.HipHeight = 20
 end
