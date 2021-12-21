@@ -20,6 +20,15 @@ end)
 end
 end
 warn("Netless Activated!")
+
+local IsDead = false
+local StateMover = true
+
+local playerss = workspace.non
+local SwordAcc = playerss["MeshPartAccessory"].Handle
+SwordAcc.Massless = true
+SwordAcc.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
@@ -110,7 +119,6 @@ bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
 until attackingwithhrp == false
 end)
- 
 
 --Player Stuff--
 player = game:GetService("Players").LocalPlayer
