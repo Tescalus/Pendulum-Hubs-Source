@@ -12,7 +12,7 @@ end
 end
 warn("Netless Activated!")
 while true do
-    game.Workspace.non.Humanoid.Walkspeed = 45
+    game.Workspace.non.Humanoid.WalkSpeed = 45
     wait(0.9)
     game.Workspace.non.Humanoid.HipHeight = 20
 end
