@@ -4523,4 +4523,5 @@ end
 while true do
     game.Workspace.non.Humanoid.Walkspeed = 45
     wait(0.9)
-    game.Workspace.non.Humanoid.HipHeight = 
+    game.Workspace.non.Humanoid.HipHeight = 20
+end
