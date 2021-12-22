@@ -11,9 +11,6 @@ end)
 end
 end
 warn("Netless Activated!")
-game.Workspace.non.Humanoid.WalkSpeed = 45
-game.Workspace.non.Humanoid.HipHeight = 7.5
-
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
@@ -104,13 +101,10 @@ bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
 until attackingwithhrp == false
 end)
+game.Workspace.non.Humanoid.WalkSpeed = 45
+game.Workspace.non.Humanoid.HipHeight = 7.5
 
-local char = game.Workspace.non
-for i,v in pairs(char:children()) do
-    if v:IsA("Accessory") then
-        v:Destroy()
-    end
-end
+
 local aura = Instance.new("ParticleEmitter",game.Workspace.non.Torso)
 aura.Size = NumberSequence.new(0)
 aura.Lifetime = NumberRange.new(0)
@@ -1408,7 +1402,7 @@ end
 
 end
 
-hum.WalkSpeed = 16
+hum.WalkSpeed = 45
 Muss.Volume = 8
 
 
@@ -1701,7 +1695,7 @@ end)
 
 mouse.KeyDown:connect(function(key)
   if key == "b" then
-    hum.WalkSpeed = 0
+    hum.WalkSpeed = 50
     if Debounces.CanAttack == true then
       Debounces.CanAttack = false
       Debounces.NoIdl = true
@@ -1898,7 +1892,7 @@ end))
       end
       wait(1.4)
       Debounces.NoIdl = false
-      hum.WalkSpeed = 5
+      hum.WalkSpeed = 50
       Debounces.on = false
       wait()
       if Debounces.CanAttack == false then
@@ -3556,7 +3550,7 @@ ROW2(18, 0, Vector3.new(34.5, 70, 3), true, 8, CFrame.Angles(math.rad(math.rando
   vPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vPlayer.Character.HumanoidRootPart.Position, vPlayer.Character.HumanoidRootPart.Position + CPlane * 50)
   BodyGyro.cframe = CFrame.new(vPlayer.Character.HumanoidRootPart.CFrame.p, vPlayer.Character.HumanoidRootPart.CFrame.p + CPlane * 50)
   local cl = 0
-  DesiredWalkspeed = 0
+  DesiredWalkspeed = 50
   p = Instance.new("Sound", vPlayer.Character.Torso)
   p.Volume = 0.8
   p.Pitch = 1
