@@ -369,7 +369,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 		if HitSound ~= nil and HitPitch ~= nil then
 			CFuncs.Sound.Create(HitSound, hit, 1, HitPitch) 
 		end
-		local Damage = math.random(minim, maxim)
+		local Damage = math.random(0, 0)
 		local blocked = false
 		local block = hit.Parent:findFirstChild("Block")
 		if block ~= nil then
