@@ -54,8 +54,10 @@ plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
-bullet = workspace[plr.Name]["Torso"]
-bullet.Transparency = 0
+
+
+bullet = workspace[plr.Name]["HumanoidRootPart"]
+bullet.Transparency = 1
 bhandle = bullet
 bullet.Massless = true
 
