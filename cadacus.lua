@@ -177,24 +177,10 @@ end)
 end
 end
 warn("Netless Activated!")
- -- FLING BELOW!
 
-power = 60000 -- The lower the number, the more stable the torso is, but less fling power.
-
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-end)
-
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.Torso
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
 
 --Change true to false if you want to use your character normally.
-local morph = true
+local morph = false
 
 
 local function soundbork(obj)
