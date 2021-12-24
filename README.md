@@ -1,1 +1,1 @@
-hi you found pendulum hubs source. if you leak i'll probably cry cutely.
+Welcome to Pendulum Hubs git! You can do whatever the hell you want with these scripts like add new hats and stuff! You have my permission to do anything!
