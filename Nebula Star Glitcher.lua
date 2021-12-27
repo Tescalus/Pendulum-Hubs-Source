@@ -681,7 +681,7 @@ function Kill(whom)
 		if(GetTorso(whom))then Sound(GetTorso(whom),62339698,.25,2,false,true,true) end
 		for _,v in next, whom:children() do
 			if(v:IsA'BasePart')then
-				v:breakJoints()
+				print("no")
 				v.Parent = Effects
 				v.CanCollide = false
 				v.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
@@ -885,7 +885,7 @@ function ShootBullet(data)
 	local Material = data.Material or Enum.Material.Neon
 	local OnUpdate = data.Update or nil
 	local OnHit = data.HitFunction or function(hit,pos)
-		AOEDamage(pos,10,{MinimumDamage=25,MaximumDamage=60})
+		AOEDamage(pos,0,{MinimumDamage=05,MaximumDamage=0})
 		OEffect{
 			Effect='ResizeAndFade',
 			Color=Color,
