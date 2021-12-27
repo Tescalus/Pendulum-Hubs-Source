@@ -77,7 +77,22 @@ Musika:Play()
    game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
 end)
 
-S:NewButton("Fake Korblox (USE WHEN REANIMATED!)", "Makes it look like you have korblox", function()
+:NewButton("Remove Torso Fling (USE WHEN REANIMATED!)", "Removes Fling", function()
+local UnlimitedRobux = game.Workspace
+
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   game.Players.LocalPlayer.Character.Torso:Destroy()
+end)
+
+S:NewButton("Fake Korblox", "Makes it look like you have korblox", function()
 local UnlimitedRobux = game.Workspace
 
 local Musika = Instance.new("Sound", UnlimitedRobux)
