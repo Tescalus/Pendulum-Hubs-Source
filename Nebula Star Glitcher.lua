@@ -1373,7 +1373,7 @@ function SoulSteal(whom)
 	if(torso and torso:IsA'BasePart')then
 		local Model = Instance.new("Model",Effects)
 		Model.Name = whom.Name.."'s Soul"
-		whom:BreakJoints()
+		print("hi")
 		local Soul = Part(Model,BrickColor.new'Black','Glass',V3.N(.5,.5,.5),torso.CFrame,true,false)
 		Soul.Name = 'Head'
 		NewInstance("Humanoid",Model,{Health=0,MaxHealth=0})
@@ -1522,7 +1522,7 @@ function DealDamage(data)
 					Hits = math.min(Hits + 1,MaxHits)
 					HitTime = time() + 1
 					--Humanoid.Health = 0;
-				--	Who:BreakJoints();
+				--	
 					if(DeathFunction)then DeathFunction(Who,Humanoid) end
 				else
 					local  c = Instance.new("ObjectValue",Hum)
@@ -1868,8 +1868,7 @@ function Shrek()
 		RS.C0 = RS.C0:lerp(CFrame.new(1.41312766, 0.523678839, 0.0325531065, 0.980119586, -0.184282064, 0.0735261068, 0.110644385, 0.815263927, 0.568421364, -0.164693028, -0.548985541, 0.81944561),Alpha)
 		NK.C0 = NK.C0:lerp(CFrame.new(9.04871195e-06, 1.49893618, -0.0143969432, 1.00000012, 9.62987542e-07, -2.71946192e-07, -9.43895429e-07, 0.997964919, 0.0637682378, 3.31550837e-07, -0.063768208, 0.997964799),Alpha)
 	end
-	wo:breakJoints()
-	wo:destroy()
+	print("hola")
 	WalkSpeed = oWS
 	Attack = false
 	NeutralAnims = true
@@ -2078,7 +2077,7 @@ function NeckSnap(target)
 					v:destroy()
 				end
 			end
-			hed:breakJoints()
+			print("no")
 			local weld = NewInstance('Motor',torso,{Part0=hed,Part1=torso,C0=CF.N(0,-1.5,0)})
 			for i = 0, 1, 0.1 do
 				swait()
@@ -2103,7 +2102,7 @@ function NeckSnap(target)
 				NK.C0 = clerp(NK.C0,CFrame.new(1.00737716e-05, 1.49894726, -0.014402397, 0.99999994, 3.67523171e-07, -1.61118805e-07, -3.56500095e-07, 0.997964799, 0.0637688041, 1.8440187e-07, -0.063768819, 0.997964799),Alpha)
 			end
 			target.Parent = oPar
-			target:breakJoints()
+			print("hi")
 			WalkSpeed = oWS
 			Hum.JumpPower = 50
 			Hum.AutoRotate = true
