@@ -2003,7 +2003,7 @@ function MurderNigger(target)
 			HW.Part0 = target:FindFirstChild'Head'
 			HW.C0 = CFrame.new(0.976348281, 0.254784644, 0.639342666, -0.527396142, -0.778684974, -0.339857459, 0.83536917, -0.402301013, -0.374582857, 0.154957026, -0.481460005, 0.862661362)
 			delay(2, function() 
-				Kill(target)
+				print("hi")
 				knife:destroy() 
 			end)
 			WalkSpeed = oWS
