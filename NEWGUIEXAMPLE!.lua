@@ -77,7 +77,7 @@ Musika:Play()
    game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
 end)
 
-:NewButton("Remove Torso Fling (USE WHEN REANIMATED!)", "Removes Fling", function()
+S:NewButton("Remove Torso Fling (USE WHEN REANIMATED!)", "Removes Fling", function()
 local UnlimitedRobux = game.Workspace
 
 local Musika = Instance.new("Sound", UnlimitedRobux)
