@@ -14,7 +14,7 @@ Musika.TimePosition = 0
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Pendulum Hub V3", "Ocean")
+local Window = Library.CreateLib("Pendulum Hub", "Ocean")
 
 local Main = Window:NewTab("Scripts")
 
@@ -137,6 +137,8 @@ Musika.TimePosition = 0
 Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/FESonic.lua"))()
 end)
+
+
 
 Main:NewButton("Neko", "This one is kinda self explanatory lol.", function()
 local UnlimitedRobux = game.Workspace
@@ -935,7 +937,49 @@ Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Ether.lua"))()
 end)
 
+Main:NewButton("Uncle Parlo The Redneck", "Parlo is not a pedophile I swear!", function()
+local UnlimitedRobux = game.Workspace
 
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Uncle%20Parlo%20The%20Stupid%20Fucking%20Redneck.lua"))()
+end)
+
+Main:NewButton("Eyo Zen", "Guy with eyeball that shoots lasers.", function()
+local UnlimitedRobux = game.Workspace
+
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Eyo%20Zen.lua"))()
+end)
+Main:NewButton("Cop", "Your average cop.", function()
+local UnlimitedRobux = game.Workspace
+
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Cop.lua"))()
+end)
 
 
 
