@@ -38,6 +38,8 @@ lleg.Massless = true
 lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 rleg.Massless = true
 rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 warn("Netless Activated!")
 _G.loop = true
 local player = game.Players.LocalPlayer
