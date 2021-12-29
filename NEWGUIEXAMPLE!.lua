@@ -14,7 +14,7 @@ Musika.TimePosition = 0
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Pendulum Hub", "Ocean")
+local Window = Library.CreateLib("\80\101\110\100\117\108\117\109\32\72\117\98", "Ocean")
 
 local Main = Window:NewTab("Scripts")
 
