@@ -7,6 +7,7 @@ loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
+
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
@@ -15,28 +16,51 @@ wait(0.5)
 end)
 end
 end
-power = 60000 -- The lower the number, the more stable the torso is, but less fling power.
+local p = game.Players.LocalPlayer
+local char = p.Character
+local mouse = p:GetMouse()
+local larm = char["Left Arm"]
+local rarm = char["Right Arm"]
+local lleg = char["Left Leg"]
+local rleg = char["Right Leg"]
+local hed = char.Head
+local torso = char.Torso
+local hum = char.Humanoid
+local cam = game.Workspace.CurrentCamera
+local root = char.HumanoidRootPart
+for i,v in pairs (char:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
+hed.Massless = true
+hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+torso.Massless = true
+torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rarm.Massless = true
+rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+larm.Massless = true
+larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+lleg.Massless = true
+lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rleg.Massless = true
+rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+warn("Netless Activated!")
+Bypass = "Death"
+plr = game.Players.LocalPlayer
+dead = false
+char = plr.Character
 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-end)
 
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.Torso
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
 
 bullet = workspace[plr.Name]["HumanoidRootPart"]
-bullet.Transparency = 0
+bullet.Transparency = 1
 bhandle = bullet
 bullet.Massless = true
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:Destroy()
+
 mouse = plr:GetMouse()
 head = char.Head
 camera = workspace.CurrentCamera
@@ -81,8 +105,6 @@ end
             else
        -- repeat 
         game:GetService("RunService").RenderStepped:Wait()
-        bbv.Position = mouse.Hit.p
-        bhandle.Position = mouse.Hit.p
         wait(1)
         --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
         end
@@ -91,22 +113,32 @@ end
          end
          end)
          
-     char.Humanoid.Died:Connect(function()
-         dead = true
-     end)
-     repeat 
-         game:GetService("RunService").RenderStepped:Wait()
-         if dead == false and bhandle.CanCollide == true then
-         bhandle.CanCollide = false
+    spawn(
+        function()
+            while true do
+                game:GetService("RunService").Heartbeat:Wait()
+                bullet.Velocity = Vector3.new(0,26,0)
          end
-         --if lt == true and dead == false then
-         --bhandle.CFrame = char.Torso.CFrame
-         bbv.Position = char.Torso.CFrame.p
-         if ltt == true and dead == false then
-        --bhandle.CFrame = char.Torso.CFrame * CFrame.new(0,0,-6)
-        bhandle.Rotation = char.Torso.Rotation
-         end
-    until char.Humanoid.Health == 0
+    end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
 
 
 -----------------------------------------------------------------------------------
