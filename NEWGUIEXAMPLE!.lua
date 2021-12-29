@@ -980,7 +980,7 @@ Musika.TimePosition = 0
 Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Cop.lua"))()
 end)
-Main:NewButton("Amythest Sword", "Your average cop.", function()
+Main:NewButton("Verlex", "Very unique script that i've seen.", function()
 local UnlimitedRobux = game.Workspace
 
 local Musika = Instance.new("Sound", UnlimitedRobux)
@@ -992,7 +992,7 @@ Musika.PlaybackSpeed = 1
 Musika.EmitterSize = 1
 Musika.TimePosition = 0
 Musika:Play()
-   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Amythest%20Sword.lua"))()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Verlex.lua"))()
 end)
 
 
