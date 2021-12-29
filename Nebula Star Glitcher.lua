@@ -2628,7 +2628,7 @@ function BarracudaMode()
 	pcall(function() Char.ReaperShadowHead.Eye1.Color = BrickColor.new'Lime green'.Color end)
 	pcall(function() Char.ReaperShadowHead.Eye2.Color = BrickColor.new'Lime green'.Color end)
 	WalkSpeed = 24
-	RecolorTextAndRename("Ancient",BrickColor.new'New Yeller'.Color,C3.N(1,1,1))
+	RecolorTextAndRename("Pendulum Hub Master",BrickColor.new'New Yeller'.Color,C3.N(1,1,1))
 	MusicID = 256251217
 	Pitch = 1
 	Mode = 16
