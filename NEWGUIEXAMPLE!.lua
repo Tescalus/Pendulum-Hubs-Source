@@ -1022,7 +1022,7 @@ Musika.PlaybackSpeed = 1
 Musika.EmitterSize = 1
 Musika.TimePosition = 0
 Musika:Play()
-   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lost%20Hope.lua"))()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Puppet%20Master%20-%20UNSTABLE%20DAMAGE%20FUNCTIONS%20.lua"))()
 end)
 
 
