@@ -1010,7 +1010,7 @@ Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lost%20Hope.lua"))()
 end)
 
-Main:NewButton("Puppet Master - UNSTABLE DAMAGE FUNCTIONS", "Pretty broken", function()
+Main:NewButton("Puppet Master - EXTREMELY UNSTABLE!", "Pretty broken", function()
 local UnlimitedRobux = game.Workspace
 
 local Musika = Instance.new("Sound", UnlimitedRobux)
