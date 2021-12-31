@@ -3954,7 +3954,7 @@ mouse.KeyDown:connect(function(k)
 		rainbowmode = true
 		chaosmode = false
 		RecolorTextAndRename("StarLight", Color3.new(1, 1, 1), Color3.new(1, 1, 1))
-		newTheme("rbxassetid://152539141", 0, 1, 1)
+		newTheme("rbxassetid://147930134", 0, 1, 1)
 		MAINRUINCOLOR = BrickColor.new("White")
 		for i, v in pairs(mw2:GetChildren()) do
 			if v:IsA("Part") then
