@@ -1099,7 +1099,7 @@ function SoulSteal(whom)
 	if(torso and torso:IsA'BasePart')then
 		local Model = Instance.new("Model",Effects)
 		Model.Name = whom.Name.."'s Soul"
-		whom:BreakJoints()
+		
 		local Soul = Part(Model,BrickColor.new'Really red','Glass',V3.N(.5,.5,.5),torso.CFrame,true,false)
 		Soul.Name = 'Head'
 		NewInstance("Humanoid",Model,{Health=0,MaxHealth=0})
@@ -1245,7 +1245,7 @@ function DealDamage(data)
 				if(Humanoid.MaxHealth >= MaxHP and Humanoid.Health > 0)then
 					print'Got kill'
 					Humanoid.Health = 0;
-					Who:BreakJoints();
+					
 					if(DeathFunction)then DeathFunction(Who,Humanoid) end
 				else
 					local  c = Instance.new("ObjectValue",Hum)
@@ -1277,7 +1277,7 @@ function DealDamage(data)
 end
 
 function Kill(whom,hum)
-	whom:breakJoints()
+	
 	swait()
 	angerCounter = 0.1
 	local t = GetTorso(whom)
