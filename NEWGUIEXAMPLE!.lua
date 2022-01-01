@@ -1010,6 +1010,22 @@ Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lost%20Hope.lua"))()
 end)
 
+Main:NewButton("The Assasian", "A shit ton of moves that are epic", function()
+local UnlimitedRobux = game.Workspace
+
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Assasian.lua"))()
+end)
+
+
 Main:NewButton("Puppet Master - EXTREMELY UNSTABLE!", "Pretty broken", function()
 local UnlimitedRobux = game.Workspace
 
