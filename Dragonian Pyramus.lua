@@ -1773,8 +1773,8 @@ end
 		so(162246701,DragonHead,1,5)
 		local frontcf = DragonHead.CFrame * CFrame.new(0,0,-5)
 		local sannd = Instance.new("Sound",Torso)
-		sannd.SoundId = "rbxassetid://6540827705"
-		sannd.Looped = true
+		sannd.SoundId = "rbxassetid://345052019"
+		sannd.Looped = false
 		sannd.Volume = 1000
 		sannd:Play()
 		local hitcf = mouse.Hit
