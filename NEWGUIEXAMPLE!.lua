@@ -1072,6 +1072,21 @@ Musika:Play()
    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Groundbreaker%20Gauntlets.lua"))()
 end)
 
+Main:NewButton("Sexy Staff Girl", "Gauntlets of death", function()
+local UnlimitedRobux = game.Workspace
+
+local Musika = Instance.new("Sound", UnlimitedRobux)
+Musika.SoundId = "rbxassetid://5852311745"
+Musika.Volume = 1
+Musika.Playing = true
+Musika.MaxDistance = math.huge
+Musika.PlaybackSpeed = 1
+Musika.EmitterSize = 1
+Musika.TimePosition = 0
+Musika:Play()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Groundbreaker%20Gauntlets.lua"))()
+end)
+
 
 
 Main:NewButton("Puppet Master - EXTREMELY UNSTABLE!", "Pretty broken", function()
