@@ -1310,36 +1310,7 @@ end)
 
 
 --Extras--
-q = char:GetChildren()
-        for u = 1, #q do
-        if q[u].ClassName == "Accessory" or q[u].ClassName == "Hat" then
-                q[u]:remove()
-                elseif q[u].ClassName == "CharacterMesh" then
-                q[u]:remove()
-            elseif q[u].ClassName == "ShirtGraphic" then
-                q[u]:remove()
-    elseif q[u].ClassName == "Shirt" then
-        q[u]:Destroy()
-elseif q[u].ClassName == "Pants" then
-    q[u]:Destroy()
-    end
-end
-local top = Instance.new("Shirt")
-top.ShirtTemplate = "rbxassetid://1042097476"
-top.Parent = char
-local bottom = Instance.new("Pants")
-bottom.PantsTemplate = "rbxassetid://1042097548"
-bottom.Parent = char
- 
-local BodyColors =  char:FindFirstChildOfClass"BodyColors"
-if BodyColors then
-    BodyColors.HeadColor = BrickColor.new"Really black"
-    BodyColors.TorsoColor = BrickColor.new"Really black"
-    BodyColors.LeftArmColor = BrickColor.new"Really black"
-    BodyColors.RightArmColor = BrickColor.new"Really black"
-    BodyColors.LeftLegColor = BrickColor.new"Really black"
-    BodyColors.RightLegColor = BrickColor.new"Really black"
-end
+
 
 --extras
 local talksound = Instance.new("Sound",char.Torso)
