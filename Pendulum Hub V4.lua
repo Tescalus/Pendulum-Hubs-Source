@@ -286,7 +286,7 @@ ScriptsTab:NewButton("Dragonian Pyramus", "Literally the fucking ender dragon.",
 end)
 
 ScriptsTab:NewButton("Grappler", "You can go to a city game and use this.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Dragonian%20Pyramus.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grappler.lua"))()
 end)
 
 ScriptsTab:NewButton("Groundbreaker Gauntlets", "Gauntlets of death", function()
