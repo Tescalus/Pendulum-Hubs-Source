@@ -305,8 +305,16 @@ ScriptsTab:NewButton("The Pacifist", "No attacks. Just a very chill animation sc
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Pacifist.lua"))()
 end)
 
-ScriptsTab:NewButton("Puppet Master - EXTREMELY UNSTABLE!", "Pretty broken", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Puppet%20Master%20-%20UNSTABLE%20DAMAGE%20FUNCTIONS%20.lua"))()
+ScriptsTab:NewButton("Sakura Blade", "Barely any jitter in these animations.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Sakura%20Blade.lua"))()
+end)
+
+ScriptsTab:NewButton("Lightning Cannon", "Shoots Lightning. Skids 101.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lightning%20Cannon.lua"))()
+end)
+
+ScriptsTab:NewButton("M41451", "Rainbow AK47 needed join the discord for hat.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lightning%20Cannon.lua"))()
 end)
 
 -- Credits
