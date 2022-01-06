@@ -43,7 +43,7 @@ root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 warn("Netless Activated!")
 local c = game:GetService("Players").LocalPlayer.Character["Cartoony Rainbow Rifle"].Handle
 c.Anchored = false
-local cRot = 3.8
+local cRot = 3.55
 game:GetService("RunService").RenderStepped:Connect(function(dt)
     cRot = cRot + 0*dt
     c.Anchored = true
