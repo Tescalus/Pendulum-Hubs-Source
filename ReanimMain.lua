@@ -8,7 +8,7 @@ _G.ShowReal = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
 task.wait()
 local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
-Fling.Transparency = 0
+Fling.Transparency = 1
 Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(9999999999999999999999999999999999999,9999999999999999999999999999999999999,9999999999999999999999999999999999999 )
 
 local mouse = game.Players.LocalPlayer:GetMouse()
