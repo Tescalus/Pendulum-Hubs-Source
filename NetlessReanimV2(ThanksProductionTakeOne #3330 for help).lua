@@ -5,7 +5,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacker1337/legoha
 
 if _G.Fling == nil then _G.Fling = false end
 if _G.TorsoFling == nil then _G.TorsoFling = false end
-if _G.ShowReal == nil then _G.ShowReal = false end
+if _G.ShowReal == nil then _G.ShowReal = true end
 if _G.FakeGod == nil then _G.FakeGod = false end
 if _G.GodMode == nil then _G.GodMode = true end
 if _G.R15toR6 == nil then _G.R15toR6 = true end
@@ -17,7 +17,7 @@ if _G.Network == nil then _G.Network = true end
 if _G.CheckForDeath == nil then _G.CheckForDeath = true end
 if _G.Netless2 == nil then _G.Netless2 = false end
 if _G.Claim2 == nil then _G.Claim2 = false end
-if _G.ExtremeNetless == nil then _G.ExtremeNetless = false end
+if _G.ExtremeNetless == nil then _G.ExtremeNetless = true end
 
 settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
 settings().Physics.AllowSleep = false
