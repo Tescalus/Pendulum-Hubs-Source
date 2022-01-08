@@ -91,7 +91,7 @@ if rigtype == Enum.HumanoidRigType.R15 and _G.R15toR6 then
 			--clonehats.Handle.AccessoryWeld.Part1 = Character[v.Handle.AccessoryWeld.Part1.Name]
 		end
 	end
-	Character.Name = "Clone " .. originalrig.Name
+	Character.Name = "non"
 	Character.HumanoidRootPart.CFrame = originalrig.HumanoidRootPart.CFrame
 	task.wait()
 	for i,v in pairs(originalrig:GetChildren()) do
@@ -105,7 +105,7 @@ else
 	plr.Character.Archivable = false
 	originalrig = plr.Character
 	Character.Parent = workspace
-	Character.Name = "FakeBody"
+	Character.Name = "non"
 end
 
 -- // Hat Matching Value
