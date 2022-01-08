@@ -11,7 +11,7 @@ if _G.GodMode == nil then _G.GodMode = true end
 if _G.R15toR6 == nil then _G.R15toR6 = true end
 if _G.AutoAnimate == nil then _G.AutoAnimate = true end
 if _G.Tools == nil then _G.Tools = true end
-if _G.Velocity == nil then _G.Velocity = 35 end
+if _G.Velocity == nil then _G.Velocity = -30 end
 if _G.Collisions == nil then _G.Collisions = true end
 if _G.Network == nil then _G.Network = true end
 if _G.CheckForDeath == nil then _G.CheckForDeath = true end
