@@ -44,11 +44,33 @@ warn("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
 --[[Developer note: If you get banned for using this, suck it up. Being overpowered comes at a cost.]]--
-Bypass = "death"
-FELOADLIBRARY = {}
-loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+if syn then
+    local CoreGui = game:GetService("StarterGui")
 
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,30,0)
+wait(0.5)
+end)
+end
+end
 local p = game.Players.LocalPlayer
 local char = p.Character
 local mouse = p:GetMouse()
@@ -172,10 +194,11 @@ bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
 until attackingwithhrp == false
 end)
+end
  Effects = { }
 local Player = game.Players.localPlayer
 local Mouse = Player:GetMouse()
-local Character = workspace.non
+local Character = game.Workspace.non
 local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 local Head = Character.Head
 local RootPart = Character.HumanoidRootPart
