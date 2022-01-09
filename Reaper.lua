@@ -1,4 +1,21 @@
-Bypass = "death"
+if syn then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
@@ -8,18 +25,50 @@ wait(0.5)
 end)
 end
 end
+local p = game.Players.LocalPlayer
+local char = p.Character
+local mouse = p:GetMouse()
+local larm = char["Left Arm"]
+local rarm = char["Right Arm"]
+local lleg = char["Left Leg"]
+local rleg = char["Right Leg"]
+local hed = char.Head
+local torso = char.Torso
+local hum = char.Humanoid
+local cam = game.Workspace.CurrentCamera
+local root = char.HumanoidRootPart
+for i,v in pairs (char:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
+hed.Massless = true
+hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+torso.Massless = true
+torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rarm.Massless = true
+rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+larm.Massless = true
+larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+lleg.Massless = true
+lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rleg.Massless = true
+rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+warn("Netless Activated!")
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
+
+
 bullet = workspace[plr.Name]["HumanoidRootPart"]
 bullet.Transparency = 1
 bhandle = bullet
 bullet.Massless = true
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
-bullet:FindFirstChildOfClass("Attachment"):Destroy()
 
 mouse = plr:GetMouse()
 head = char.Head
@@ -65,8 +114,6 @@ end
             else
        -- repeat 
         game:GetService("RunService").RenderStepped:Wait()
-        bbv.Position = mouse.Hit.p
-        bhandle.Position = mouse.Hit.p
         wait(1)
         --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
         end
@@ -75,30 +122,33 @@ end
          end
          end)
          
-     char.Humanoid.Died:Connect(function()
-         dead = true
-     end)
-     repeat 
-         game:GetService("RunService").RenderStepped:Wait()
-         if dead == false and bhandle.CanCollide == true then
-         bhandle.CanCollide = false
-         end
-         --if lt == true and dead == false then
-         --bhandle.CFrame = char.Torso.CFrame
-         bbv.Position = char.Torso.CFrame.p
-         if ltt == true and dead == false then
-        --bhandle.CFrame = char.Torso.CFrame * CFrame.new(0,0,-6)
-        bhandle.Rotation = char.Torso.Rotation
-         end
-    until char.Humanoid.Health == 0
-    
     spawn(
         function()
             while true do
                 game:GetService("RunService").Heartbeat:Wait()
-                bullet.Velocity = Vector3.new(17,17,17)
+                bullet.Velocity = Vector3.new(0,26,0)
          end
     end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
+end
 warn("Netless Activated!")
 -- Mewy23's message --
 -- I'll kill you if you leak this e-e --
