@@ -1,3 +1,22 @@
+if syn then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
@@ -6,11 +25,6 @@ wait(0.5)
 end)
 end
 end
-Bypass = "death"
-FELOADLIBRARY = {}
-loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-
 local p = game.Players.LocalPlayer
 local char = p.Character
 local mouse = p:GetMouse()
@@ -44,13 +58,12 @@ rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 root.Massless = true
 root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 warn("Netless Activated!")
-
 Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
-game.Workspace.non.Humanoid.WalkSpeed = 35
+
 
 bullet = workspace[plr.Name]["HumanoidRootPart"]
 bullet.Transparency = 1
@@ -135,9 +148,10 @@ bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
 until attackingwithhrp == false
 end)
+end
 
 local p = game.Players.LocalPlayer
-local char = workspace.non
+local char = game.Workspace.non
 local Character = char
 local Mau5 = p:GetMouse()
 local larm = char["Left Arm"]
