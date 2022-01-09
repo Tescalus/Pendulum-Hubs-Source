@@ -1,24 +1,24 @@
 --[[ Please note that some damage functions may cause inconsistant damage between players and must be fixed manually using the DamageRemote I've turned into a comment.
  	Don't worry about this if you don't know how as it normally doesn't matter.																						--]]
-Bypass = "death"
+if syn then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-local FavIDs = {
-	340106355, --Nefl Crystals
-	927529620, --Dimension
-	876981900, --Fantasy
-	398987889, --Ordinary Days
-	1117396305, --Oh wait, it's you.
-	885996042, --Action Winter Journey
-	919231299, --Sprawling Idiot Effigy
-	743466274, --Good Day Sunshine
-	727411183, --Knife Fight
-	1402748531, --The Earth Is Counting On You!
-	595230126 --Robot Language
-	}
-
-
-
---The reality of my life isn't real but a Universe -makhail07
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
@@ -59,11 +59,103 @@ rleg.Massless = true
 rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 root.Massless = true
 root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+warn("Netless Activated!")
+Bypass = "Death"
+plr = game.Players.LocalPlayer
+dead = false
+char = plr.Character
+
+
+
+bullet = workspace[plr.Name]["HumanoidRootPart"]
+bullet.Transparency = 1
+bhandle = bullet
+bullet.Massless = true
+
+mouse = plr:GetMouse()
+head = char.Head
+camera = workspace.CurrentCamera
+lt = true
+ltt = false
+
+local function IsFirstPerson()
+     return (head.CFrame.p - camera.CFrame.p).Magnitude < 1
+end
+
+     bbv = Instance.new("BodyPosition",bhandle)
+     bbv.Position = char.Torso.CFrame.p
+   
+     
+     
+     mouse.Button1Down:Connect(function()
+         if dead == false then
+        lt = false
+        ltt = false
+     bbav = Instance.new("BodyAngularVelocity",bhandle)
+     bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+     bbav.P = 1000000000000000000000000000
+     bbav.AngularVelocity = Vector3.new(10000000000000000000000000000000,100000000000000000000000000,100000000000000000)
+     game:GetService("Debris"):AddItem(bbav,0.1)
+        if game.Players:GetPlayerFromCharacter(mouse.Target.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+              --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        elseif game.Players:GetPlayerFromCharacter(mouse.Target.Parent.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+            --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+            
+            else
+       -- repeat 
+        game:GetService("RunService").RenderStepped:Wait()
+        wait(1)
+        --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        end
+        wait()
+        lt = true
+         end
+         end)
+         
+    spawn(
+        function()
+            while true do
+                game:GetService("RunService").Heartbeat:Wait()
+                bullet.Velocity = Vector3.new(0,26,0)
+         end
+    end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
+end
 wait(0.2)
 local Player = game:GetService("Players").LocalPlayer
 local lplr = game:GetService("Players").LocalPlayer
 local mouse = Player:GetMouse()
-local char = workspace.non
+local char = game.Workspace.non
 local PlayerGui = Player.PlayerGui
 local Cam = workspace.CurrentCamera
 local Backpack = Player.Backpack
