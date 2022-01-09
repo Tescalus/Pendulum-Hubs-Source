@@ -322,7 +322,7 @@ ScriptsTab:NewButton("Master Of Elements", "Badass script.", function()
 end)
 
 ScriptsTab:NewButton("AK47", "Very OP gun script.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/AK47.lua"))()
 end)
 
 ScriptsTab:NewButton("AKV", "Very high mag.", function()
