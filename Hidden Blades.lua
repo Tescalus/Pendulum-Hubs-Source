@@ -1,6 +1,23 @@
 --[Made by R R U#4232 & Dooven]--
 --[For AzuLX.]--
-Bypass = "death"
+if syn then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
@@ -10,7 +27,6 @@ wait(0.5)
 end)
 end
 end
-
 local p = game.Players.LocalPlayer
 local char = p.Character
 local mouse = p:GetMouse()
@@ -49,7 +65,7 @@ plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
 
-game.Workspace.non.Humanoid.WalkSpeed = 20
+
 
 bullet = workspace[plr.Name]["HumanoidRootPart"]
 bullet.Transparency = 1
@@ -134,6 +150,7 @@ bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
 end
 until attackingwithhrp == false
 end)
+end
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
 wait(1 / 60)
 Effects = { }
