@@ -314,7 +314,7 @@ ScriptsTab:NewButton("Lightning Cannon", "Shoots Lightning. Skids 101.", functio
 end)
 
 ScriptsTab:NewButton("M41451", "Rainbow AK47 needed join the discord for hat.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Lightning%20Cannon.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
 end)
 
 -- Credits
