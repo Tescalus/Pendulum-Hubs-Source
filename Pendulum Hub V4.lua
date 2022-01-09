@@ -341,6 +341,10 @@ ScriptsTab:NewButton("Ban Sword", "very cool", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Ban%20Sword.lua"))()
 end)
 
+ScriptsTab:NewButton("Rainbow Banisher", "OMG RAINBOW HACKER", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Rainbow%20Banisher1.lua"))()
+end)
+
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
