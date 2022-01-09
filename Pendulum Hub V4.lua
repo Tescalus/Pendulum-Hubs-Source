@@ -318,7 +318,7 @@ ScriptsTab:NewButton("M41451", "Rainbow AK47 needed join the discord for hat.", 
 end)
 
 ScriptsTab:NewButton("Master Of Elements", "Badass script.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Master%20Of%20Elements.lua"))()
 end)
 
 ScriptsTab:NewButton("AK47", "Very OP gun script.", function()
