@@ -149,15 +149,53 @@ end
 until attackingwithhrp == false
 end)
 end
-local c = game:GetService("Players").LocalPlayer.Character["Cartoony Rainbow Rifle"].Handle
-c.Anchored = false
-local cRot = 3.55
-game:GetService("RunService").RenderStepped:Connect(function(dt)
-    cRot = cRot + 0*dt
-    c.Anchored = true
-    c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,-1,-.2) * CFrame.Angles(math.rad(-285), 359.7, -cRot)
-    c.Velocity = Vector3.new(0,0,0)
-    c.Anchored = false
+_G.loop = true
+local player = game.Players.LocalPlayer
+local char = player.Character
+local Align = function(Part0, Part1,Mesh)
+    local Aligns = {
+        AlignOrientation = Instance.new("AlignOrientation", Part0),
+        AlignPosition = Instance.new("AlignPosition", Part0)
+    }
+    
+    local Attachments = {
+        Attach0 = Instance.new("Attachment", Part0),
+        Attach1 = Instance.new("Attachment", Part1)
+    }
+    local m = Part0:FindFirstChildOfClass('SpecialMesh')--This will get the first "SpecialMesh" it finds if it does not find any, then it will return nil
+    if Mesh and m then --If Mesh is set to true and it finds a mesh it will destroy it
+        m:Destroy()
+    end
+    Part0:BreakJoints()
+    Aligns.AlignOrientation.Attachment0 = Attachments.Attach0
+    Aligns.AlignOrientation.Attachment1 = Attachments.Attach1
+    Aligns.AlignOrientation.Responsiveness = math.huge
+    Aligns.AlignOrientation.RigidityEnabled = true
+    
+    Aligns.AlignPosition.Attachment0 = Attachments.Attach0
+    Aligns.AlignPosition.Attachment1 = Attachments.Attach1
+    Aligns.AlignPosition.Responsiveness = math.huge
+    Aligns.AlignPosition.RigidityEnabled = true
+        Aligns.AlignPosition.MaxForce = 999999999
+        spawn(function()
+            while _G.loop do 
+                local mag = (Part0.Position - (Part1.CFrame*Attachments.Attach0.CFrame:Inverse()).p).magnitude--magnitude can get the distance between two cframe or position
+                if mag >= 5 then 
+                Part0.CFrame = Part1.CFrame*Attachments.Attach0.CFrame:Inverse()
+                end
+                Part0.Velocity = Vector3.new(0,35,0)
+                game['Run Service'].Heartbeat:wait()
+                end
+        end)
+ return {Attachments.Attach0, Attachments, Aligns}
+        
+end 
+local hat = Align(char['Cartoony Rainbow Rifle'].Handle,char['Right Arm'],false)
+local cf = char['Right Arm'].CFrame*CFrame.new(0,-1,-0.5)*CFrame.Angles(math.rad(35),math.rad(70),60)
+hat[1].CFrame = cf:Inverse() * char['Right Arm'].CFrame
+spawn(function()
+    char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
+    _G.loop = false 
 end)
 warn("Netless Activated!")
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
