@@ -317,6 +317,26 @@ ScriptsTab:NewButton("M41451", "Rainbow AK47 needed join the discord for hat.", 
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
 end)
 
+ScriptsTab:NewButton("Master Of Elements", "Badass script.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
+end)
+
+ScriptsTab:NewButton("AK47", "Very OP gun script.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/M41451.lua"))()
+end)
+
+ScriptsTab:NewButton("AKV", "Very high mag.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/AKV.lua"))()
+end)
+
+ScriptsTab:NewButton("Chips/Pillow", "Crank that real soldia boi.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Chips.lua"))()
+end)
+
+ScriptsTab:NewButton("Noob Baseball Bat", "This one is very questionable...", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Noob%20Baseball%20Bat.lua"))()
+end)
+
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
