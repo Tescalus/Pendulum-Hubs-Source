@@ -149,7 +149,7 @@ end
 until attackingwithhrp == false
 end)
 end
-
+local char = game.Workspace.non
 --//Lol try to figure this one out//
 function rainb(hue)
     local section = hue % 1 * 3
