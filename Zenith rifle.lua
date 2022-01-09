@@ -149,6 +149,16 @@ end
 until attackingwithhrp == false
 end)
 end
+local c = game:GetService("Players").LocalPlayer.Character["Cartoony Rainbow Rifle"].Handle
+c.Anchored = false
+local cRot = 3.55
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    cRot = cRot + 0*dt
+    c.Anchored = true
+    c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,-1,-.2) * CFrame.Angles(math.rad(-285), 359.7, -cRot)
+    c.Velocity = Vector3.new(0,0,0)
+    c.Anchored = false
+end)
 warn("Netless Activated!")
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
 --------------------------
