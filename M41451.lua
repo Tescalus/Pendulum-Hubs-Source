@@ -207,7 +207,7 @@ spawn(function()
     char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
     _G.loop = false 
 end)
-
+local plr = game.Players.LocalPlayer
 warn("Netless Activated!")
 plrgui = plr:findFirstChild'PlayerGui'
 plrmouse = plr:GetMouse()
