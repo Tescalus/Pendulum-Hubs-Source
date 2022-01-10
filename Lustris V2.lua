@@ -1,9 +1,26 @@
 -- Shadow Blade Edit by MappleGalexy(MapleGalaxy) --
 -- I'll Fucking Find You --
-game.Players.LocalPlayer.Character:BreakJoints()
-wait(7.5)
 
 
+if syn then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Synapse X detected!";
+    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Duration = 5;
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
+    else
+        local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Other executor detected!";
+    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Duration = 5;
+})
+        Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
@@ -12,17 +29,184 @@ wait(0.5)
 end)
 end
 end
-local playerss = game.Players.LocalPlayer.Character
-local cloness = playerss.MeshPartAccessory
+local p = game.Players.LocalPlayer
+local char = p.Character
+local mouse = p:GetMouse()
+local larm = char["Left Arm"]
+local rarm = char["Right Arm"]
+local lleg = char["Left Leg"]
+local rleg = char["Right Leg"]
+local hed = char.Head
+local torso = char.Torso
+local hum = char.Humanoid
+local cam = game.Workspace.CurrentCamera
+local root = char.HumanoidRootPart
+for i,v in pairs (char:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
+hed.Massless = true
+hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+torso.Massless = true
+torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rarm.Massless = true
+rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+larm.Massless = true
+larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+lleg.Massless = true
+lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rleg.Massless = true
+rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+warn("Netless Activated!")
+Bypass = "Death"
+plr = game.Players.LocalPlayer
+dead = false
+char = plr.Character
 
-Bypass = "death"
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 
 
-if cloness.Handle:FindFirstChild("AccessoryWeld") then cloness.Handle:FindFirstChild("AccessoryWeld"):Destroy() end
+bullet = workspace[plr.Name]["HumanoidRootPart"]
+bullet.Transparency = 1
+bhandle = bullet
+bullet.Massless = true
+
+mouse = plr:GetMouse()
+head = char.Head
+camera = workspace.CurrentCamera
+lt = true
+ltt = false
+
+local function IsFirstPerson()
+     return (head.CFrame.p - camera.CFrame.p).Magnitude < 1
+end
+
+     bbv = Instance.new("BodyPosition",bhandle)
+     bbv.Position = char.Torso.CFrame.p
+   
+     
+     
+     mouse.Button1Down:Connect(function()
+         if dead == false then
+        lt = false
+        ltt = false
+     bbav = Instance.new("BodyAngularVelocity",bhandle)
+     bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+     bbav.P = 1000000000000000000000000000
+     bbav.AngularVelocity = Vector3.new(10000000000000000000000000000000,100000000000000000000000000,100000000000000000)
+     game:GetService("Debris"):AddItem(bbav,0.1)
+        if game.Players:GetPlayerFromCharacter(mouse.Target.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+              --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        elseif game.Players:GetPlayerFromCharacter(mouse.Target.Parent.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+            --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+            
+            else
+       -- repeat 
+        game:GetService("RunService").RenderStepped:Wait()
+        wait(1)
+        --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        end
+        wait()
+        lt = true
+         end
+         end)
+         
+    spawn(
+        function()
+            while true do
+                game:GetService("RunService").Heartbeat:Wait()
+                bullet.Velocity = Vector3.new(0,26,0)
+         end
+    end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
+end
+_G.loop = true
+local player = game.Players.LocalPlayer
+local char = player.Character
+local Align = function(Part0, Part1,Mesh)
+    local Aligns = {
+        AlignOrientation = Instance.new("AlignOrientation", Part0),
+        AlignPosition = Instance.new("AlignPosition", Part0)
+    }
+    
+    local Attachments = {
+        Attach0 = Instance.new("Attachment", Part0),
+        Attach1 = Instance.new("Attachment", Part1)
+    }
+    local m = Part0:FindFirstChildOfClass('SpecialMesh')--This will get the first "SpecialMesh" it finds if it does not find any, then it will return nil
+    if Mesh and m then --If Mesh is set to true and it finds a mesh it will destroy it
+        m:Destroy()
+    end
+    Part0:BreakJoints()
+    Aligns.AlignOrientation.Attachment0 = Attachments.Attach0
+    Aligns.AlignOrientation.Attachment1 = Attachments.Attach1
+    Aligns.AlignOrientation.Responsiveness = math.huge
+    Aligns.AlignOrientation.RigidityEnabled = true
+    
+    Aligns.AlignPosition.Attachment0 = Attachments.Attach0
+    Aligns.AlignPosition.Attachment1 = Attachments.Attach1
+    Aligns.AlignPosition.Responsiveness = math.huge
+    Aligns.AlignPosition.RigidityEnabled = true
+        Aligns.AlignPosition.MaxForce = 999999999
+        spawn(function()
+            while _G.loop do 
+                local mag = (Part0.Position - (Part1.CFrame*Attachments.Attach0.CFrame:Inverse()).p).magnitude--magnitude can get the distance between two cframe or position
+                if mag >= 5 then 
+                Part0.CFrame = Part1.CFrame*Attachments.Attach0.CFrame:Inverse()
+                end
+                Part0.Velocity = Vector3.new(0,35,0)
+                game['Run Service'].Heartbeat:wait()
+                end
+        end)
+ return {Attachments.Attach0, Attachments, Aligns}
+        
+end 
+local hat = Align(char['MeshPartAccessory'].Handle,char['Right Arm'],false)
+local cf = char['Right Arm'].CFrame*CFrame.new(0,-0.75,-2.5)*CFrame.Angles(math.rad(45),math.rad(-90),0)
+hat[1].CFrame = cf:Inverse() * char['Right Arm'].CFrame
+spawn(function()
+    char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
+    _G.loop = false 
+end)
+
+
+
 
 Player=game:GetService("Players").LocalPlayer
-Character=workspace.non
+Character=game.Workspace.non
 PlayerGui=Player.PlayerGui
 Backpack=Player.Backpack 
 Torso=Character.Torso 
@@ -1588,18 +1772,3 @@ while true do
 	asasdd.Velocity = Vector3.new(math.huge,math.huge,math.huge)
 end
 end)()
- -- FLING BELOW!
-
-power = 60000 -- The lower the number, the more stable the torso is, but less fling power.
-
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-end)
-
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.Torso
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
