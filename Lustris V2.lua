@@ -684,7 +684,7 @@ function ShowDamage(Pos, Text, Time, Color)
 	end)
 end
 
-handle=cloness.Handle
+handle=game.Players.LocalPlayer.Character.MeshPartAccessory.Handle
 handleweld=weld(m,Character["Right Arm"],handle,CFrame.new(0, 0, 0),CFrame.new(2, 1.4, 0)* CFrame.Angles(math.rad(90),math.rad(145),math.rad(90)))
 handleweld.Name = "MagicWeld"
 Hitbox=part(Enum.FormFactor.Custom,m,Enum.Material.SmoothPlastic,0,1,"Black","Hitbox",Vector3.new(0.650000036, 4.19999981, 0.200000003))
@@ -1754,21 +1754,5 @@ end
 end
 end
 end
-end
-end)()
-coroutine.wrap(function()
-while true do
-	wait(60)
-	local ssss1 = Instance.new("BodyPosition"); ssss1.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
-	ssss1.Parent = maybe.Handle
-	for _=1,10 do
-		ssss1.Position = cloness.Handle.CFrame.p
-		wait(0.1)
-	end
-	ssss1:Destroy()
-	asasdd:Destroy()
-	asasdd = Instance.new("BodyVelocity", maybe.Handle)
-	asasdd.MaxForce = Vector3.new(10000,10000,10000)
-	asasdd.Velocity = Vector3.new(math.huge,math.huge,math.huge)
 end
 end)()
