@@ -4,11 +4,11 @@
 -- Discord: Nebula the Zorua#6969
 -- Youtube: https://www.youtube.com/channel/UCo9oU9dCw8jnuVLuy4_SATA
 
-if syn then
+if getrawmetatable and sethiddenproperty then
     local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "Synapse X detected!";
+    Title = "Paid executor detected!";
     Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
     Duration = 5;
 })
