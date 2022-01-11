@@ -4,12 +4,12 @@
 -- Discord: Nebula the Zorua#6969
 -- Youtube: https://www.youtube.com/channel/UCo9oU9dCw8jnuVLuy4_SATA
 
-if getrawmetatable and sethiddenproperty then
+if syn or getexecutorname() then
     local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "Paid executor detected!";
-    Text = "Synapse X has been detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
+    Text = "Paid executor detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
     Duration = 5;
 })
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
@@ -18,7 +18,7 @@ CoreGui:SetCore("SendNotification", {
 
 CoreGui:SetCore("SendNotification", {
     Title = "Other executor detected!";
-    Text = "Unfortunately, because you are not using Synapse X, you cannot use the new reanimation. You will only have R6 support with fling. You can buy Synapse X at https://x.synapse.to";
+    Text = "Unfortunately, because you are not using a paid executor (Synapse X/Script-Ware), you cannot use the new reanimation. You will only have R6 support with fling.";
     Duration = 5;
 })
         Bypass = "death"
