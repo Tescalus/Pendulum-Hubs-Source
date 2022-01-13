@@ -346,7 +346,7 @@ ScriptsTab:NewButton("Rainbow Banisher", "OMG RAINBOW HACKER", function()
 end)
 
 ScriptsTab:NewButton("Flamethrower", "Terrorism. What else do you want me to say?", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Rainbow%20Banisher1.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Flamethrower.lua"))()
 end)
 
 ScriptsTab:NewButton("Energy Blade Slapper", "POV: you like to look like a retard.", function()
@@ -362,7 +362,7 @@ ScriptsTab:NewButton("Echo Banisher", "Just your average banisher.", function()
 end)
 
 ScriptsTab:NewButton("What do I even name this?", "you'll just have to execute it to find out what it is", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Echo%20Banisher.lua"))()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/I%20dont%20even%20know%20what%20to%20name%20this.lua"))()
 end)
 
 ScriptsTab:NewButton("Incension Reborn", "This is a really cool switcher thing.", function()
