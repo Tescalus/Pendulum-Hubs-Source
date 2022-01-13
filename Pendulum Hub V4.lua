@@ -345,6 +345,39 @@ ScriptsTab:NewButton("Rainbow Banisher", "OMG RAINBOW HACKER", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Rainbow%20Banisher1.lua"))()
 end)
 
+ScriptsTab:NewButton("Flamethrower", "Terrorism. What else do you want me to say?", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Rainbow%20Banisher1.lua"))()
+end)
+
+ScriptsTab:NewButton("Energy Blade Slapper", "POV: you like to look like a retard.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Crazy%20Rainbow%20Energy%20Blade.lua"))()
+end)
+
+ScriptsTab:NewButton("Sniper", "Stop playing COD and touch some grass.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/SniperWIP.lua"))()
+end)
+
+ScriptsTab:NewButton("Echo Banisher", "Just your average banisher.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Echo%20Banisher.lua"))()
+end)
+
+ScriptsTab:NewButton("What do I even name this?", "you'll just have to execute it to find out what it is", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Echo%20Banisher.lua"))()
+end)
+
+ScriptsTab:NewButton("Incension Reborn", "This is a really cool switcher thing.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Incension%20Reborn.lua"))()
+end)
+
+ScriptsTab:NewButton("The Sun Is A Deadly laser", "The Sun. What did you expect?", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Sun%20Is%20A%20Deadly%20Laser.lua"))()
+end)
+
+ScriptsTab:NewButton("John Doe Blaster", "insert edgy hacker quote here", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/John%20Doe%20Blasters.lua"))()
+end)
+
+
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
