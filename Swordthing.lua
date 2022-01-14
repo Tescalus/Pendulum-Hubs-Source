@@ -1,29 +1,4 @@
-Bypass = "death"
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,30,0)
-wait(0.5)
-end)
-end
-end
-warn("Netless Activated!")
- -- FLING BELOW!
-
-power = 65000 -- The lower the number, the more stable the torso is, but less fling power.
-
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-end)
-
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.Torso
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.Torso.Position
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 
 local ToolName = "MeshPartAccessory"
 Player=game:GetService("Players").LocalPlayer
