@@ -42,8 +42,8 @@ local Align = function(Part0, Part1,Mesh)
  return {Attachments.Attach0, Attachments, Aligns}
         
 end 
-local hat = Align(char['MeshPartAccessory'].Handle,char['Right Arm'],false)
-local cf = char['Right Arm'].CFrame*CFrame.new(0,-0.75,-2.5)*CFrame.Angles(math.rad(45),math.rad(-90),0)
+local hat = Align(char['RedSaber'].Handle,char['Right Arm'],false)
+local cf = char['Right Arm'].CFrame*CFrame.new(0,-1,-2)*CFrame.Angles(math.rad(270),math.rad(-90),0)
 hat[1].CFrame = cf:Inverse() * char['Right Arm'].CFrame
 spawn(function()
     char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
@@ -382,17 +382,7 @@ local buttonC = false
 
 -----------------------------------------------------------------------------
 
-for i,v in pairs(char:GetChildren()) do
-	if v:IsA("Shirt") then
-		v:Destroy()
-	end
-	if v:IsA("Pants") then
-		v:Destroy()
-	end
-	if v:IsA("Accessory") then
-		v:Destroy()
-	end
-end
+
 
 local ff = Instance.new("ForceField", char)
 ff.Visible = false
