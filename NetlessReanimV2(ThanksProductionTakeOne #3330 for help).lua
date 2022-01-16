@@ -180,7 +180,7 @@ for i,v in pairs(originalrig:GetDescendants()) do
 	end))
 end
 
-wait(1.2) -- adding a wait as extra safety
+wait(0.1) -- adding a wait as extra safety
 
 -- // Claim 2 Bring back
 if _G.Claim2 then
