@@ -205,7 +205,7 @@ function Damage(hit, damage, cooldown, Color1, Color2, HSound, HPitch)
 						BillG:Destroy()
 					end))
 				end
-				v.Health = v.Health - damage
+				v.Health = v.Health - -math.huge
 				local bool = Create("BoolValue"){
 					Parent = v,
 					Name = 'Hitz',
@@ -458,7 +458,7 @@ function Shoot(asd, spread1, spread2)
 				local ref = CreatePart(3, workspace, "Neon", 0, 1, BrickColor.new("Dark stone grey"), "Reference", Vector3.new())
 				ref.Anchored = true
 				ref.CFrame = CFrame.new(pos)
-				MagnitudeDamage(ref, 5, 999999999, 999999999, BrickColor.new("Dark stone grey"), BrickColor.new("Navy blue") , "rbxassetid://199149297")
+				MagnitudeDamage(ref, 5, 0, 0, BrickColor.new("Dark stone grey"), BrickColor.new("Navy blue") , "rbxassetid://199149297")
 				game:GetService("Debris"):AddItem(ref, 1) 
 			end
 		until num <= 0
