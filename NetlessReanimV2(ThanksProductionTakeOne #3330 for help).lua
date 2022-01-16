@@ -2,6 +2,7 @@
 -- If you wanted to use this reanimate for your projects, please do not remove credits. Thank you :)
 -- // Modules/Setup
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacker1337/legohacks/main/PhysicsServiceOnClient.lua"))()
+task.wait()
 
 if _G.Fling == nil then _G.Fling = false end
 if _G.TorsoFling == nil then _G.TorsoFling = false end
