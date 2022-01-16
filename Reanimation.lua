@@ -1,11 +1,5 @@
 if syn or getexecutorname then
-    local CoreGui = game:GetService("StarterGui")
 
-CoreGui:SetCore("SendNotification", {
-    Title = "Paid executor detected!";
-    Text = "Paid executor detected! Running new reanimation with R15 support and R6 support. Please wait a few moments...";
-    Duration = 5;
-})
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
     else
         local CoreGui = game:GetService("StarterGui")
