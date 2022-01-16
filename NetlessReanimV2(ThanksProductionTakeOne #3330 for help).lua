@@ -1,4 +1,4 @@
--- https://discord.gg/8EZcyvtDcq // ProductionTakeOne#3330
+-- https://discord.gg/8EZcyvtDcq // ProductionTakeOne#3330 // Tescalus#0001
 
 -- // Modules/Setup
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacker1337/legohacks/main/PhysicsServiceOnClient.lua"))()
@@ -12,10 +12,10 @@ if _G.R15toR6 == nil then _G.R15toR6 = true end
 if _G.AutoAnimate == nil then _G.AutoAnimate = true end
 if _G.Tools == nil then _G.Tools = true end
 if _G.Velocity == nil then _G.Velocity = -25.05 end
-if _G.Collisions == nil then _G.Collisions = false end
+if _G.Collisions == nil then _G.Collisions = true end
 if _G.Network == nil then _G.Network = true end
 if _G.CheckForDeath == nil then _G.CheckForDeath = true end
-if _G.Netless2 == nil then _G.Netless2 = false end
+if _G.Netless2 == nil then _G.Netless2 = true end
 if _G.Claim2 == nil then _G.Claim2 = true end
 if _G.ExtremeNetless == nil then _G.ExtremeNetless = true end
 
@@ -89,6 +89,7 @@ if rigtype == Enum.HumanoidRigType.R15 and _G.R15toR6 then
 					clonehats.Handle.AccessoryWeld.Part1 = Character[_]
 				end
 			end
+			
 			--clonehats.Handle.AccessoryWeld.Part1 = Character[v.Handle.AccessoryWeld.Part1.Name]
 		end
 	end
