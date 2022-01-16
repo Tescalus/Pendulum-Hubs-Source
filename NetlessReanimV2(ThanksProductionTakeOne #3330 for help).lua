@@ -16,7 +16,7 @@ if _G.Collisions == nil then _G.Collisions = true end
 if _G.Network == nil then _G.Network = true end
 if _G.CheckForDeath == nil then _G.CheckForDeath = true end
 if _G.Netless2 == nil then _G.Netless2 = true end
-if _G.Claim2 == nil then _G.Claim2 = false end
+if _G.Claim2 == nil then _G.Claim2 = true end
 if _G.ExtremeNetless == nil then _G.ExtremeNetless = true end
 
 settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
@@ -180,7 +180,7 @@ for i,v in pairs(originalrig:GetDescendants()) do
 	end))
 end
 
-wait(0.1) -- adding a wait as extra safety
+wait(0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) -- adding a wait as extra safety
 
 -- // Claim 2 Bring back
 if _G.Claim2 then
