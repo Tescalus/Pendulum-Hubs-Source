@@ -149,3 +149,38 @@ end
 until attackingwithhrp == false
 end)
 end
+task.wait()
+local Character = game.Workspace.non
+	local Humanoid = Character:WaitForChild("Humanoid")
+	local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+
+local Falling = false
+
+local function OnHumanoidFreeFalling(Active)
+	print("Firing Event")
+	Falling = Active
+	while Falling do
+		print("Waiting for char to reach the void...")
+		if HumanoidRootPart.Position.Y <= -50 then
+			print("Teleporting")
+			
+			local Success, Error = pcall(function()
+				for i,v in pairs(Character:GetDescendants()) do
+					if v:IsA("BasePart") then
+						v.Velocity = Vector3.new(0,0,0)
+					end
+				end
+				Character:SetPrimaryPartCFrame(CFrame.new(0,200,0))
+			end)
+			if Success then
+				print("Anti Void successfully teleported the char back to spawn")
+			else
+				warn("An error was detected when running the anti void! Please send this to Tescalus#0001 on discord!")
+				warn(Error)
+			end
+		end
+		wait(0.1)
+	end
+end
+
+Humanoid.FreeFalling:Connect(OnHumanoidFreeFalling)
