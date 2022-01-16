@@ -1,41 +1,64 @@
---Hats Needed
-
--- https://www.roblox.com/catalog/4506945409/Corrupt-Demonic-Greatsword
-
-
-
---[[
-J0hn D0e
-C0rrupt3d
-]]--
-
+------------
+--John Doe--
+------------
+-----by-----
+--CKbackup--
+------------
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
-warn("Netless Activated!")
-
-local IsDead = false
-local StateMover = true
-
-local playerss = game.Workspace.non
-local SwordAcc = playerss["MeshPartAccessory"].Handle
-SwordAcc.Massless = true
-SwordAcc.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-
-
+_G.loop = true
+local player = game.Players.LocalPlayer
+local char = player.Character
+local Align = function(Part0, Part1,Mesh)
+    local Aligns = {
+        AlignOrientation = Instance.new("AlignOrientation", Part0),
+        AlignPosition = Instance.new("AlignPosition", Part0)
+    }
+    
+    local Attachments = {
+        Attach0 = Instance.new("Attachment", Part0),
+        Attach1 = Instance.new("Attachment", Part1)
+    }
+    local m = Part0:FindFirstChildOfClass('SpecialMesh')--This will get the first "SpecialMesh" it finds if it does not find any, then it will return nil
+    if Mesh and m then --If Mesh is set to true and it finds a mesh it will destroy it
+        m:Destroy()
+    end
+    Part0:BreakJoints()
+    Aligns.AlignOrientation.Attachment0 = Attachments.Attach0
+    Aligns.AlignOrientation.Attachment1 = Attachments.Attach1
+    Aligns.AlignOrientation.Responsiveness = math.huge
+    Aligns.AlignOrientation.RigidityEnabled = true
+    
+    Aligns.AlignPosition.Attachment0 = Attachments.Attach0
+    Aligns.AlignPosition.Attachment1 = Attachments.Attach1
+    Aligns.AlignPosition.Responsiveness = math.huge
+    Aligns.AlignPosition.RigidityEnabled = true
+        Aligns.AlignPosition.MaxForce = 999999999
+        spawn(function()
+            while _G.loop do 
+                local mag = (Part0.Position - (Part1.CFrame*Attachments.Attach0.CFrame:Inverse()).p).magnitude--magnitude can get the distance between two cframe or position
+                if mag >= 5 then 
+                Part0.CFrame = Part1.CFrame*Attachments.Attach0.CFrame:Inverse()
+                end
+                Part0.Velocity = Vector3.new(0,35,0)
+                game['Run Service'].Heartbeat:wait()
+                end
+        end)
+ return {Attachments.Attach0, Attachments, Aligns}
+        
+end 
+local hat = Align(char['MeshPartAccessory'].Handle,char['Right Arm'],false)
+local cf = char['Right Arm'].CFrame*CFrame.new(0,-0.75,-2.5)*CFrame.Angles(math.rad(45),math.rad(-90),0)
+hat[1].CFrame = cf:Inverse() * char['Right Arm'].CFrame
+spawn(function()
+    char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
+    _G.loop = false 
+end)
 --Player Stuff--
 player = game:GetService("Players").LocalPlayer
-chara = playerss
+chara = game.Workspace.non
 
 ch = chara:GetChildren()
-for i = 1, #ch do
-if ch[i].Name == "Torso" then
-ch[i].roblox.Transparency = 1
-elseif ch[i].Name == "Head" then
-ch[i].face.Transparency = 1
-ch[i].Transparency = 1
-elseif ch[i].ClassName == "Accessory" or ch[i].ClassName == "Shirt" or ch[i].ClassName == "Pants" or ch[i].ClassName == "ShirtGraphic" then
--- ch[i]:Destroy()
-end
-end
+
 
 chara["Left Arm"].BrickColor = BrickColor.new("Cool yellow")
 chara["Right Arm"].BrickColor = BrickColor.new("Cool yellow")
@@ -180,17 +203,6 @@ Weld = New("ManualWeld",CorruptedPart,"Weld",{Part0 = CorruptedPart,Part1 = Main
 ScatterEff(EffCorruptedPart)
 RightArm = New("Model",chara,"RightArm",{})
 MainPart = New("Part",RightArm,"MainPart",{Transparency = 1,Transparency = 1,FormFactor = Enum.FormFactor.Symmetric,Size = Vector3.new(1, 2, 1),CFrame = CFrame.new(2.011096, 6.31690788, -3.92582893, 0.00918400101, -0.262283146, 0.964947343, 0.259330034, 0.932596445, 0.251021653, -0.965745091, 0.247934431, 0.0765828639),CanCollide = false,})
-
-local A0 = Instance.new("Attachment",MainPart)
-A0.Position = Vector3.new(0.5,-1,0)
-local A1 = Instance.new("Attachment",MainPart)
-A1.Rotation = Vector3.new(0,90,45)
-
-MainPart.Attachment.Name = "Attachment2"
-
-SwordAcc:FindFirstChildOfClass("AlignOrientation").Attachment1 = MainPart.Attachment
-SwordAcc:FindFirstChildOfClass("AlignPosition").Attachment1 = MainPart.Attachment2
-
 Weld = New("ManualWeld",MainPart,"Weld",{Part0 = MainPart,Part1 = chara["Right Arm"],C0 = CFrame.new(0, 0, 0, 0.00918400101, 0.259330034, -0.965745091, -0.262283146, 0.932596445, 0.247934431, 0.964947343, 0.251021653, 0.0765828639),C1 = CFrame.new(-2.86102295e-006, -9.05990601e-006, -2.38418579e-006, 0.00918400101, 0.259330034, -0.965745091, -0.262283146, 0.932596445, 0.247934431, 0.964947343, 0.251021653, 0.0765828639),})
 Hitbox = New("Part",RightArm,"Hitbox",{BrickColor = BrickColor.new("Really black"),Transparency = 1,Transparency = 1,Size = Vector3.new(1, 4, 1),CFrame = CFrame.new(22.2733669, 5.0842762, -22.1737366, -0.964945257, -0.262290984, 0.00919180829, -0.251027077, 0.93259424, 0.259333313, -0.0765930116, 0.247935042, -0.965744138),CanCollide = false,BackSurface = Enum.SurfaceType.SmoothNoOutlines,BottomSurface = Enum.SurfaceType.SmoothNoOutlines,FrontSurface = Enum.SurfaceType.SmoothNoOutlines,LeftSurface = Enum.SurfaceType.SmoothNoOutlines,RightSurface = Enum.SurfaceType.SmoothNoOutlines,TopSurface = Enum.SurfaceType.SmoothNoOutlines,Color = Color3.new(0.0666667, 0.0666667, 0.0666667),})
 Weld = New("ManualWeld",Hitbox,"Weld",{Part0 = Hitbox,Part1 = MainPart,C0 = CFrame.new(0, 0, 0, -0.964945257, -0.251027077, -0.0765930116, -0.262290984, 0.93259424, 0.247935042, 0.00919180829, 0.259333313, -0.965744138),C1 = CFrame.new(-1.52587891e-005, -1.00003147, -1.71661377e-005, 0.0091838371, 0.259330064, -0.965745151, -0.262283117, 0.932596445, 0.247934505, 0.964947283, 0.251021653, 0.0765827149),})
@@ -288,27 +300,15 @@ slashsnd = New("Sound",chara.Torso,"Slash",{SoundId = "rbxassetid://28144425",Pl
 hitsnd = New("Sound",chara.Torso,"Hit",{SoundId = "rbxassetid://429400881",PlaybackSpeed = .7,Volume = 5})
 telesnd = New("Sound",chara.Torso,"Tele",{SoundId = "rbxassetid://2767090",PlaybackSpeed = .7,Volume = 5})
 burnsnd = New("Sound",chara.Torso,"Burn",{SoundId = "rbxassetid://32791565",PlaybackSpeed = .7,Volume = 5})
-music1 = New("Sound",chara.Torso,"Music1",{SoundId = "rbxassetid://678930213",PlaybackSpeed = .1,Volume = 10,Looped = true})
-music2 = New("Sound",chara.Torso,"Music1",{SoundId = "rbxassetid://678930213",PlaybackSpeed = .1,Volume = 10,Looped = true})
+music1 = New("Sound",chara.Torso,"Music1",{SoundId = "rbxassetid://151038517",PlaybackSpeed = .5,Volume = 10,Looped = true})
+music2 = New("Sound",chara.Torso,"Music2",{SoundId = "rbxassetid://11984351",PlaybackSpeed = .2,Volume = 5,Looped = true})
 deathmus = New("Sound",chara.Torso,"DeathMus",{SoundId = "rbxassetid://19094700",PlaybackSpeed = .5,Volume = 5,Looped = true})
 deathex = New("Sound",chara.Torso,"DeathEx",{SoundId = "rbxassetid://11984351",PlaybackSpeed = 1,Volume = 5})
 music1:Play()
 music2:Play()
 
 --Animations--
-walkanim = chara.Humanoid:LoadAnimation(New("Animation",chara,"Walk",{AnimationId = "rbxassetid://180426354"}))
 swinganim = chara.Humanoid:LoadAnimation(New("Animation",chara,"Swing",{AnimationId = "rbxassetid://186934658"}))
-
-chara.Humanoid.Running:connect(function(speed) 
-
-	if speed > 3 then
-
-		walkanim:Play()
-	else
-
-		walkanim:Stop()
-	end
-end)
 
 --Name Tag--
 local naeeym = Instance.new("BillboardGui",chara)
@@ -371,40 +371,7 @@ end
 
 --Death of a Mortal--
 function KillMortal(hitdude)
-local torsy = nil
-if hitdude:FindFirstChild("Torso")~=nil then
-torsy = hitdude.Torso
-DamageFling(hitdude)
-elseif hitdude:FindFirstChild("UpperTorso")~=nil then
-torsy = hitdude.UpperTorso
-end
-local val = Instance.new("ObjectValue",hitdude)
-val.Name = "HasBeenHit"
--- hitdude:BreakJoints()
--- hitdude.Humanoid:Destroy()
-SoulSteal(torsy.Position)
-local chi = hitdude:GetChildren()
-for i = 1, #chi do
-if chi[i].ClassName == "Part" or chi[i].ClassName == "MeshPart" then
--- local bodpos = Instance.new("BodyPosition",chi[i])
--- bodpos.Position = chi[i].Position + Vector3.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))
-ScatterEff(chi[i])
--- chi[i].BrickColor = BrickColor.new("Really black")
-end
-end
-for i = 1, 4 do
-for i = 1, #chi do
-if chi[i].ClassName == "Part" or chi[i].ClassName == "MeshPart" then
--- chi[i].Transparency = chi[i].Transparency + .25
-wait(.01)
-end
-end
-end
-for i = 1, #chi do
-if chi[i].ClassName == "Part" or chi[i].ClassName == "MeshPart" then
--- chi[i]:Destroy()
-end
-end
+print("hi")
 end
 
 --Arm Touch--
@@ -447,17 +414,7 @@ end)
 tracedisappear()
 end
 end
-
-g1 = Instance.new("BodyGyro", chara.HumanoidRootPart)
-g1.D = 175
-g1.P = 20000
-g1.MaxTorque = Vector3.new(0,9000,0)
-g1.CFrame = CFrame.new(playerss:FindFirstChild("HumanoidRootPart").Position,Mouse.Hit.p)
-
-game:GetService("Debris"):AddItem(g1,.05)
-
-playerss:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(Mouse.Hit.p) * CFrame.new(0,3.3,0)
-
+chara.Torso.CFrame = CFrame.new(pos.X,pos.Y,pos.Z)
 end
 
 --Grab--
@@ -578,17 +535,7 @@ chara["Left Leg"].Anchored = false
 chara["Right Leg"].Anchored = false
 chara.Torso.Anchored = false
 ch = chara:GetChildren()
-for i = 1, #ch do
-if ch[i].ClassName == "Accessory" or ch[i].ClassName == "Hat" then
--- ch[i]:Destroy()
-end
-end
-tools = player.Backpack:GetChildren()
-for i = 1, #tools do
-if tools[i].ClassName == "HopperBin" then
--- tools[i]:Destroy()
-end
-end
+
 skybox.CFrame = skybox.CFrame * CFrame.fromEulerAnglesXYZ(0,math.rad(1),0)
 tecks.Position = UDim2.new(0,math.random(-3,3),0,math.random(-3,3))
 local jtrace = Instance.new("Part",game.Workspace)
