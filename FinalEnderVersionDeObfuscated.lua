@@ -232,7 +232,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 	end
          if h ~= nil and hit.Parent.Name ~= char.Name and hit.Parent:FindFirstChild("UpperTorso") ~= nil then
 	
-         hit.Parent:FindFirstChild("Head"):BreakJoints()
+         print("hi")
          end
 
 	if h ~= nil and hit.Parent.Name ~= char.Name and hit.Parent:FindFirstChild("Torso") ~= nil then
@@ -242,7 +242,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 			end
 		end
          if insta == true then
-         hit.Parent:FindFirstChild("Head"):BreakJoints()
+         print("yes")
          end
 		local c = Create("ObjectValue"){
 			Name = "creator",
