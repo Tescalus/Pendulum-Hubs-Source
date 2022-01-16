@@ -377,6 +377,69 @@ ScriptsTab:NewButton("John Doe Blaster", "insert edgy hacker quote here", functi
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/John%20Doe%20Blasters.lua"))()
 end)
 
+ScriptsTab:NewButton("The Distorted", "Distorting aaaaa", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Distorted.lua"))()
+end)
+
+ScriptsTab:NewButton("Drone", "I love this way to much", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Drone.lua"))()
+end)
+
+ScriptsTab:NewButton("Pharoh", "Ankha momento", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pharoh.lua"))()
+end)
+
+ScriptsTab:NewButton("Technoblade", "No this is not a minecraft script.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Technoblade.lua"))()
+end)
+
+ScriptsTab:NewButton("Demonic Sword", "Sword, nothin else. Pretty unoriginal", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Demonic%20Sword.lua"))()
+end)
+
+ScriptsTab:NewButton("SCP-106", "Scary aa", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/SCP-106.lua"))()
+end)
+
+ScriptsTab:NewButton("Chara", "knife girl sexy uwu", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Chara.lua"))()
+end)
+
+ScriptsTab:NewButton("Video Powers", "Infamous Second Son reference", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Video%20Powers.lua"))()
+end)
+
+ScriptsTab:NewButton("Bumper Cars", "Noob get rekt!!", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Bumper%20Car.lua"))()
+end)
+
+ScriptsTab:NewButton("God Eater", "Not the guy from fnf", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/God%20Eater.lua"))()
+end)
+
+ScriptsTab:NewButton("Golden Claws", "swing", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Golden%20Claws.lua"))()
+end)
+
+ScriptsTab:NewButton("Big Daddy", "thick", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Big%20Daddy.lua"))()
+end)
+
+ScriptsTab:NewButton("Noob Switcher", "Noob get rekt!!", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Noob%20Switcher.lua"))()
+end)
+
+ScriptsTab:NewButton("The Angle", "angel... more like angle", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Angel.lua"))()
+end)
+
+ScriptsTab:NewButton("The Warden", "lock away their souls up your vagina", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/The%20Warden.lua"))()
+end)
+
+ScriptsTab:NewButton("Gaster", "man who speaks in handjobs", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Gaster.lua"))()
+end)
 
 -- Credits
 
