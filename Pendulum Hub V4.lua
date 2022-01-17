@@ -446,7 +446,7 @@ end)
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
 CreditsTab:NewLabel("Ty ProductionTakeOne#3330 for help with new reanimation")
 CreditsTab:NewLabel("Pendulum hubs very own UI was made by charli#4616")
-CreditsTab:NewLabel("All script creators go to their original owners.")
+
 
 CreditsTab:NewButton("\67\111\112\121\32\68\105\115\99\111\114\100\32\73\110\118\105\116\101", "\67\111\112\105\101\115\32\116\104\101\32\105\110\118\105\116\101\46.", function()
 	if setclipboard then
