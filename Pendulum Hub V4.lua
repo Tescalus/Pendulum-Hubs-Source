@@ -10,23 +10,11 @@ local UserInputService = game:GetService("UserInputService")
 local ScriptsTab = Pendulum:NewTab("Scripts",false)
 local CreditsTab = Pendulum:NewTab("Credits",true)
 local AnimationIdPlayer = Pendulum:NewTab("Animation Player",false)
-local Settings = Pendulum:NewTab("Settings",false)
+
 
 local Players = game:GetService("Players")
 
--- Settings
 
-Settings:NewButton("Headless (USE WHEN REANIMATED!)", "Destroys your head.", function()
-	Players.LocalPlayer.Character.Head:Destroy()
-end)
-
-Settings:NewButton("Remove Fling (USE WHEN REANIMATED!)", "Removes Fling", function()
-	Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
-end)
-
-Settings:NewButton("Remove Torso Fling (USE WHEN REANIMATED!)", "Removes Fling", function()
-	Players.LocalPlayer.Character.Torso:Destroy()
-end)
 
 -- Animation ID Player
 
@@ -41,9 +29,7 @@ ScriptsTab:NewButton("Neptunian V", "An original. If you want the hat join the d
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Neptunia.lua"))()
 end)
 
-Settings:NewButton("Fake Korblox", "Makes it look like you have korblox", function()
-	game:GetService("Players").LocalPlayer.Character["Right Leg"]:Destroy()
-end)
+
 
 ScriptsTab:NewButton("Sonic", "All other versions don't fling except this one.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/FESonic.lua"))()
