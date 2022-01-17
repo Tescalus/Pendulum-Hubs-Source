@@ -2060,7 +2060,7 @@ if me:FindFirstChild('Right Arm') and me:FindFirstChild('Torso') and me:FindFirs
 					v.Anchored = true
 					end
 				end
-				hit.Anchored = true
+				print("wait what")
 				if ree:FindFirstChildOfClass('Humanoid') and hit.Name == "Torso" or hit.Name == "Head" then
 					ree:FindFirstChildOfClass('Humanoid').Health = 100
 				end
@@ -2083,9 +2083,9 @@ if me:FindFirstChild('Right Arm') and me:FindFirstChild('Torso') and me:FindFirs
 					v.Anchored = false
 					end
 				end
-				hit.Anchored = true
+				print("wait what")
 				wait(0.001)
-				hit.Anchored = false
+				print("oh alright")
 				for i, v in pairs(knofe:GetChildren()) do
 					if v:IsA('BasePart') then
 					v.Anchored = false
