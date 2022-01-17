@@ -36,13 +36,7 @@ local Character,originalrig
 local FakeTorso,FakeTorso1,FakeHead
 local cr,cc = coroutine.resume,coroutine.create
 local rigtype = plr.Character.Humanoid.RigType
-local function networkownership(obj)
-if isnetworkowner then
-    isnetworkowner(obj)
-else
-    return true
-end
-end
+local networkownership = isnetworkowner
 local offsets = {
 	["Left Arm"] = {["LeftUpperArm"] = CFrame.new(0,0.39,0),
 		["LeftLowerArm"] = CFrame.new(0,-0.15,0),
