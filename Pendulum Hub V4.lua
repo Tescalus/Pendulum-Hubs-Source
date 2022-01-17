@@ -444,7 +444,7 @@ end)
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
-CreditsTab:NewLabel("Credits to ProductionTakeOne#3330 for help with new reanimation")
+CreditsTab:NewLabel("Ty ProductionTakeOne#3330 for help with new reanimation")
 CreditsTab:NewLabel("Pendulum hubs very own UI was made by charli#4616")
 CreditsTab:NewLabel("All script creators go to their original owners.")
 
