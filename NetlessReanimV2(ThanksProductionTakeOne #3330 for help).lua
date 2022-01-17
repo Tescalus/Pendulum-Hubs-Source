@@ -38,7 +38,7 @@ local cr,cc = coroutine.resume,coroutine.create
 local rigtype = plr.Character.Humanoid.RigType
 local function networkownership(obj)
 if isnetworkowner then
-    isnetworkowner(obj)
+    return isnetworkowner(obj)
 else
     return true
 end
