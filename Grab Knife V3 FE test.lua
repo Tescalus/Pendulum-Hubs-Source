@@ -2319,7 +2319,7 @@ function instasplode()
 									wait()
 								end
 								if hit.Parent and hit.Parent:FindFirstChildOfClass('Humanoid') == nil and hit.Parent.Parent:FindFirstChildOfClass('Humanoid') == nil then
-									hit:BreakJoints()
+									print("lol")
 								elseif hit.Parent and hit.Parent:IsA('Accessory') then
 									for i,v in pairs(hit:GetChildren()) do
 										if v:IsA('SpecialMesh') then
@@ -2765,10 +2765,10 @@ function explode()
 							coru()
 						elseif hit.Parent and hit.Parent ~= workspace and hit.Parent ~= me then
 							if hit.Parent.Name ~= "Projectile" then
-								hit.Parent:BreakJoints()
+								print("lol")
 							end
 						elseif hit.Parent and hit.Parent ~= me then
-							hit:BreakJoints()
+							print("lol")
 						end
 					end)
 					local explosionaccenttimeout = coroutine.wrap(function()
