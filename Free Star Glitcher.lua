@@ -2376,84 +2376,7 @@ function sphereMKCharge(bonuspeed, FastSpeed, type, pos, x1, y1, z1, value, colo
 	end))
 end
 function dmg(dude)
-	if dude.Name ~= Character then
-		local bgf = Instance.new("BodyGyro", dude.Head)
-		bgf.CFrame = bgf.CFrame * CFrame.fromEulerAnglesXYZ(math.rad(-90), 0, 0)
-		local val = Instance.new("BoolValue", dude)
-		val.Name = "IsHit"
-		local ds = coroutine.wrap(function()
-			dude:WaitForChild("Head"):BreakJoints()
-			wait(0.5)
-			targetted = nil
-			CFuncs.Sound.Create("rbxassetid://62339698", char, 0.5, 0.3)
-			coroutine.resume(coroutine.create(function()
-				for i, v in pairs(dude:GetChildren()) do
-					if v:IsA("Accessory") then
-						v:Destroy()
-					end
-					if v:IsA("Humanoid") then
-						v:Destroy()
-					end
-					if v:IsA("CharacterMesh") then
-						v:Destroy()
-					end
-					if v:IsA("Model") then
-						v:Destroy()
-					end
-					if v:IsA("Part") or v:IsA("MeshPart") then
-						for x, o in pairs(v:GetChildren()) do
-							if o:IsA("Decal") then
-								o:Destroy()
-							end
-						end
-						coroutine.resume(coroutine.create(function()
-							v.Material = "Neon"
-							v.CanCollide = false
-							local bld = Instance.new("ParticleEmitter", v)
-							bld.LightEmission = 1
-							bld.Texture = "rbxassetid://284205403"
-							bld.Color = ColorSequence.new(Color3.new(1, 1, 1))
-							bld.Rate = 50
-							bld.Lifetime = NumberRange.new(1)
-							bld.Size = NumberSequence.new({
-								NumberSequenceKeypoint.new(0, 0.75, 0),
-								NumberSequenceKeypoint.new(1, 0, 0)
-							})
-							bld.Transparency = NumberSequence.new({
-								NumberSequenceKeypoint.new(0, 0, 0),
-								NumberSequenceKeypoint.new(1, 1, 0)
-							})
-							bld.Speed = NumberRange.new(0, 0)
-							bld.VelocitySpread = 50000
-							bld.Rotation = NumberRange.new(-500, 500)
-							bld.RotSpeed = NumberRange.new(-500, 500)
-							local sbs = Instance.new("BodyPosition", v)
-							sbs.P = 3000
-							sbs.D = 1000
-							sbs.maxForce = Vector3.new(50000000000, 50000000000, 50000000000)
-							sbs.position = v.Position + Vector3.new(math.random(-5, 5), math.random(-5, 5), math.random(-5, 5))
-							v.Color = Color3.new(1, 1, 1)
-							coroutine.resume(coroutine.create(function()
-								for i = 0, 49 do
-									swait(1)
-									v.Transparency = v.Transparency + 0.02
-								end
-								CFuncs.Sound.Create("rbxassetid://1192402877", v, 0.25, 1)
-								bld.Speed = NumberRange.new(1, 5)
-								bld.Acceleration = vt(0, 10, 0)
-								wait(0.5)
-								bld.Enabled = false
-								wait(3)
-								v:Destroy()
-								dude:Destroy()
-							end))
-						end))
-					end
-				end
-			end))
-		end)
-		ds()
-	end
+print("no")
 end
 function FindNearestHead(Position, Distance, SinglePlayer)
 	if SinglePlayer then
@@ -2558,7 +2481,7 @@ function ExtinctiveHeartbreak()
 		end))
 		CameraEnshaking(5, 5)
 		game:GetService("Debris"):AddItem(bld, 3)
-		dmg(targetted)
+		print("nullified")
 		CFuncs.Sound.Create("rbxassetid://429400881", targetted.Head, 1, 1)
 		for i = 0, 1, 0.1 do
 			swait()
