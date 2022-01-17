@@ -35,10 +35,6 @@ ScriptsTab:NewButton("Sonic", "All other versions don't fling except this one.",
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/FESonic.lua"))()
 end)
 
-ScriptsTab:NewButton("Neko", "This one is kinda self explanatory lol.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/neko.lua"))()
-end)
-
 ScriptsTab:NewButton("Joy", "Its got some cute stufff", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Joy.lua"))()
 end)
