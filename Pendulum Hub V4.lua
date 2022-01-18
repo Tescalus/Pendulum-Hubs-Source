@@ -425,11 +425,11 @@ ScriptsTab:NewButton("Gaster", "man who speaks in handjobs", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Gaster.lua"))()
 end)
 
-ScriptsTab:NewButton("Grab Knife V3 - In Beta", "Currently being worked on but have fun with fe version.", function()
+ScriptsTab:NewButton("Grab Knife V3 - Recommended - Fully FE", "Finished version of Grab Knife.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
 
-ScriptsTab:NewButton("Grab Knife V4 - In Alpha", "Currently being worked on but have fun with fe version.", function()
+ScriptsTab:NewButton("Grab Knife V4 - Not Recommended - Not fully fe yet", "Currently being worked on but have fun with fe version.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/grab%20knife%20v4%20fe.lua"))()
 end)
 
