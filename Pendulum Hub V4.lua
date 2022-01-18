@@ -427,6 +427,10 @@ ScriptsTab:NewButton("Grab Knife V3 - In Beta", "Currently being worked on but h
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
 
+ScriptsTab:NewButton("Grab Knife V4 - In Alpha", "Currently being worked on but have fun with fe version.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/grab%20knife%20v4%20fe.lua"))()
+end)
+
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
