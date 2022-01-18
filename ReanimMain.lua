@@ -9,7 +9,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hub
 task.wait()
 local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
 Fling.Transparency = 1
-Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(9999999999999999999999999999999999,9999999999999999999999999999999999,9999999999999999999999999999999999)
+Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(9999999999999999999999999999999999999999,9999999999999999999999999999999999999999,9999999999999999999999999999999999999999)
 
 local mouse = game.Players.LocalPlayer:GetMouse()
 --game["Run Service"].Heartbeat:Connect(function(delta)
