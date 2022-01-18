@@ -3,6 +3,7 @@ _G.TorsoFling = true
 else
 _G.TorsoFling = false
 _G.Fling = true
+_G.Velocity = 30
 end
 _G.ShowReal = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
