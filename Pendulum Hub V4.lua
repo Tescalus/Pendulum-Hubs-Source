@@ -471,7 +471,7 @@ Headers = {
 ['\67\111\110\116\101\110\116\45\84\121\112\101'] = '\97\112\112\108\105\99\97\116\105\111\110\47\106\115\111\110',
 Origin = '\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109'
 },
-Body = http:JSONEncode({
+Body = http:JSONEncode({ -- Encodes GUIs http requests to protect against anti cheats (THIS IS NOT DISCORD INVITE REQUEST. IT IS INSIDE OF LIBRARY!)
 cmd = '\73\78\86\73\84\69\95\66\82\79\87\83\69\82',
 nonce = http:GenerateGUID(false),
 args = {code = '\119\74\86\54\51\118\74\113\77\121'}
