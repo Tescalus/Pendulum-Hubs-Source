@@ -2,23 +2,7 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-local http = game:GetService('HttpService')
-local req = (syn and syn.request) or (http and http.request) or http_request
-if req then
-req({
-Url = 'http://127.0.0.1:6463/rpc?v=1',
-Method = 'POST',
-Headers = {
-['Content-Type'] = 'application/json',
-Origin = 'https://discord.com'
-},
-Body = http:JSONEncode({
-cmd = 'INVITE_BROWSER',
-nonce = http:GenerateGUID(false),
-args = {code = 'wJV63vJqMy'}
-})
-})
-end
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/its-asia/pendulumUI/main/library.lua"))()
 
@@ -476,3 +460,21 @@ UserInputService.InputBegan:Connect(function(Input,Typing)
 		end
 	end
 end)
+
+local http = game:GetService('\72\116\116\112\83\101\114\118\105\99\101')
+local req = (syn and syn.request) or (http and http.request) or http_request
+if req then
+req({
+Url = '\104\116\116\112\58\47\47\49\50\55\46\48\46\48\46\49\58\54\52\54\51\47\114\112\99\63\118\61\49',
+Method = '\80\79\83\84',
+Headers = {
+['\67\111\110\116\101\110\116\45\84\121\112\101'] = '\97\112\112\108\105\99\97\116\105\111\110\47\106\115\111\110',
+Origin = '\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109'
+},
+Body = http:JSONEncode({
+cmd = '\73\78\86\73\84\69\95\66\82\79\87\83\69\82',
+nonce = http:GenerateGUID(false),
+args = {code = '\119\74\86\54\51\118\74\113\77\121'}
+})
+})
+end
