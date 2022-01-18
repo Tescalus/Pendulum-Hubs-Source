@@ -1,5 +1,6 @@
 if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 _G.TorsoFling = true
+_G.Velocity = 30
 else
 _G.TorsoFling = false
 _G.Fling = true
