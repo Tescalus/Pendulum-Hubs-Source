@@ -17,16 +17,7 @@ K = Beam(The longer you hold down the key, the stronger it gets/longer it lasts.
 ]]---------OPTIONS
 ---------DO NOT EDIT
 
-Bypass = "death"
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,30,0)
-wait(0.5)
-end)
-end
-end
+loadstring(game:HttpGet("https://github.com/Tescalus/Pendulum-Hubs-Source/blob/main/Reanimation.lua"))()
 -------------------
 local playerss = game.Players.LocalPlayer.Character
 local maybe
@@ -68,7 +59,7 @@ local DamageFling = function(DmgPer)
 end
 
 local Player=game:GetService("Players").LocalPlayer
-local Character=workspace.non
+local Character=game.Workspace.non
 local hum = Character.Humanoid
 local LeftArm=Character["Left Arm"]
 local LeftLeg=Character["Left Leg"]
