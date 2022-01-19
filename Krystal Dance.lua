@@ -241,12 +241,7 @@ function swait(num)
 	end
 end
 
-for _,n in pairs(Character:GetChildren()) do
-if n:IsA("Accessory") then n:Remove() end
-end
-for _,x in pairs(Character:GetChildren()) do
-if x:IsA("Decal") then x:Remove() end
-end
+
 
 intro = true
 ws = 0
