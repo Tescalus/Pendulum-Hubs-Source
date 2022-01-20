@@ -3376,139 +3376,7 @@ function whoosh(vroom)
 end
 
 function fling()
-	working = true
-	pcall(function()
-		local rweld = Instance.new("Weld", char["Right Arm"])
-		local lweld = Instance.new("Weld", char["Left Arm"])
-		rweld.Part0 = char["Torso"]
-		rweld.Part1 = char["Right Arm"]
-		rweld.C0 = CFrame.new(1.5, 0, 0)
-		lweld.Part0 = char.Torso
-		lweld.Part1 = char["Left Arm"]
-		lweld.C0 = CFrame.new(-1.5, 0, 0)
-		local tweld = Instance.new("Weld", char.HumanoidRootPart)
-		tweld.Part0 = char.HumanoidRootPart
-		tweld.Part1 = char.Torso
-		
-		local at1 = Instance.new("Attachment", handle)
-		local at2 = Instance.new("Attachment", handle)
-		at1.Visible = false
-		at1.Position = Vector3.new(2, 0, 0)
-		at2.Visible = false
-		at2.Position = Vector3.new(-0.3, 0, 0)
-		
-		local trail = Instance.new("Trail", handle)
-		trail.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))})
-		trail.LightEmission = 0.25
-		trail.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.75), NumberSequenceKeypoint.new(1, 1)})
-		trail.Lifetime = 0.10
-		trail.MinLength = 0.05
-		trail.Attachment0 = at1
-		trail.Attachment1 = at2
-		
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(1.75, 0, 0) * CFrame.Angles(0, math.rad(0), math.rad(45)),0.07)
-		end)
-		cor()
-		lerp(lweld,lweld.C0,CFrame.new(-1.5, 0, -0.5) * CFrame.Angles(math.rad(45), math.rad(0), math.rad(0)),0.07)
-		
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(1.75, 1, 0.25) * CFrame.Angles(math.rad(35), math.rad(0), math.rad(150)),0.07)
-		end)
-		local cor2 = coroutine.wrap(function()
-			lerp(tweld,tweld.C0,CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(-45), math.rad(0)),0.07)
-		end)
-		local cor3 = coroutine.wrap(function()
-			lerp(hweld,hweld.C0,CFrame.new(0, -2.5, 0) * CFrame.Angles(math.rad(90),math.rad(90), 0),0.12)
-		end)
-		cor()
-		cor2()
-		cor3()
-		lerp(lweld,lweld.C0,CFrame.new(-1.75, 0.5, -0.5) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(-45)),0.07)
-		wait(0.2)
-		
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(1.5, 1, 0.25) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(170)),0.03)
-		end)
-		local cor2 = coroutine.wrap(function()
-			lerp(tweld,tweld.C0,CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(0), math.rad(0)),0.03)
-		end)
-		cor()
-		cor2()
-		lerp(lweld,lweld.C0,CFrame.new(-1, 0, -0.45) * CFrame.Angles(math.rad(45), math.rad(0), math.rad(45)),0.03)
-		
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(1.5, 0.5, -0.5) * CFrame.Angles(math.rad(0), math.rad(60), math.rad(90)),0.03)
-		end)
-		local cor2 = coroutine.wrap(function()
-			lerp(tweld,tweld.C0,CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(45), math.rad(0)),0.01)
-		end)
-		cor()
-		cor2()
-		whoosh(handle:Clone())
-		for i, v in pairs(handle:GetChildren()) do
-			if v:IsA("Part") then
-				v.Transparency = 1
-			end
-		end
-		handle.Transparency = 1
-		trail:Remove()
-		at1:Remove()
-		at2:Remove()
-		lerp(lweld,lweld.C0,CFrame.new(-1.5, 0, 0) * CFrame.Angles(math.rad(45), math.rad(0), math.rad(0)),0.01)
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(0.5, 0.4, -1) * CFrame.Angles(math.rad(0), math.rad(180), math.rad(75)),0.04)
-		end)
-		local cor2 = coroutine.wrap(function()
-			lerp(tweld,tweld.C0,CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(55), math.rad(0)),0.04)
-		end)
-		cor()
-		cor2()
-		lerp(lweld,lweld.C0,CFrame.new(-1.5, 0, 0) * CFrame.Angles(math.rad(45), math.rad(0), math.rad(0)),0.04)
-		wait(0.2)
-		
-		local cor = coroutine.wrap(function()
-			lerp(rweld,rweld.C0,CFrame.new(1.5, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),0.07)
-		end)
-		local cor2 = coroutine.wrap(function()
-			lerp(tweld,tweld.C0,CFrame.new(0, 0, 0) * CFrame.Angles(0, math.rad(0), math.rad(0)),0.07)
-		end)
-		cor()
-		cor2()
-		lerp(lweld,lweld.C0,CFrame.new(-1.5, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),0.07)
-		
-		for i, v in pairs(handle:GetChildren()) do
-			if v:IsA("Part") then
-				v.Transparency = 0
-			end
-		end
-		handle.Transparency = 0
-		hweld.C0 = CFrame.new(0, -1, 0) * CFrame.Angles(math.rad(-180),math.rad(-90), 0)
-		
-		lweld:Remove()
-		rweld:Remove()
-		tweld:Remove()
-		
-		if torsoclone and char:FindFirstChild("Torso") and char:FindFirstChild("HumanoidRootPart") then
-			local clone = torsoclone:Clone()
-			clone.Part0 = char.HumanoidRootPart
-			clone.Part1 = char.Torso
-			clone.Parent = char.HumanoidRootPart
-		end
-		if leftclone and char:FindFirstChild('Left Arm') and char:FindFirstChild('Torso') then
-			local clone = leftclone:Clone()
-			clone.Part0 = char.Torso
-			clone.Part1 = char["Left Arm"]
-			clone.Parent = char.Torso
-		end
-		if rightclone and char:FindFirstChild('Right Arm') and char:FindFirstChild('Torso') then
-			local clone = rightclone:Clone()
-			clone.Part0 = char.Torso
-			clone.Part1 = char["Right Arm"]
-			clone.Parent = char.Torso
-		end
-	end)
-	working = false
+print("k")
 end
 
 function kill()
@@ -3860,7 +3728,7 @@ mouse.KeyDown:connect(function(kkk)
 				getrid(handle)
 				if firsttime5 then
 					firsttime5 = false
-					notify("Gun mode enabled || Click to perform an action",true)
+					notify("Mustardfoot didn't actually make this mode so pick another one lol",true)
 				else
 					notify("Gun mode enabled")
 				end
@@ -3875,7 +3743,7 @@ mouse.KeyDown:connect(function(kkk)
 					getrid(handle)
 					if firsttime4 then
 						firsttime4 = false
-						notify("Dildo mode enabled || Click to perform an action",true)
+						notify("Warning: This mode is not FE people will not see the dildo. However, you will still be able to use fling and the dildos attacks (yeah but attacks sound kinda sexy (Production was here))",true)
 					else
 						notify("Dildo mode enabled")
 					end
@@ -3927,7 +3795,7 @@ THOT]])
 		elseif key == "t" then
 			if blademode == "knife" then
 				mode = "fling"
-				notify("Mode changed to "..mode)
+				notify("lol this mode doesn't work because of Pendulum Hubs reanimate use another mode")
 			end
 		end
 	end
