@@ -416,8 +416,8 @@ end
 
 -- // Check for death
 if _G.CheckForDeath then
-	Character.Humanoid.Died:Connect(function() pcall(function() Noclip:Disconnect(); Conversion:Disconnect(); plr.Character = originalrig; originalrig:ClearAllChildren(); originalrig.Parent = workspace; Character:Destroy() game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer) end) end) -- checking for resetting
-	plr.CharacterAdded:Connect(function() Noclip:Disconnect(); Conversion:Disconnect(); Character:Destroy() game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer) end) -- checking to see if server respawned you
+	Character.Humanoid.Died:Connect(function() pcall(function() Noclip:Disconnect(); Conversion:Disconnect(); plr.Character = originalrig; originalrig:ClearAllChildren(); originalrig.Parent = workspace; Character:Destroy() end) end) -- checking for resetting
+	plr.CharacterAdded:Connect(function() Noclip:Disconnect(); Conversion:Disconnect(); Character:Destroy() end) -- checking to see if server respawned you
 	
 end
 
