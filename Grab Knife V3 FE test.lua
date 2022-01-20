@@ -1,3 +1,4 @@
+_G.Velocity = 30
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 _G.loop = true
 local player = game.Players.LocalPlayer
