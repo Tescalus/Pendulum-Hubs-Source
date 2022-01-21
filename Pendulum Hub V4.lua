@@ -425,11 +425,15 @@ ScriptsTab:NewButton("Gaster", "man who speaks in handjobs", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Gaster.lua"))()
 end)
 
-ScriptsTab:NewButton("Grab Knife V3 - Recommended - Fully FE", "Finished version of Grab Knife. I had to do it lol.", function()
+ScriptsTab:NewButton("Killer", "scary", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Killer.lua"))()
+end)
+
+ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
 
-ScriptsTab:NewButton("Grab Knife V4 - Not Recommended - Not fully fe yet", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!", function()
+ScriptsTab:NewButton("Grab Knife V4", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/grab%20knife%20v4%20fe.lua"))()
 end)
 
