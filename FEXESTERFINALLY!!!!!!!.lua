@@ -17,7 +17,48 @@ K = Beam(The longer you hold down the key, the stronger it gets/longer it lasts.
 ]]---------OPTIONS
 ---------DO NOT EDIT
 
-loadstring(game:HttpGet("https://github.com/Tescalus/Pendulum-Hubs-Source/blob/main/Reanimation.lua"))()
+Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,30,0)
+wait(0.5)
+end)
+end
+end
+local p = game.Players.LocalPlayer
+local char = p.Character
+local mouse = p:GetMouse()
+local larm = char["Left Arm"]
+local rarm = char["Right Arm"]
+local lleg = char["Left Leg"]
+local rleg = char["Right Leg"]
+local hed = char.Head
+local torso = char.Torso
+local hum = char.Humanoid
+local cam = game.Workspace.CurrentCamera
+local root = char.HumanoidRootPart
+for i,v in pairs (char:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
+hed.Massless = true
+hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+torso.Massless = true
+torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rarm.Massless = true
+rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+larm.Massless = true
+larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+lleg.Massless = true
+lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rleg.Massless = true
+rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 -------------------
 local playerss = game.Players.LocalPlayer.Character
 local maybe
