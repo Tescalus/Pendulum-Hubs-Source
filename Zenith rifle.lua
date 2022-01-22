@@ -40,8 +40,8 @@ local Align = function(Part0, Part1,Mesh)
  return {Attachments.Attach0, Attachments, Aligns}
         
 end 
-local hat = Align(char['Cartoony Rainbow Rifle'].Handle,char['Right Arm'],false)
-local cf = char['Right Arm'].CFrame*CFrame.new(0,-1,-0.5)*CFrame.Angles(math.rad(35),math.rad(70),60)
+local hat = Align(char['Meshes/CRL4Accessory'].Handle,char['Right Arm'],false)
+local cf = char['Right Arm'].CFrame*CFrame.new(0,-1,-0.5)*CFrame.Angles(math.rad(-35),math.rad(-100),-99.5)
 hat[1].CFrame = cf:Inverse() * char['Right Arm'].CFrame
 spawn(function()
     char.AncestryChanged:wait()--if you respawn, it will stop the  loop to avoid lag of using it over and over
