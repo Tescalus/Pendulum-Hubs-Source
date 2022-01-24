@@ -618,6 +618,20 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
+
+  18. Content Creation on YouTube.com or any Website.
+  
+  
+   A link to the repository and the Discord Server must be provided.
+Failure to comply with these will automatically give us the right to demonitize and remove your video. 
+If none of these requirements are met, or if they are not made clear to the average user, 
+the appropriate authorities WILL be contacted.
+ 
+
+                     
+                     
+                     
+                     
                      END OF TERMS AND CONDITIONS
 
             How to Apply These Terms to Your New Programs
