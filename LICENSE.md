@@ -1,6 +1,7 @@
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
-
+ 
+ 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
@@ -617,15 +618,6 @@ reviewing courts shall apply local law that most closely approximates
 an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
-
-
-  18. Content Creation on YouTube.com or any Website.
-  
-  
-   A link to the repository and the Discord Server must be provided.
-Failure to comply with these will automatically give us the right to demonitize and remove your video. 
-If none of these requirements are met, or if they are not made clear to the average user, 
-the appropriate authorities WILL be contacted.
  
 
                      
