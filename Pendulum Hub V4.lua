@@ -429,6 +429,22 @@ ScriptsTab:NewButton("Killer", "scary", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Killer.lua"))()
 end)
 
+ScriptsTab:NewButton("Spectrum Glitcher", "This also has the big black.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Spectrum%20Glitcher.lua"))()
+end)
+
+ScriptsTab:NewButton("Ultimate Switcher", "Ultimate automaticlly means its the best.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ULTIMATE%20SWITCHER.lua"))()
+end)
+
+ScriptsTab:NewButton("Mask", "Little boy got mask and he died haha spoiler", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Mask.lua"))()
+end)
+
+ScriptsTab:NewButton("Switcher Wing Master", "Switch wing there so many modes", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/SwitcherWingMaster.lua"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
