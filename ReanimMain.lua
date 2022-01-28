@@ -1,11 +1,15 @@
-if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
-_G.TorsoFling = true
-else
-_G.TorsoFling = false
-_G.Fling = true
-end
-_G.ShowReal = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
+getgenv().Fling = true
+getgenv().TorsoFling = false
+getgenv().ShowReal = true
+getgenv().FakeGod = false
+getgenv().GodMode = true
+getgenv().Tools = false
+getgenv().Velocity = 35
+getgenv().Collisions = true
+getgenv().Claim2 = false
+getgenv().ExtremeNetless = true
+getgenv().Notification = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/newnetlessreanimate.lua"))() --
 task.wait()
 local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
 Fling.Transparency = 1
