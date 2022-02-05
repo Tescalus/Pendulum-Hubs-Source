@@ -14,184 +14,111 @@ G = Fire ball
 H = Huge fire ball
 J = Dragon's breath(The longer you hold, the more insaner it gets.)
 K = Beam(The longer you hold down the key, the stronger it gets/longer it lasts.)
-]]---------OPTIONS
----------DO NOT EDIT
+---------]]
 
-Bypass = "death"
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(0,30,0)
-wait(0.5)
-end)
-end
-end
-local p = game.Players.LocalPlayer
-local char = p.Character
-local mouse = p:GetMouse()
-local larm = char["Left Arm"]
-local rarm = char["Right Arm"]
-local lleg = char["Left Leg"]
-local rleg = char["Right Leg"]
-local hed = char.Head
-local torso = char.Torso
-local hum = char.Humanoid
-local cam = game.Workspace.CurrentCamera
-local root = char.HumanoidRootPart
-for i,v in pairs (char:GetChildren()) do
-	if v:IsA("Accessory") then
-		v.Handle.Massless = true
-		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-	end
-end
-hed.Massless = true
-hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-torso.Massless = true
-torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-rarm.Massless = true
-rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-larm.Massless = true
-larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-lleg.Massless = true
-lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-rleg.Massless = true
-rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-root.Massless = true
-root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
--------------------
-local playerss = game.Players.LocalPlayer.Character
-local maybe
-maybe = playerss.Torso
-maybe.Transparency = 0
+--"Now you see me 2" is a good movie, which is why i've made this.--
+--Sadly, this got logged, one of my best work just being thrown out like this is a real shame.--
+--This was made before FE so using this may or may not lag the server--
+--Keep in mind that THIS was never even finished at all, i stopped working on this when skidcentric leaked it, who knows how big this script could've been?--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 
-
-local asasdd = Instance.new("BodyVelocity", maybe)
-asasdd.Velocity = Vector3.new(math.huge,math.huge,math.huge)
-
-local StateMover = true
-local connections
-function SPEEDFREAK()
-if IsDead then connections:Disconnect(); return end
-    if maybe.CanCollide == true then
-        maybe.CanCollide = false
-    end
-end
-connections = game["Run Service"].Heartbeat:connect(SPEEDFREAK)
-
-local CDDF = {}
-local DamageFling = function(DmgPer)
-	if IsDead or (DmgPer.Name == playerss.Name and DmgPer.Name == "non") or CDDF[DmgPer] or not DmgPer or not DmgPer:FindFirstChildOfClass("Humanoid") or DmgPer:FindFirstChildOfClass("Humanoid").Health <= 0 then return end
-	CDDF[DmgPer] = true; StateMover = false
-    bbav = Instance.new("BodyAngularVelocity",maybe)
-    bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-    bbav.P = 1000000000000000000000000000
-    bbav.AngularVelocity = Vector3.new(10000000000000000000000000000000,100000000000000000000000000,100000000000000000)
-    game:GetService("Debris"):AddItem(bbav,0.1)
-    maybe.Rotation = playerss.Torso.Rotation
-    local STATEPOS = DmgPer:FindFirstChild("Torso").CFrame.p or DmgPer:FindFirstChildOfClass("Part").CFrame.p
-    --for _=1,12 do
-		maybe.Position = (CFrame.new(STATEPOS,playerss.Torso.CFrame.p) * CFrame.new(0,0,2)).p
-		wait(0.1)
-    --end
-    maybe.Position = playerss.Torso.CFrame.p
-    --wait(0.26)
-	CDDF[DmgPer] = false; StateMover = true
-end
-
-local Player=game:GetService("Players").LocalPlayer
-local Character=game.Workspace.non
-local hum = Character.Humanoid
-local LeftArm=Character["Left Arm"]
-local LeftLeg=Character["Left Leg"]
-local RightArm=Character["Right Arm"]
-local RightLeg=Character["Right Leg"]
-local Root=Character["HumanoidRootPart"]
-local Head=Character["Head"]
-local Torso=Character["Torso"]
-local Neck=Torso["Neck"]
-local walking = false
-local jumping = false
-local allowgrassy = false
-local zxc = false
-local matte = nil
-local colori = nil
-local bigball = false
-local attacking = false
-local laughing = false
-local running = false
-local downpress = false
-local taim = nil
-local change = 0
-local ws = 10
-local appi = false
-local tauntdebounce = false
-local position = nil
-local staybooming = false
-local MseGuide = true
-local levitate = false
-local firsttime5 = false
-local notallowedtransform = false
-local settime = 0
-local firsttime2 = false
-local sine = 0
-local t = 0
-local combo1 = true
-local dgs = 75
-local combo2 = false
-local firsttime3 = false
-local combo3 = false
+Player=game:GetService("Players").LocalPlayer
+Character=game.Workspace.non
+Character.Humanoid.Name = "noneofurbusiness"
+hum = Character.noneofurbusiness
+LeftArm=Character["Left Arm"]
+LeftLeg=Character["Left Leg"]
+RightArm=Character["Right Arm"]
+RightLeg=Character["Right Leg"]
+Root=Character["HumanoidRootPart"]
+Head=Character["Head"]
+Torso=Character["Torso"]
+Neck=Torso["Neck"]
+walking = false
+jumping = false
+allowgrassy = false
+zxc = false
+matte = nil
+colori = nil
+bigball = false
+attacking = false
+laughing = false
+running = false
+downpress = false
+taim = nil
+change = 0
+ws = 25
+appi = false
+tauntdebounce = false
+position = nil
+staybooming = false
+MseGuide = true
+levitate = false
+firsttime5 = false
+notallowedtransform = false
+settime = 0
+firsttime2 = false
+sine = 0
+t = 0
+combo1 = true
+dgs = 75
+combo2 = false
+firsttime3 = false
+combo3 = false
 local bl = {907530553,907527750,907527912}
-local colortable = {"Really black","Really red"}
-local colors = #colortable
-local blz = #bl
+colortable = {"Really black","Really red"}
+colors = #colortable
+blz = #bl
 local aces = {1880203893,1881287656,1881287420,1881288034}
-local ace = #aces
+ace = #aces
 local laughs = {2011349649,2011349983,2011351501,2011352223,2011355991,2011356475}
-local laugh = #laughs
-local mouse = Player:GetMouse()
-local RunSrv = game:GetService("RunService")
-local RenderStepped = game:GetService("RunService").RenderStepped
-local removeuseless = game:GetService("Debris")
-local damageall={}
-local Repeater={}
-local Repeater2={}
-local magictable={}
-local nonmeshRepeater={}
-local nonmeshRepeater2={}
-local dmgii={}
-local DamageAll2={}
-local SlowlyFade={}
-local th1={}
-local lolzor={}
-local lolzor2={}
-local th2={}
-local keyYsize={}
-local blocktrail={}
-local keyYtransparency={}
-local th3={}
-local laughingtable={}
-local Extreme={}
-local ExtremeM={}
-local ExtremeM2={}
-local m3={}
-local th4={}
-local th5={}
-local UpMover={}
-local openshocktable={}
-local LessSize={}
-local ForwardMover={}
-local FadeIn={}
-local signtransparency={}
-local signmover={}
-local signrotator={}
+laugh = #laughs
+mouse = Player:GetMouse()
+RunSrv = game:GetService("RunService")
+RenderStepped = game:GetService("RunService").RenderStepped
+removeuseless = game:GetService("Debris")
+damageall={}
+Repeater={}
+Repeater2={}
+magictable={}
+nonmeshRepeater={}
+nonmeshRepeater2={}
+dmgii={}
+DamageAll2={}
+SlowlyFade={}
+th1={}
+lolzor={}
+lolzor2={}
+th2={}
+keyYsize={}
+blocktrail={}
+keyYtransparency={}
+th3={}
+laughingtable={}
+Extreme={}
+ExtremeM={}
+ExtremeM2={}
+m3={}
+th4={}
+th5={}
+UpMover={}
+openshocktable={}
+LessSize={}
+ForwardMover={}
+FadeIn={}
+signtransparency={}
+signmover={}
+signrotator={}
 
-local FireBall = Instance.new("Sound",LeftArm)
+screenGui = Instance.new("ScreenGui")
+screenGui.Parent = script.Parent
+
+FireBall = Instance.new("Sound",LeftArm)
 FireBall.SoundId = "rbxassetid://842332424"
 FireBall.Volume = 5
 FireBall.Pitch = 2.5
 
-local BigFireBall = Instance.new("Sound",LeftArm)
+BigFireBall = Instance.new("Sound",LeftArm)
 BigFireBall.SoundId = "rbxassetid://842332424"
 BigFireBall.Volume = 8
 BigFireBall.Pitch = 1.5
@@ -248,7 +175,6 @@ end
 function makeblockytrail()
 coroutine.wrap(function()
 while true do
-if IsDead then break end
 for i,v in pairs(blocktrail) do
 smke = Instance.new("Part",v)
 smke.CFrame = v.CFrame * CFrame.Angles(math.random(-180,180),math.random(-180,180),math.random(-180,180))
@@ -268,6 +194,128 @@ so.SoundId = c
 so.Volume = y
 so.Looped = n
 end
+
+function ghost()
+fakeeyo2 = Instance.new("Part",Head)
+fakeeyo2.BrickColor = BrickColor.new("White")
+fakeeyo2.Material = "Neon"
+fakeeyo2.Shape = "Ball"
+fakeeyo2.Anchored = true
+fakeeyo2.CFrame = eyo2.CFrame
+fakeeyo2.CanCollide = false
+fakeeyo2.Size = Vector3.new(0.33, 0.33, 0.33)
+table.insert(ghosttable,fakeeyo2)
+removeuseless:AddItem(fakeeyo2,3)
+
+fakeeyo1 = Instance.new("Part",Head)
+fakeeyo1.BrickColor = BrickColor.new("White")
+fakeeyo1.Material = "Neon"
+fakeeyo1.Shape = "Ball"
+fakeeyo1.CanCollide = false
+fakeeyo1.Anchored = true
+fakeeyo1.CFrame = eyo1.CFrame
+fakeeyo1.Size = Vector3.new(0.33, 0.33, 0.33)
+table.insert(ghosttable,fakeeyo1)
+removeuseless:AddItem(fakeeyo1,3)
+
+fakemask = Instance.new("Part",Character)
+fakemask.Size = Vector3.new(1,1,1)
+fakemask.CFrame = mask.CFrame
+fakemask.Material = "Neon"
+fakemask.CanCollide = false
+fakemask.Anchored = true
+fakemask.BrickColor = BrickColor.new("White")
+fakemask.Transparency = .5
+mfMask = Instance.new("SpecialMesh", fakemask)
+mfMask.MeshType = "FileMesh"
+mfMask.Scale = Vector3.new(0.13, 0.13, 0.1)
+mfMask.MeshId = 'http://www.roblox.com/asset/?id=5158270'
+table.insert(ghosttable,fakemask)
+removeuseless:AddItem(fakemask,3)
+
+
+
+
+
+fakehead = Instance.new("Part",Character)
+fakehead.Size = Vector3.new(1.01,1.01,1.01)
+fakehead.Anchored = true
+fakehead.CanCollide = false
+fakehead.Transparency = .5
+fakehead.BrickColor = BrickColor.new("White")
+fakehead.Material = "Neon"
+fakehead.CFrame = Head.CFrame
+fakeheadmesh = Instance.new("SpecialMesh",fakehead)
+fakeheadmesh.MeshType = "Head"
+fakeheadmesh.Scale = Vector3.new(1.255,1.255,1.255)
+table.insert(ghosttable,fakehead)
+removeuseless:AddItem(fakehead,3)
+
+
+fakelarm = Instance.new("Part",Character)
+fakelarm.CFrame = LeftArm.CFrame
+fakelarm.Size = Vector3.new(1,2,1)
+fakelarm.CanCollide = false
+fakelarm.Transparency = .5
+fakelarm.Material = "Neon"
+fakelarm.Anchored = true
+table.insert(ghosttable,fakelarm)
+removeuseless:AddItem(fakelarm,3)
+
+
+fakerarm = Instance.new("Part",Character)
+fakerarm.CFrame = RightArm.CFrame
+fakerarm.Size = Vector3.new(1,2,1)
+fakerarm.Transparency = .5
+fakerarm.CanCollide = false
+fakerarm.Material = "Neon"
+fakerarm.Anchored = true
+table.insert(ghosttable,fakerarm)
+removeuseless:AddItem(fakerarm,3)
+
+
+fakelleg = Instance.new("Part",Character)
+fakelleg.CFrame = LeftLeg.CFrame
+fakelleg.Size = Vector3.new(1,2,1)
+fakelleg.Transparency = .5
+fakelleg.CanCollide = false
+fakelleg.Material = "Neon"
+fakelleg.Anchored = true
+table.insert(ghosttable,fakelleg)
+removeuseless:AddItem(fakelleg,3)
+
+
+fakerleg = Instance.new("Part",Character)
+fakerleg.CFrame = RightLeg.CFrame
+fakerleg.Size = Vector3.new(1,2,1)
+fakerleg.Transparency = .5
+fakerleg.CanCollide = false
+fakerleg.Material = "Neon"
+fakerleg.Anchored = true
+table.insert(ghosttable,fakerleg)
+removeuseless:AddItem(fakerleg,3)
+
+
+fakeTorso = Instance.new("Part",Character)
+fakeTorso.CFrame = Torso.CFrame
+fakeTorso.Size = Vector3.new(2,2,1)
+fakeTorso.Transparency = .5
+fakeTorso.CanCollide = false
+fakeTorso.Material = "Neon"
+fakeTorso.Anchored = true
+table.insert(ghosttable,fakeTorso)
+removeuseless:AddItem(fakeTorso,3)
+end
+
+ghosttable={}
+coroutine.wrap(function()
+while true do
+for i,v in pairs(ghosttable) do
+v.Transparency = v.Transparency + 0.025
+end
+wait()
+end
+end)()
 
 function MAKETRAIL(PARENT,POSITION1,POSITION2,LIFETIME,COLOR)
 A = Instance.new("Attachment", PARENT)
@@ -315,6 +363,37 @@ signmover={}
 signrotator={}
 end
 
+coroutine.wrap(function()
+while wait() do
+hum.WalkSpeed = ws
+LeftArm.BrickColor = BrickColor.new("Really black")
+RightArm.BrickColor = BrickColor.new("Really black")
+Head.BrickColor = BrickColor.new("Really black")
+end
+end)()
+godmode = coroutine.wrap(function()
+for i,v in pairs(Character:GetChildren()) do
+if v:IsA("BasePart") and v ~= Root then
+v.Anchored = false
+end
+end
+while true do
+hum.MaxHealth = math.huge
+wait(0.0000001)
+hum.Health = math.huge
+wait()
+end
+end)
+godmode()
+ff = Instance.new("ForceField", Character)
+ff.Visible = false
+
+coroutine.wrap(function()
+for i,v in pairs(Character:GetChildren()) do
+if v.Name == "Animate" then v:Remove()
+end
+end
+end)()
 
 function damagealll(Radius,Position)		
 	local Returning = {}		
@@ -336,6 +415,39 @@ end
 	return Returning		
 end
 
+ArtificialHB = Instance.new("BindableEvent", script)
+ArtificialHB.Name = "Heartbeat"
+script:WaitForChild("Heartbeat")
+
+frame = 1 / 60
+tf = 0
+allowframeloss = false
+tossremainder = false
+
+
+lastframe = tick()
+script.Heartbeat:Fire()
+
+
+game:GetService("RunService").Heartbeat:connect(function(s, p)
+	tf = tf + s
+	if tf >= frame then
+		if allowframeloss then
+			script.Heartbeat:Fire()
+			lastframe = tick()
+		else
+			for i = 1, math.floor(tf / frame) do
+				script.Heartbeat:Fire()
+			end
+			lastframe = tick()
+		end
+		if tossremainder then
+			tf = 0
+		else
+			tf = tf - frame * math.floor(tf / frame)
+		end
+	end
+end)
 
 function swait(num)
 	if num == 0 or num == nil then
@@ -375,6 +487,17 @@ end
 end
 end)
 
+
+
+glow = Instance.new("Part",Head)
+glow.Size = Vector3.new(.488,.3,.1)
+glow.CanCollide = false
+glow.Material = "Neon"
+glow.Transparency = 1
+glow.BrickColor = BrickColor.new("Really white")
+glowweld = weldBetween(glow,Head)
+glowweld.C0 = CFrame.new(0,.2,.565)
+
 leftlocation = Instance.new("Part",LeftArm)
 leftlocation.Size = Vector3.new(1,1,1)
 leftlocation.Transparency = 1
@@ -385,6 +508,82 @@ rightlocation.Size = Vector3.new(1,1,1)
 rightlocation.Transparency = 1
 rightlocationweld = weldBetween(rightlocation,RightArm)
 rightlocationweld.C0 = CFrame.new(0,1.2,0)
+
+shirt = Instance.new("Shirt", Character)
+shirt.Name = "Shirt"
+pants = Instance.new("Pants", Character)
+pants.Name = "Pants"
+Character.Shirt.ShirtTemplate = "rbxassetid://676428254"----lol
+Character.Pants.PantsTemplate = "rbxassetid://676428351"
+
+fakehed = Instance.new("Part",Character)
+fakehed.Size = Vector3.new(1.01,1.01,1.01)
+fakehed.Anchored = false
+fakehed.CanCollide = false
+fakehed.Transparency = 0
+fakehed.BrickColor = BrickColor.new("Really black")
+fakehed.Material = "Neon"
+fakehed.CFrame = Head.CFrame
+fakehedweld = weldBetween(fakehed,Head)
+fakehedmesh = Instance.new("SpecialMesh",fakehed)
+fakehedmesh.MeshType = "Head"
+fakehedmesh.Scale = Vector3.new(1.255,1.255,1.255)
+
+jester = Instance.new("Part",Character)
+jester.Size = Vector3.new(2,2,2)
+jester.CFrame = Head.CFrame
+jester.CanCollide = false
+jesterWeld = Instance.new("Weld",jester)
+jesterWeld.Part0 = jester
+jesterWeld.Part1 = Head
+jesterWeld.C0 = jester.CFrame:inverse() * Head.CFrame * CFrame.new(0,-.3,0) * CFrame.Angles(math.rad(0),math.rad(90),0)
+mjester = Instance.new("SpecialMesh", jester)
+mjester.MeshType = "FileMesh"
+mjester.Scale = Vector3.new(1.1, 1.1, 1.1)
+mjester.MeshId,mjester.TextureId = 'rbxassetid://1241662062','rbxassetid://1241662395'
+
+mask = Instance.new("Part",Character)
+mask.Size = Vector3.new(1,1,1)
+mask.CFrame = Head.CFrame
+mask.CanCollide = false
+maskweld = weldBetween(mask,Head)
+maskweld.C0 = CFrame.new(0,-.555,0) * CFrame.Angles(math.rad(90),0,0)
+mMask = Instance.new("SpecialMesh", mask)
+mMask.MeshType = "FileMesh"
+mMask.Scale = Vector3.new(0.13, 0.13, 0.1)
+mMask.MeshId,mMask.TextureId = 'http://www.roblox.com/asset/?id=5158270','http://www.roblox.com/asset/?id=9543585'
+
+eyo1 = Instance.new("Part",Head)
+eyo1.BrickColor = BrickColor.new("White")
+eyo1.Material = "Neon"
+eyo1.Shape = "Ball"
+eyo1.Name = "eyo1"
+eyo1.CanCollide = false
+eyo1.Size = Vector3.new(0.33, 0.33, 0.33)
+eyo1weld = weldBetween(eyo1,Head)
+eyo1weld.C0 = CFrame.new(.215,-.05,.52)
+
+light = Instance.new("PointLight", eyo1)
+light.Color = Color3.new(1,1,1)
+light.Range = 3
+light.Brightness = 4
+light.Enabled = true
+
+eyo2 = Instance.new("Part",Head)
+eyo2.BrickColor = BrickColor.new("White")
+eyo2.Material = "Neon"
+eyo2.Shape = "Ball"
+eyo2.Name = "eyo2"
+eyo2.CanCollide = false
+eyo2.Size = Vector3.new(0.33, 0.33, 0.33)
+eyo2weld = weldBetween(eyo2,Head)
+eyo2weld.C0 = CFrame.new(-.215,-.05,.52)
+
+light2 = Instance.new("PointLight", eyo2)
+light2.Color = Color3.new(1,1,1)
+light2.Range = 3
+light2.Brightness = 4
+light2.Enabled = true
 
 function SOUND(PARENT,ID,VOL,LOOP,REMOVE)
 so = Instance.new("Sound")
@@ -405,10 +604,9 @@ if debounce then return end
 debounce = true
 attacking = true
 appi = true
-ws = 0
+ws = 15
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.Magnitude < 2 and attacking == true then
 position = "Idle2"
@@ -417,7 +615,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -479,7 +676,7 @@ end)()
 for i = 1, 35 do
 local Hit = damagealll(22,Torso.Position)	
 for _,v in pairs(Hit) do			
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -541,10 +738,9 @@ clickdisallowance = true
 clickdebounce = false
 notallowed = true
 appi = true
-ws = 0
+ws = 15
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.y > 1 and attacking == true then
 position = "Jump2"
@@ -559,7 +755,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -636,7 +831,7 @@ table.insert(tab,halow)
 table.insert(tab2,halo)
 wait()
 end
-ws = 10
+ws = 15
 clickdisallowance = false
 coroutine.wrap(function()
 g1 = Instance.new("BodyGyro", Root)
@@ -644,7 +839,6 @@ g1.D = 175
 g1.P = 20000
 g1.MaxTorque = Vector3.new(0,9000,0)
 while notallowed do
-if IsDead then break end
 ROOTLERP.C0 = ROOTLERP.C0:lerp(CFrame.new(0, -.2, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), 0.3)
 g1.CFrame = g1.CFrame:lerp(CFrame.new(Root.Position,mouse.Hit.p),.2)
 LEFTARMLERP.C0 = LEFTARMLERP.C0:lerp(CFrame.new(1, 1.35, 0.4) * CFrame.Angles(math.rad(-90 - 2 * math.sin(sine/12)), math.rad(3), math.rad(4)), 0.3)
@@ -661,14 +855,13 @@ notallowed = false
 end)
 end)()
 while notallowed do
-if IsDead then break end
 for i,v in pairs(tab) do
 v.C0 = v.C0 * CFrame.Angles(math.rad(0),math.rad(0 + 1.2),math.rad(0))
 end
 swait()
 end
 appi = false
-ws = 0
+ws = 15
 for i = 1, 15 do
 RIGHTLEGLERP.C0 = RIGHTLEGLERP.C0:lerp(CFrame.new(-0.3, 2, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(-10)), 0.3)
 LEFTLEGLERP.C0 = LEFTLEGLERP.C0:lerp(CFrame.new(0.3, 2.0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(10)), 0.3)
@@ -703,7 +896,7 @@ if damagedebounce == true then return end
 damagedebounce = true
 Slachtoffer = hit.Parent:findFirstChildOfClass("Humanoid")
 tor = hit.Parent:FindFirstChild("Torso") or hit.Parent:FindFirstChild("UpperTorso")
-DamageFling(hit.Parent)
+Slachtoffer:TakeDamage(0)
 SOUND(tor,694703797,6,false,1)
 wait(.1)
 damagedebounce = false
@@ -726,7 +919,7 @@ debounce = false
 damagedebounce = false
 clickdebounce = false
 appi = false
-ws = 10
+ws = 15
 end
 end)
 
@@ -740,10 +933,9 @@ clickdebounce = false
 debounce = true
 attacking = true
 appi = true
-ws = 0
+ws = 15
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.y > 1 and attacking == true then
 position = "Jump2"
@@ -758,7 +950,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -824,7 +1015,7 @@ RIGHTARMLERP.C1 = RIGHTARMLERP.C1:lerp(CFrame.new(0,1.5,-.1),.5)
 RIGHTARMLERP.C0 = RIGHTARMLERP.C0:lerp(CFrame.new(-1.5,0,0) * CFrame.Angles(math.rad(180),math.rad(10),math.rad(10)),.3)
 swait()
 end
-ws = 10
+ws = 15
 g1 = Instance.new("BodyGyro", Root)
 g1.D = 175
 g1.P = 20000
@@ -839,14 +1030,13 @@ clickdebounce = true
 end)
 end)()
 while not clickdebounce do
-if IsDead then break end
 g1.CFrame = g1.CFrame:lerp(CFrame.new(Root.Position,mouse.Hit.p),.2)
 bigcard.CFrame = Root.CFrame * CFrame.new(0,18,0)
 RIGHTARMLERP.C0 = RIGHTARMLERP.C0:lerp(CFrame.new(-1.5,0,0) * CFrame.Angles(math.rad(180),math.rad(10 + 2 *math.sin(sine/12)),math.rad(10 - 2*math.sin(sine/12))),.3)
 swait()
 end
 g1:Remove()
-ws = 0
+ws = 15
 for i = 1, 13 do
 bigcard.CFrame = bigcard.CFrame:lerp(Root.CFrame * CFrame.new(0,18,3) * CFrame.Angles(math.rad(10),0,0),.3)
 RIGHTARMLERP.C0 = RIGHTARMLERP.C0:lerp(CFrame.new(-1.5,0,0.2) * CFrame.Angles(math.rad(160),math.rad(10),math.rad(10)),.3)
@@ -904,7 +1094,7 @@ shockwavemesh4.MeshId = "rbxassetid://20329976"
 removeuseless:AddItem(shockwave4,4)
 Hit = damagealll(20,locationpart.Position)
 for _,v in pairs(Hit) do			
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -946,7 +1136,7 @@ debounce = false
 appi = false
 clickdisallowance = false
 clickdebounce = false
-ws = 10
+ws = 15
 bigcard:Remove()
 clean()
 end
@@ -961,11 +1151,10 @@ if debounce then return end
 debounce = true
 attacking = true
 appi = true
-ws = 0
+ws = 15
 appi = true
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.y > 1 and attacking == true then
 position = "Jump2"
@@ -980,7 +1169,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -1066,7 +1254,6 @@ ace2.Face = "Back"
 spinning = true
 coroutine.wrap(function()
 while spinning do
-if IsDead then break end
 bigzcard.CFrame = bigzcard.CFrame * CFrame.Angles(0,math.rad(0+5),0)
 swait()
 end
@@ -1100,7 +1287,6 @@ bigzcard2.CanCollide = false
 bigzcard2.Anchored = true
 coroutine.wrap(function()
 while spinning do
-if IsDead then break end
 bigzcard2.CFrame = bigzcard2.CFrame * CFrame.Angles(0,math.rad(0+5),0)
 swait()
 end
@@ -1152,13 +1338,12 @@ end
 end)()
 coroutine.wrap(function()
 while blackholeactive do
-if IsDead then break end
 local Hit = damagealll(45,bigzcard2.Position)		
 for _,v in pairs(Hit) do
 coroutine.wrap(function()
 wait(.15)
 if blackholeactive == false then return end
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 end)()		
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
 torso.CFrame = torso.CFrame:lerp(CFrame.new(bigzcard2.Position),.1)
@@ -1204,7 +1389,7 @@ blackholeactive = false
 bigzcard2:Remove()
 Hit = damagealll(60,soundboks.Position)
 for _,v in pairs(Hit) do			
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -1279,7 +1464,7 @@ keyYtransparency={}
 blackholev = false
 appi = false
 g1:Remove()
-ws = 10
+ws = 15
 attacking = false
 debounce = false
 end
@@ -1294,7 +1479,6 @@ tauntdebounce = true
 laughing = true
 coroutine.wrap(function()
 while laughing do
-if IsDead then break end
 local b1 = Instance.new("BillboardGui",Head)
 b1.Size = UDim2.new(0,4,0,1.6)
 b1.StudsOffset = Vector3.new(0,0,0)
@@ -1318,7 +1502,6 @@ coroutine.wrap(function()
 if zxc then return end
 zxc = true
 while true do
-if IsDead then break end
 swait()
 for i,v in pairs(Head:GetChildren()) do
 if v.Name == "laff" then
@@ -1350,6 +1533,7 @@ else
 if mouse.Target ~= nil then
 if debounce then return end
 attacking = true
+ghost()
 tps = Instance.new("Sound", Torso)
 tps.Volume = 5
 tps.SoundId = "rbxassetid://1894958339"
@@ -1379,10 +1563,9 @@ if debounce then return end
 debounce = true
 attacking = true
 appi = true
-ws = 0
+ws = 15
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.y > 1 and attacking == true then
 position = "Jump2"
@@ -1397,7 +1580,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -1532,7 +1714,7 @@ brick.CFrame = brick.CFrame * CFrame.Angles(0,math.rad(n),0)
 brick.Size = brick.Size - Vector3.new(1.5,.025,2.5)
 swait()
 end
-ws = 10
+ws = 15
 brick:Remove()
 enemyhum.Parent:Remove()
 attacking = false
@@ -1554,7 +1736,7 @@ appi = false
 attacking = true
 blocking = false
 throwing = true
-ws = 0
+ws = 15
 n = 0
 blockcard.CanCollide = false
 for i = 1, 35 do
@@ -1619,7 +1801,7 @@ LEFTARMLERP.C0 = LEFTARMLERP.C0:lerp(CFrame.new(1, 1.35, 0.4) * CFrame.Angles(ma
 fushfush.Volume = fushfush.Volume - .2
 Hit = damagealll(20,blockcard.Position)
 for _,v in pairs(Hit) do			
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -1684,12 +1866,12 @@ clickallowance = false
 appi = false
 blockcard:Remove()
 g1:Remove()
-ws = 10
+ws = 15
 else
 if debounce then return end
 if throwing then return end
 debounce = true
-ws = 10
+ws = 15
 attacking = true
 blocking = true
 boosh = Instance.new("Sound",nil)
@@ -1698,7 +1880,6 @@ boosh.Volume = 6
 appi = true
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 if Root.Velocity.y > 1 and attacking == true then
 position = "Jump2"
@@ -1713,7 +1894,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 wait()
 settime = 0.05
 sine = sine + change
@@ -1786,7 +1966,6 @@ g1.P = 20000
 g1.MaxTorque = Vector3.new(0,9000,0)
 coroutine.wrap(function()
 while blocking do
-if IsDead then break end
 if not blockedoff then
 ROOTLERP.C0 = ROOTLERP.C0:lerp(CFrame.new(0,-.2, 0) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),.3)
 blockcard.CFrame = Root.CFrame * CFrame.new(0,3,-5)
@@ -1803,7 +1982,7 @@ if throwing then return end
 if not clickallowance then return end
 clickallowance = false
 blockedoff = true
-ws = 0
+ws = 15
 for i = 1, 15 do
 ROOTLERP.C0 = ROOTLERP.C0:lerp(CFrame.new(0, -.2, 0) * CFrame.Angles(math.rad(0), math.rad(25), math.rad(0)), 0.3)
 LEFTARMLERP.C0 = LEFTARMLERP.C0:lerp(CFrame.new(1, 1.35, 0.4) * CFrame.Angles(math.rad(-50 - 2 * math.sin(sine/12)), math.rad(12), math.rad(9)), 0.3)
@@ -1830,7 +2009,7 @@ tors = hit.Parent:FindFirstChild("Torso")
 end
 vel.velocity = CFrame.new(Root.Position,tors.Position).lookVector*120
 removeuseless:AddItem(vel,.1)
-DamageFling(v.Parent)
+Slachtoffer:TakeDamage(0)
 end
 end
 end)
@@ -1863,6 +2042,8 @@ if notallowedtransform then return end
 debounce = true
 if levitate then
 levitate = false
+mjester.VertexColor = Vector3.new(1, 1, 1)
+glow.Transparency = 1
 blastwave = Instance.new("Part",Torso)
 blastwave.CFrame = Torso.CFrame
 blastwave.Anchored = true
@@ -1899,7 +2080,52 @@ wait()
 end
 end)()
 doomtheme.SoundId = "rbxassetid://1843358057"
+jesterWeld.C0 = CFrame.new(0,0,0) * CFrame.Angles(0,0,0)
+wait(0.000001)
+jesterWeld.C0 = jester.CFrame:inverse() * Head.CFrame * CFrame.new(0,-.3,0) * CFrame.Angles(math.rad(0),math.rad(90),0)
+mjester.Scale = Vector3.new(1.1, 1.1, 1.1)
+mjester.MeshId,mjester.TextureId = 'rbxassetid://1241662062','rbxassetid://1241662395'
 
+mMask.Scale = Vector3.new(0.13, 0.13, 0.1)
+mMask.MeshId,mMask.TextureId = 'http://www.roblox.com/asset/?id=5158270','http://www.roblox.com/asset/?id=9543585'
+maskweld.C0 = CFrame.new(0,0,0)*CFrame.Angles(0,0,0)
+wait(0.000001)
+maskweld.C0 = CFrame.new(0,-.555,0) * CFrame.Angles(math.rad(90),0,0)
+
+eyo1 = Instance.new("Part",Head)
+eyo1.BrickColor = BrickColor.new("White")
+eyo1.Material = "Neon"
+eyo1.Shape = "Ball"
+eyo1.Name = "eyo1"
+eyo1.CanCollide = false
+eyo1.Size = Vector3.new(0.33, 0.33, 0.33)
+eyo1weld = weldBetween(eyo1,Head)
+eyo1weld.C0 = CFrame.new(.215,-.05,.52)
+
+light = Instance.new("PointLight", eyo1)
+light.Color = Color3.new(1,1,1)
+light.Range = 3
+light.Brightness = 4
+light.Enabled = true
+
+eyo2 = Instance.new("Part",Head)
+eyo2.BrickColor = BrickColor.new("White")
+eyo2.Material = "Neon"
+eyo2.Shape = "Ball"
+eyo2.Name = "eyo2"
+eyo2.CanCollide = false
+eyo2.Size = Vector3.new(0.33, 0.33, 0.33)
+eyo2weld = weldBetween(eyo2,Head)
+eyo2weld.C0 = CFrame.new(-.215,-.05,.52)
+
+light2 = Instance.new("PointLight", eyo2)
+light2.Color = Color3.new(1,1,1)
+light2.Range = 3
+light2.Brightness = 4
+light2.Enabled = true
+
+Character.Shirt.ShirtTemplate = "rbxassetid://676428254"
+Character.Pants.PantsTemplate = "rbxassetid://676428351"
 hum.HipHeight = 0
 ws = 10
 debounce = false
@@ -1913,6 +2139,19 @@ ws = 50
 notallowedtransform = true
 levitate = true
 ws = 50
+glow.Transparency = 0
+eyo1:Remove()
+eyo2:Remove()
+coroutine.wrap(function()
+while levitate do
+for i,v in pairs(Head:GetChildren()) do
+if v.Name == "eyo1" or v.Name == "eyo2" then
+v:Remove()
+end
+end
+wait()
+end
+end)()
 mnb = 0
 levitatewave = Instance.new("Part", Torso)
 levitatewave.Size = Vector3.new(1,1,1)
@@ -1951,7 +2190,6 @@ blastwave:Remove()
 end)()
 coroutine.wrap(function()
 while levitate do
-if IsDead then break end
 mnb = mnb + 15
 levitatewave.CFrame = CFrame.new(Root.Position) * CFrame.new(0,-6 + .5 * math.sin(sine/9),0) * CFrame.Angles(0,math.rad(mnb),0)
 levitatewave2.CFrame = CFrame.new(Root.Position) * CFrame.new(0,-6 + .5 * math.sin(sine/9),0) * CFrame.Angles(0,math.rad(mnb),0)
@@ -1983,14 +2221,40 @@ end
 swait()
 end
 end)()
+framee = Instance.new("Frame")
+framee.Parent = screenGui
+framee.Position = UDim2.new(0, 8, 0, -500)
+framee.Size = UDim2.new(100000000,10000000,10000000,10000000)
+framee.BackgroundColor3 = BrickColor.new("White").Color
+framee.BackgroundTransparency = 0
+coroutine.wrap(function()
+wait(.2)
+for i = 1, 40 do
+hum.CameraOffset = Vector3.new(math.random(-1,1),math.random(-1,1),math.random(-0,0))
+framee.BackgroundTransparency = framee.BackgroundTransparency + 0.025
+swait()
+end
+hum.CameraOffset = Vector3.new(0,0,0)
+framee:Remove()
+end)()
 doomtheme.SoundId = "rbxassetid://1382488262"
 doomtheme:Play()
 doomtheme.Volume = 2
-doomtheme.TimePosition = 0
-
+doomtheme.TimePosition = 20.7
+jesterWeld.C0 = jesterWeld.C0 * CFrame.new(.3,-.3,0) * CFrame.Angles(math.rad(0),math.rad(-90),0)
+mjester.MeshId = "rbxassetid://193760002"
+mjester.TextureId = "rbxassetid://379225327"
+mjester.VertexColor = Vector3.new(1, 0, 0)
+Character.Shirt.ShirtTemplate = "rbxassetid://238537827"
+Character.Pants.PantsTemplate = "rbxassetid://486031443"
+maskweld.C0 = maskweld.C0 * CFrame.new(0,.55,-.5) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0))
+mMask.MeshId = "rbxassetid://13520257"
+mMask.Scale = Vector3.new(1.1, 1, 1)
+mMask.TextureId = "rbxassetid://13520260"
+eyo1:Remove()
+eyo2:Remove()
 coroutine.wrap(function()
 while levitate do
-if IsDead then break end
 hum.HipHeight = 3 - .5 * math.sin(sine/9)
 swait()
 end
@@ -2014,7 +2278,6 @@ end)
 
 checks1 = coroutine.wrap(function() -------Checks
 while true do
-if IsDead then break end
 if Root.Velocity.y > 1 and levitate == false then
 position = "Jump"
 elseif Root.Velocity.y < -1 and levitate == false then
@@ -2048,7 +2311,6 @@ end
 OrgnC0 = Neck.C0
 local movelimbs = coroutine.wrap(function()
 while RunSrv.RenderStepped:wait() do
-if IsDead then break end
 TrsoLV = Torso.CFrame.lookVector
 Dist = nil
 Diff = nil
@@ -2067,15 +2329,81 @@ end
 end
 end)
 movelimbs()
-
+immortal = {}
+for i,v in pairs(Character:GetDescendants()) do
+	if v:IsA("BasePart") and v.Name ~= "lmagic" and v.Name ~= "rmagic" then
+		if v ~= Root and v ~= Torso and v ~= Head and v ~= RightArm and v ~= LeftArm and v ~= RightLeg and v.Name ~= "lmagic" and v.Name ~= "rmagic" and v ~= LeftLeg then
+			v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+		end
+		table.insert(immortal,{v,v.Parent,v.Material,v.Color,v.Transparency})
+	elseif v:IsA("JointInstance") then
+		table.insert(immortal,{v,v.Parent,nil,nil,nil})
+	end
+end
+for e = 1, #immortal do
+	if immortal[e] ~= nil then
+		local STUFF = immortal[e]
+		local PART = STUFF[1]
+		local PARENT = STUFF[2]
+		local MATERIAL = STUFF[3]
+		local COLOR = STUFF[4]
+		local TRANSPARENCY = STUFF[5]
+if levitate then
+		if PART.ClassName == "Part" and PART ~= Root and PART.Name ~= eyo1 and PART.Name ~= eyo2 and PART.Name ~= "lmagic" and PART.Name ~= "rmagic" then
+			PART.Material = MATERIAL
+			PART.Color = COLOR
+			PART.Transparency = TRANSPARENCY
+		end
+		PART.AncestryChanged:connect(function()
+			PART.Parent = PARENT
+		end)
+else
+		if PART.ClassName == "Part" and PART ~= Root and PART.Name ~= "lmagic" and PART.Name ~= "rmagic" then
+			PART.Material = MATERIAL
+			PART.Color = COLOR
+			PART.Transparency = TRANSPARENCY
+		end
+		PART.AncestryChanged:connect(function()
+			PART.Parent = PARENT
+		end)
+end
+	end
+end
+function immortality()
+	for e = 1, #immortal do
+		if immortal[e] ~= nil then
+			local STUFF = immortal[e]
+			local PART = STUFF[1]
+			local PARENT = STUFF[2]
+			local MATERIAL = STUFF[3]
+			local COLOR = STUFF[4]
+			local TRANSPARENCY = STUFF[5]
+			if PART.ClassName == "Part" and PART == Root then
+				PART.Material = MATERIAL
+				PART.Color = COLOR
+				PART.Transparency = TRANSPARENCY
+			end
+			if PART.Parent ~= PARENT then
+				hum:Remove()
+				PART.Parent = PARENT
+				hum = Instance.new("Humanoid",Character)
+if levitate then
+eyo1:Remove()
+eyo2:Remove()
+end
+                                hum.Name = "noneofurbusiness"
+			end
+		end
+	end
+end
 coroutine.wrap(function()
 while true do
-if IsDead then break end
 if hum.Health < .1 then
 deadsound = Instance.new("Sound", Torso)
 deadsound.Volume = 6
 deadsound.SoundId = "rbxassetid://1411352723"
 deadsound:Play()
+immortality()
 end
 wait()
 end
@@ -2138,7 +2466,6 @@ coroutine.wrap(function()
 if firsttime2 then return end
 firsttime2 = true
 while true do
-if IsDead then break end
 for i,v in pairs(LeftArm:GetChildren()) do
 if v.Name == "explo" then
 v.Size = v.Size + Vector3.new(2.5,2.5,2.5)
@@ -2158,7 +2485,7 @@ end
 swait()
 end
 end)()
-DamageFling(hit.Parent)
+Slachtoffer:TakeDamage(0)
 wait(.1)
 damagedebounce = false
 end
@@ -2167,7 +2494,6 @@ coroutine.wrap(function()
 if firsttime then return end
 firsttime = true
 while wait() do
-if IsDead then break end
 for i,v in pairs(Torso:GetChildren()) do
 if v.Name == "swoosh" then
 magiccc = Instance.new("Part",RightArm)
@@ -2207,11 +2533,10 @@ if not levitate then return end
 if debounce then return end
 debounce = true
 attacking = true
-ws = 0
+ws = 15
 appi = true
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 if Root.Velocity.Magnitude < 2 and attacking == true then
 position = "Idle3"
@@ -2220,7 +2545,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 settime = 0.05
 sine = sine + change
@@ -2292,7 +2616,6 @@ end)()
 charging = true
 coroutine.wrap(function()
 while charging do
-if IsDead then break end
 bigrmagic = Instance.new("Part",RightArm)
 bigrmagic.Material = "Neon"
 bigrmagic.CanCollide = false
@@ -2340,7 +2663,6 @@ coroutine.wrap(function()
 if firsttime5 then return end
 firsttime5 = true
 while true do
-if IsDead then break end
 swait()
 for i,v in pairs(Torso:GetChildren()) do
 if v.Name == "ballzor" then
@@ -2434,10 +2756,9 @@ staybooming = true
 d = 5
 coroutine.wrap(function()
 while staybooming do
-if IsDead then break end
 Hit = damagealll(d,deadlywave.Position)
 for _,v in pairs(Hit) do			
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -2525,7 +2846,7 @@ charging = true
 attacking = true
 downpress = false
 x = 1
-ws = 0
+ws = 15
 g1 = Instance.new("BodyGyro", Root)
 g1.D = 175
 g1.P = 20000
@@ -2541,7 +2862,6 @@ end)()
 appi = true
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 if Root.Velocity.Magnitude < 2 and attacking == true then
 position = "Idle3"
@@ -2550,7 +2870,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 settime = 0.05
 sine = sine + change
@@ -2595,7 +2914,6 @@ swait()
 end
 downpress = true
 while charging and x < 5  do
-if IsDead then break end
 g1.CFrame = g1.CFrame:lerp(CFrame.new(Root.Position,mouse.Hit.p),.4)
 ROOTLERP.C0 = ROOTLERP.C0:lerp(CFrame.new(0,0,0) * CFrame.Angles(math.rad(-10),math.rad(-15),math.rad(0)),.5)
 RIGHTARMLERP.C1 = CFrame.new(0,0,0) * CFrame.Angles(0,0,0)
@@ -2655,9 +2973,9 @@ nb = nb - x
 Hit = damagealll(n,bigswoosh.Position)
 for _,v in pairs(Hit) do
 if x > 4.5 then		
-v:FindFirstChildOfClass("Humanoid").Parent:BreakJoints()
+print("ok")
 else	
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 end
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
@@ -2735,7 +3053,6 @@ charging = true
 appi = true
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 if Root.Velocity.Magnitude < 2 and attacking == true then
 position = "Idle3"
@@ -2744,7 +3061,6 @@ end
 end)()
 coroutine.wrap(function()
 while appi do
-if IsDead then break end
 swait()
 settime = 0.05
 sine = sine + change
@@ -2759,7 +3075,7 @@ LEFTLEGLERP.C0 = LEFTLEGLERP.C0:lerp(CFrame.new(0.5, 2.0,0) * CFrame.Angles(math
 end
 end
 end)()
-ws = 0
+ws = 15
 g1 = Instance.new("BodyGyro", Root)
 g1.D = 175
 g1.P = 20000
@@ -2787,7 +3103,6 @@ removeuseless:AddItem(blass,2)
 swait()
 end
 while r < 16 and charging == true do
-if IsDead then break end
 r = r + .1
 g1.CFrame = g1.CFrame:lerp(CFrame.new(Root.Position,mouse.Hit.p),.3)
 blass = Instance.new("Part",RightArm)
@@ -2859,7 +3174,7 @@ end
 end)
 Hit = damagealll(r+3,boom.Position)
 for _,v in pairs(Hit) do	
-DamageFling(v)
+v:FindFirstChildOfClass("Humanoid"):TakeDamage(0)
 vel = Instance.new("BodyVelocity",v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")) 
 vel.maxForce = Vector3.new(9999999999999,9999999999999,9999999999999)
 torso = v:FindFirstChild("Torso") or v:FindFirstChild("UpperTorso")
@@ -2906,7 +3221,6 @@ end)
 
 doit = coroutine.wrap(function()
 while true do
-if IsDead then break end
 for _,v in pairs(Repeater) do
 v.Scale =  v.Scale + Vector3.new(1, 1, 1)
 end
@@ -3032,7 +3346,6 @@ end)
 
 local anims = coroutine.wrap(function()
 while true do
-if IsDead then break end
 settime = 0.05
 sine = sine + change
 if position == "Jump" and attacking == false then
@@ -3140,4 +3453,3 @@ end
 end)
 anims()
 warn("Prepare for a magic trick full of pain and regret. Made by Supr14")
-game.Workspace.non.Humanoid.WalkSpeed = 50
