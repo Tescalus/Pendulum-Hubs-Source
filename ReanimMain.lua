@@ -1,8 +1,12 @@
 if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 _G.TorsoFling = true
+_G.ExtremeNetless = true
+_G.Velocity = -50
 else
 _G.TorsoFling = false
 _G.Fling = true
+_G.Velocity = -17
+_G.ExtremeNetless = false
 end
 _G.ShowReal = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
