@@ -449,6 +449,10 @@ ScriptsTab:NewButton("Sutart", "I love big bacon boy bacon penis in my mouth", f
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Sutart.lua"))()
 end)
 
+ScriptsTab:NewButton("Xester V2 - In Pre-Alpha", "Currently usable, but still a WIP.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Xester%20V2%20final.lua"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
