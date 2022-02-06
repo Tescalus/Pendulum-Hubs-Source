@@ -1,4 +1,3 @@
-_G.Velocity = 25
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 
 --Converted with ttyyuu12345's model to script plugin v4
