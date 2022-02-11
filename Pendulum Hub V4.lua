@@ -153,10 +153,6 @@ ScriptsTab:NewButton("Aureate", "This script can kill your frames in big games."
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Aureate.lua"))()
 end)
 
-ScriptsTab:NewButton("Neptunian Gun & Sword", "Join discord for hats.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Script_4.lua"))()
-end)
-
 ScriptsTab:NewButton("Doomspire Brickbattler", "For people who say that old roblox is better.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/DoomspireBrickbattler.lua"))()
 end)
