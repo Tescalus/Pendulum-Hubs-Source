@@ -453,6 +453,10 @@ ScriptsTab:NewButton("Dual Ultima", "Rainbow Tylenol is on keybind L :)", functi
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/FE%20dual%20ultima.lua"))()
 end)
 
+ScriptsTab:NewButton("Billie Elish", "Rainbow Tylenol is on keybind L :)", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Billie.lua"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
