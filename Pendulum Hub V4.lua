@@ -453,8 +453,16 @@ ScriptsTab:NewButton("Dual Ultima", "Rainbow Tylenol is on keybind L :)", functi
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/FE%20dual%20ultima.lua"))()
 end)
 
-ScriptsTab:NewButton("Billie Elish", "Rainbow Tylenol is on keybind L :)", function()
+ScriptsTab:NewButton("Billie Elish", "Yes its that sexy bitch.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Billie.lua"))()
+end)
+
+ScriptsTab:NewButton("Sans V2", "Don't read the undertail R34 comic.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Last%20Breath%20Sans.lua"))()
+end)
+
+ScriptsTab:NewButton("Wing Gun Destroyer", "The Destroyer (Aligners will align wings)", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Wing%20Gun%20Destroyer.lua"))()
 end)
 
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
