@@ -1,3 +1,5 @@
+-- THIS WAS NOT MADE BY ME (The Pendulum Hub owner.) I couldn't find the original owner so just look up animation id player.
+print("THIS WAS NOT MADE BY ME (The Pendulum Hub owner.) I couldn't find the original owner so just look up animation id player.")
 local animation = Instance.new("ScreenGui")
 local Shadow = Instance.new("Frame")
 local Shadow_2 = Instance.new("Folder")
