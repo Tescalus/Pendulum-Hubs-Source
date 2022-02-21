@@ -11,7 +11,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local ScriptsTab = Pendulum:NewTab("Scripts",false)
 local CreditsTab = Pendulum:NewTab("Credits",true)
-local AnimationIdPlayer = Pendulum:NewTab("Animation Player",false)
+
 
 
 local Players = game:GetService("Players")
@@ -20,9 +20,7 @@ local Players = game:GetService("Players")
 
 -- Animation ID Player
 
-AnimationIdPlayer:NewButton("Animation ID Player", "If you have trouble using it join the discord.", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Animation%20ID%20Player.lua"))()
-end)
+
 
 -- Script Buttons
 
