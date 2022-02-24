@@ -11,7 +11,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local ScriptsTab = Pendulum:NewTab("Scripts",false)
 local CreditsTab = Pendulum:NewTab("Credits",true)
-
+local GamesTab = Pendulum:NewTab("Games", true)
 
 
 local Players = game:GetService("Players")
@@ -471,6 +471,141 @@ ScriptsTab:NewButton("Grab Knife V4", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/grab%20knife%20v4%20fe.lua"))()
 end)
 
+
+-- GAMES SECTION
+GamesTab:NewSearchBar()
+
+GamesTab:NewLabel("Some games will be more active at different times.")
+GamesTab:NewLabel("You're not limited to these games.")
+GamesTab:NewLabel("These are just some confirmed games to work in.")
+GamesTab:NewLabel("You can always find your own.")
+GamesTab:NewLabel("Look up the game if teleporting directly doesn't work.")
+GamesTab:NewLabel('Teleport failed due to an unexpected error cannot be fixed!')
+
+
+GamesTab:NewButton("Prison Life", "OG game", function()
+	game:GetService('TeleportService'):Teleport(155615604)
+end)
+
+GamesTab:NewButton("Dream SMP RP", "Cringe dream stans :yikes:", function()
+	game:GetService('TeleportService'):Teleport(7896215429)
+end)
+
+GamesTab:NewButton("Anime RP", "Do you even read these?", function()
+	game:GetService('TeleportService'):Teleport(6706730970)
+end)
+
+GamesTab:NewButton("Dodgeball", "Let's see if they can dodge fire.", function()
+	game:GetService('TeleportService'):Teleport(222415472)
+end)
+
+GamesTab:NewButton("Doomspire Brickbattle", "Use doomspire brickbattler in the game for easter egg", function()
+	game:GetService('TeleportService'):Teleport(222415472)
+end)
+
+GamesTab:NewButton("Baldi's SUPER RP!", "You know its good when they add super to the name for sure!", function()
+	game:GetService('TeleportService'):Teleport(1881966366)
+end)
+
+GamesTab:NewButton("Crossroads", "GUYS I PLAY OLD ROBLOX IM SO COOOOOOOOOOL!", function()
+	game:GetService('TeleportService'):Teleport(966011451)
+end)
+
+GamesTab:NewButton("Sword fight on the heights", "GUYS I PLAY OLD ROBLOX IM SO COOOOOOOOOOL! x2!", function()
+	game:GetService('TeleportService'):Teleport(487316)
+end)
+
+GamesTab:NewButton("Fashion Famous", "OMGG YASSS SISTER LOOK AT MY BRAND NEW TOES!!", function()
+	game:GetService('TeleportService'):Teleport(559159830)
+end)
+
+GamesTab:NewButton("UNDERTALE RP", "You execute Pendulum Hub. You are filled with DETERMINATION.", function()
+	game:GetService('TeleportService'):Teleport(474068250)
+end)
+
+GamesTab:NewButton("Blox Paradise", "You could get some girls using Pendulum Hub ;-)", function()
+	game:GetService('TeleportService'):Teleport(656314299)
+end)
+
+GamesTab:NewButton("Clone Tycoon 2", "Graphics are good here.", function()
+	game:GetService('TeleportService'):Teleport(413424176)
+end)
+
+GamesTab:NewButton("White Room", "Why can't there be a black room racist developer reporting!!", function()
+	game:GetService('TeleportService'):Teleport(413424176)
+end)
+
+GamesTab:NewButton("AGirlJennifier's Place", "If you see this message dm me it please I beg of you.", function()
+	game:GetService('TeleportService'):Teleport(413424176)
+end)
+
+GamesTab:NewButton("Cart Ride Into Rdite!", "Cart ride games are uh, actually, no comment.", function()
+	game:GetService('TeleportService'):Teleport(4913581664)
+end)
+
+GamesTab:NewButton("Ro-Chat: Spatial Voice - No collisions", "You can talk to people... and use Pendulum Hub...", function()
+	game:GetService('TeleportService'):Teleport(6154671407)
+end)
+
+GamesTab:NewButton("Life In Paradise", "Flamingo fans gonna love using Pendulum Hub here.", function()
+	game:GetService('TeleportService'):Teleport(1662219031)
+end)
+
+GamesTab:NewButton("Natural Disaster Survival", "Fall damage combined with flings is super op.", function()
+	game:GetService('TeleportService'):Teleport(189707)
+end)
+
+GamesTab:NewButton("Jedi Temple On Ilum - Legacy", "Star wars fanboys wanna fuck padmes pussy.", function()
+	game:GetService('TeleportService'):Teleport(189707)
+end)
+
+GamesTab:NewButton("Robloxian Life", "Tons of Online Daters here.", function()
+	game:GetService('TeleportService'):Teleport(531492495)
+end)
+
+GamesTab:NewButton("Raise a Family!", "uhhh", function()
+	game:GetService('TeleportService'):Teleport(1232683271)
+end)
+
+GamesTab:NewButton("Auto Rap Battles", "I used to sing. Short story I sucked.", function()
+	game:GetService('TeleportService'):Teleport(579955134)
+end)
+
+GamesTab:NewButton("Bloxy Bingo", "I used to be forced against my will to go to bingo.", function()
+	game:GetService('TeleportService'):Teleport(5244411056)
+end)
+
+GamesTab:NewButton("Hotel Elephant", "Old game to.", function()
+	game:GetService('TeleportService'):Teleport(23578803)
+end)
+
+GamesTab:NewButton("Robloxity", "Old game to. x2", function()
+	game:GetService('TeleportService'):Teleport(12468179)
+end)
+
+GamesTab:NewButton("NPCs are becoming smart hangout.", "You can find wanna-be followers here.", function()
+	game:GetService('TeleportService'):Teleport(7006181810)
+end)
+
+GamesTab:NewButton("Trench War", "Germans Vs The United Kingdom essentially. I love history.", function()
+	game:GetService('TeleportService'):Teleport(6654918151)
+end)
+
+GamesTab:NewButton("Lumber Tycoon", "Old game as well. Jesus how many old games are there??", function()
+	game:GetService('TeleportService'):Teleport(13822889)
+end)
+
+GamesTab:NewButton("The Underground War", "Fight people in there ditches being bitches.", function()
+	game:GetService('TeleportService'):Teleport(3829055572)
+end)
+
+GamesTab:NewButton("High School Dorm Life", "Fuck girls in their dorms now!!", function()
+	game:GetService('TeleportService'):Teleport(597114278)
+end)
+
+GamesTab:NewButton("Dollhouse RP", "Cringe 8 year olds who say they're 16 and act like idiots.", function()
+	game:GetService('TeleportService'):Teleport(417267366)
+end)
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
