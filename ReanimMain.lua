@@ -1,17 +1,23 @@
+
 if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
-_G.TorsoFling = true
-_G.ExtremeNetless = true
-_G.Velocity = -50
+getgenv().TorsoFling = true
+getgenv().ExtremeNetless = true
+getgenv().Velocity = -50
+getgenv().Fling = false
+getgenv().Netless2 = false
 else
-_G.TorsoFling = false
-_G.Fling = true
-_G.Velocity = -17
-_G.ExtremeNetless = false
+getgenv().TorsoFling = false
+getgenv().Fling = true
+getgenv().Velocity = -25.05
+getgenv().Netless2 = false
 end
-_G.ShowReal = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
+getgenv().ShowReal = true
+getgenv().AutoAnimate = true
+getgenv().DynamicVelocity = true
+getgenv().AntiSleep = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/newnetlessreanimate.lua"))()
 task.wait()
-local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
+local Fling = getgenv().RealRig:FindFirstChild("LowerTorso") or getgenv().RealRig.HumanoidRootPart
 Fling.Transparency = 1
 Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(999999999999999999999999999999999999,999999999999999999999999999999999999,999999999999999999999999999999999999)
 
@@ -34,6 +40,6 @@ game["Run Service"].Heartbeat:Connect(function(delta)
     if attackingwithhrp then
         Fling.CFrame = CFrame.new(mouse.hit.p)
     else
-        Fling.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame
+        Fling.CFrame = getgenv().RealRig.Torso.CFrame
     end
 end)
