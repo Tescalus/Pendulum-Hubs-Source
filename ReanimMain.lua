@@ -15,7 +15,7 @@ getgenv().ShowReal = true
 getgenv().AutoAnimate = true
 getgenv().DynamicVelocity = true
 getgenv().AntiSleep = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/newnetlessreanimate.lua"))()
+loadstring(game:HttpGet("https://github.com/Tescalus/Pendulum-Hubs-Source/blob/main/NetlessReanimV2(ThanksProductionTakeOne%20%233330%20for%20help).lua"))()
 task.wait()
 local Fling = getgenv().RealRig:FindFirstChild("LowerTorso") or getgenv().RealRig.HumanoidRootPart
 Fling.Transparency = 1
