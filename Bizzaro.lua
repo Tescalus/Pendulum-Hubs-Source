@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://github.com/Tescalus/Pendulum-Hubs-Source/blob/main/Reanimation.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
 Cam = workspace.CurrentCamera
