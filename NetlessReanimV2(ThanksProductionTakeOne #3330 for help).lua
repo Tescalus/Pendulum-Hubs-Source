@@ -12,7 +12,7 @@ if _G.GodMode == nil then _G.GodMode = true end
 if _G.R15toR6 == nil then _G.R15toR6 = true end
 if _G.AutoAnimate == nil then _G.AutoAnimate = true end
 if _G.Tools == nil then _G.Tools = false end
-if _G.Velocity == nil then _G.Velocity = -17 end
+if _G.Velocity == nil then _G.Velocity = -25.05 end
 if _G.Collisions == nil then _G.Collisions = true end
 if _G.Network == nil then _G.Network = true end
 if _G.CheckForDeath == nil then _G.CheckForDeath = true end
@@ -186,7 +186,7 @@ for i,v in pairs(originalrig:GetDescendants()) do
 	end))
 end
 
-wait(0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) -- adding a wait as extra safety
+wait(0.1) -- adding a wait as extra safety
 
 -- // Claim 2 Bring back
 if _G.Claim2 then
