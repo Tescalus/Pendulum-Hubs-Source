@@ -463,6 +463,10 @@ ScriptsTab:NewButton("Wing Gun Destroyer", "The Destroyer (Aligners will align w
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Wing%20Gun%20Destroyer.lua"))()
 end)
 
+ScriptsTab:NewButton("Hacker X", "Hackers have massive cocks. Skids have tiny cocks.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Hacker%20X.lua"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
