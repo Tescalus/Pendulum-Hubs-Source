@@ -467,6 +467,10 @@ ScriptsTab:NewButton("Hacker X", "Hackers have massive cocks. Skids have tiny co
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Hacker%20X.lua"))()
 end)
 
+ScriptsTab:NewButton("Carnage", "The ultimate mercenary. Seriously though do people read these? DM Tescalus if your reading this and he will give you 5 robux.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Carnage.lua"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Grab%20Knife%20V3%20FE%20test.lua"))()
 end)
