@@ -1,4 +1,4 @@
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
 Cam = workspace.CurrentCamera
@@ -2453,7 +2453,7 @@ sp1.CFrame = LeftArm.CFrame * CF(0,-1,0)
 sp2.CFrame = RightArm.CFrame * CF(0,-1,0)
 WACKYEFFECT2({Time = 90, EffectType = "Sphere", Size = VT(.2,.2,.2)*sp1.Size.Magnitude, Size2 = VT(10,10,10), Transparency = 0.6, Transparency2 = 1, CFrame = CF(sp1.Position) --[[* CF(2,-15.3,-3)]], MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(1,0,0), SoundID = 203691785, SoundPitch = 1, SoundVolume = 10, UseBoomerangMath = false, Boomerang = 0, SizeBoomerang = 35})
 WACKYEFFECT2({Time = 90, EffectType = "Sphere", Size = VT(.2,.2,.2)*sp2.Size.Magnitude, Size2 = VT(10,10,10), Transparency = 0.6, Transparency2 = 1, CFrame = CF(sp2.Position) --[[* CF(2,-15.3,-3)]], MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(1,0,0), SoundID = nil, SoundPitch = 1, SoundVolume = 8, UseBoomerangMath = false, Boomerang = 0, SizeBoomerang = 35})
-swait(.3)
+
 coroutine.resume(coroutine.create(function()
 repeat
 Swait()
