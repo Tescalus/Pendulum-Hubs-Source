@@ -471,6 +471,10 @@ ScriptsTab:NewButton("Carnage", "The ultimate mercenary. Seriously though do peo
 	loadstring(game:HttpGetAsync("https://bit.ly/3vOp6s9"))()
 end)
 
+ScriptsTab:NewButton("Minigun & Drone", "I wish one of these scripts used heavys minigun even though I can make it like that :(", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/34qersp"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://bit.ly/3MBauma"))()
 end)
