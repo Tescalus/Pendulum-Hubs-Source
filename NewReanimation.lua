@@ -1,6 +1,6 @@
 
 -- // Modules/Setup
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacker1337/legohacks/main/PhysicsServiceOnClient.lua"))()
+loadstring(game:HttpGet("https://bit.ly/3IVv9yR"))()
 
 if _G.Fling == nil then _G.Fling = false end
 if _G.TorsoFling == nil then _G.TorsoFling = false end
@@ -273,7 +273,7 @@ if _G.AutoAnimate then
 	if rigtype == Enum.HumanoidRigType.R15 and _G.R15toR6 then
 		cr(cc(function()
 			_G.ForHonor = Character.Animate
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/Animate"))()
+			loadstring(game:HttpGet("https://bit.ly/3pLR57U"))()
 		end))
 	else
 		Character.Animate.Disabled = true; wait() Character.Animate.Disabled = false
