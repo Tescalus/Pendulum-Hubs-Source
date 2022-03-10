@@ -1,3 +1,6 @@
+if game.Players.LocalPlayer.Name == "stalkerwwww" then
+    error("Emper Please man.")
+end
 if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 _G.TorsoFling = true
 _G.ExtremeNetless = true
