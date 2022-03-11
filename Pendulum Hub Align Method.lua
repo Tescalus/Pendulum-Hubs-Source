@@ -2,7 +2,7 @@
 -- If you're a aligner for Pendulum Hub I suggest you use the new align method.
 local plr = game.Players.LocalPlayer
 local chr = plr.Character
-local function Align_Hat(hat, part, a, b, c, d, e, f)
+getgenv() function Align_Hat(hat, part, a, b, c, d, e, f)
     local hat2 = chr[hat].Handle -- The hat you choose
     hat2:BreakJoints()
     local Weld = Instance.new("Weld", game.Players.LocalPlayer.Character)
