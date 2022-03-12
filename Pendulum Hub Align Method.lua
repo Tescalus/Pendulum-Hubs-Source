@@ -15,6 +15,6 @@ getgenv() function Align_Hat(hat, part, a, b, c, d, e, f)
     print("Ran with no errors")
 end
 getgenv() function Destroy_Mesh(hat)
-    local hat1 = game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle.SpecialMesh or game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle.Mesh
+    local hat1 = game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle:FindFirstChild("SpecialMesh") or game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle:FindFirstChild("Mesh")
     hat1:Destroy()
 end
