@@ -14,3 +14,7 @@ getgenv() function Align_Hat(hat, part, a, b, c, d, e, f)
     Weld.C0 = CFrame.new(a,b,c)*CFrame.Angles(math.rad(d),math.rad(e),f) -- Offset & Angles
     print("Ran with no errors")
 end
+getgenv() function Destroy_Mesh(hat)
+    local hat1 = game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle.SpecialMesh or game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle.Mesh
+    hat1:Destroy()
+end
