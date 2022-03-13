@@ -475,6 +475,10 @@ ScriptsTab:NewButton("Minigun & Drone", "I wish one of these scripts used heavys
 	loadstring(game:HttpGetAsync("https://bit.ly/34qersp"))()
 end)
 
+ScriptsTab:NewButton("Internal War", "Basically a stand but not a stand.", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/3MKGqo3"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://bit.ly/3MBauma"))()
 end)
