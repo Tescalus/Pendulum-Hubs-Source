@@ -5,7 +5,7 @@ _G.Velocity = -50
 else
 _G.TorsoFling = false
 _G.Fling = true
-_G.Velocity = -25.05
+_G.Velocity = -35.05
 _G.ExtremeNetless = false
 end
 _G.ShowReal = true
