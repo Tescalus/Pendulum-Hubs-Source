@@ -5,8 +5,8 @@ _G.Velocity = -50
 else
 _G.TorsoFling = false
 _G.Fling = true
-_G.Velocity = -30
-_G.ExtremeNetless = false
+_G.Velocity = -25.05
+_G.ExtremeNetless = true
 end
 _G.ShowReal = true
 loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
