@@ -7533,6 +7533,11 @@ if equipped == true then
   end
 end
 end)
+maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor.Attachment
+maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor.Attachment2
+
+rarmor.Attachment2.Position = Vector3.new(-2.5, 0.2, -0)
+rarmor.Attachment.Rotation = Vector3.new(-0, -0, -50)
 mouse.KeyDown:connect(function(k)
 if k == "f" and attack == false and equipped == false then
 	maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor.Attachment
