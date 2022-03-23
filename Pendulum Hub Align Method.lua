@@ -1,4 +1,3 @@
--- Good luck with trying to expose me when I have my own align method!
 -- If you're a aligner for Pendulum Hub I suggest you use the new align method.
 local plr = game.Players.LocalPlayer
 local chr = plr.Character
