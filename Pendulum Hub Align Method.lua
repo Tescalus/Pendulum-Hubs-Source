@@ -18,3 +18,10 @@ getgenv() function Destroy_Mesh(hat)
     local hat1 = game:GetService("Workspace").non[game.Players.LocalPlayer.Name][hat].Handle:FindFirstChildOfClass("SpecialMesh")
     hat1:Destroy()
 end
+getgenv() function Lerp_CFrame(part, cframe, duration)
+	for i=0, 1, 0.01*duration do
+		wait()
+		part.CFrame = part.CFrame:Lerp(cframe, i)
+
+	end
+end
