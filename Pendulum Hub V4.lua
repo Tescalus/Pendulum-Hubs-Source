@@ -479,6 +479,14 @@ ScriptsTab:NewButton("Internal War", "Basically a stand but not a stand.", funct
 	loadstring(game:HttpGetAsync("https://bit.ly/3MKGqo3"))()
 end)
 
+ScriptsTab:NewButton("Dear Sister Pistol", "A cool gun that does stuff", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/3IDglnH"))()
+end)
+
+ScriptsTab:NewButton("Amythest Ninja Blade", "A really powerful script with a FE golden trail!", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/3wAvlQN"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://bit.ly/3MBauma"))()
 end)
