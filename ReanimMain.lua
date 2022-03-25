@@ -1,14 +1,14 @@
 if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
-_G.TorsoFling = true
-_G.ExtremeNetless = true
-_G.Velocity = -50
+getgenv().TorsoFling = true
+getgenv().ExtremeNetless = true
+getgenv().Velocity = -50
 else
-_G.TorsoFling = false
-_G.Fling = true
-_G.Velocity = -30
-_G.ExtremeNetless = false
+getgenv().TorsoFling = false
+getgenv().Fling = true
+getgenv().Velocity = -25.05
+getgenv().ExtremeNetless = false
 end
-_G.ShowReal = true
+getgenv().ShowReal = true
 loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 task.wait()
 local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
