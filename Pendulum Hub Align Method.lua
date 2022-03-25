@@ -24,3 +24,10 @@ getgenv() function Lerp_CFrame(part, cframe, duration)
 
 	end
 end
+getgenv() function Make_Parts_Transparent(part)
+    for _,v in pairs(part:GetDescendants()) do
+        if v:IsA("BasePart") then
+            v.Transparency = 1
+        end
+    end
+end
