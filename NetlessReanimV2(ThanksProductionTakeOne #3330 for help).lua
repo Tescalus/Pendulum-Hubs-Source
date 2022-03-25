@@ -1,4 +1,5 @@
--- https://discord.gg/8EZcyvtDcq // ProductionTakeOne#3330 & nul#3174
+--  Productions server https://discord.gg/8EZcyvtDcq & https://discord.gg/wJV63vJqMy for Pendulum Hubs server // ProductionTakeOne#3330 general reanimation // Tescalus#0001 bug fixes and making it better.
+-- If you wanted to use this reanimate for your projects, please do not remove credits. Thank you :)
 local speedtesttick = tick()
 -- // Modules/Setup
 
