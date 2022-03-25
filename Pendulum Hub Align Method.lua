@@ -31,3 +31,4 @@ getgenv() function Make_Parts_Transparent(part)
         end
     end
 end
+warn("This script uses the Pendulum Hub Align Method and Tools. Join the server for high quality scripts https://discord.gg/rgcA9v9PMz")
