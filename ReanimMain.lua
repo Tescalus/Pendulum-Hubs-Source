@@ -9,6 +9,7 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	getgenv().Velocity = -30.05
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
+	getgenv().Optimizer = false
 	end
 	getgenv().ShowReal = true
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
@@ -51,6 +52,7 @@ elseif Reanimation == "Simple" then
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().GodMode = false
+	getgenv().Optimizer = false
 	end
 	getgenv().ShowReal = true
 	getgenv().Optimizer = false
