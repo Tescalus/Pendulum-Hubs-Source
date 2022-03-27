@@ -6,6 +6,7 @@ else
 getgenv().TorsoFling = false
 getgenv().Fling = true
 getgenv().Velocity = -35
+getgenv().AntiSleep = true
 getgenv().ExtremeNetless = false
 end
 getgenv().ShowReal = true
