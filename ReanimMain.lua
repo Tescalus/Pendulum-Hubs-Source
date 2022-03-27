@@ -6,7 +6,7 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "HumanoidRootPart"
-	getgenv().Velocity = -30.05
+	getgenv().Velocity = -30
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().Optimizer = false
@@ -48,7 +48,7 @@ elseif Reanimation == "Simple" then
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "Right Arm"
-	getgenv().Velocity = -25.05
+	getgenv().Velocity = -30
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().GodMode = false
