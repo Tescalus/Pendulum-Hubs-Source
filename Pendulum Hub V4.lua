@@ -14,7 +14,7 @@ local ScriptsTab = Pendulum:NewTab("Scripts",false)
 SettingsTab:NewButton("Toggle Perma Death (Default is pd on!)", "Toggles perma death. Off requires man hair!", function()
 	if getgenv().Reanimation == "PermaDeath" then
 		getgenv().Reanimation = "Simple"
-	elseif getgenv().Reanimation == "Simple"
+	elseif getgenv().Reanimation == "Simple" then
 		getgenv().Reanimation = "PermaDeath"	
 	end
 end)
