@@ -71,7 +71,7 @@ elseif Reanimation == "Simple" then
     Weld.C0 = CFrame.new(0,0,0)*CFrame.Angles(math.rad(90),math.rad(0),0) -- Offset & Angles
     print("Ran with no errors")
 	local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]["Right Arm"]
-	local hat1 = game:GetService("Workspace").ExProReanimate[game.Players.LocalPlayer.Name]["Hat1"].Handle.Mesh
+	local hat1 = game:GetService("Workspace").non[game.Players.LocalPlayer.Name]["Hat1"].Handle.Mesh
     hat1:Destroy()
 	Fling.Transparency = .5
 	Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(999999999999999999999999999999999999,999999999999999999999999999999999999,999999999999999999999999999999999999)
