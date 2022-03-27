@@ -5,7 +5,7 @@ getgenv().Velocity = -50
 else
 getgenv().TorsoFling = false
 getgenv().Fling = true
-getgenv().Velocity = -25.05
+getgenv().Velocity = -35
 getgenv().ExtremeNetless = false
 end
 getgenv().ShowReal = true
