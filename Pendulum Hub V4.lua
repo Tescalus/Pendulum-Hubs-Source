@@ -1,26 +1,26 @@
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
-
+getgenv().Reanimation = "PermaDeath"
 
 
 local Library = loadstring(game:HttpGet("https://bit.ly/3612rxR"))()
 
 local Pendulum = Library.CreateLib("Pendulum Hub")
 local UserInputService = game:GetService("UserInputService")
-
-local ScriptsTab = Pendulum:NewTab("Scripts",false)
+local SettingsTab = Pendulum:NewTab("Settings",true)
 local CreditsTab = Pendulum:NewTab("Credits",true)
-
+local ScriptsTab = Pendulum:NewTab("Scripts",false)
+SettingsTab:NewButton("Toggle Perma Death (Default is pd on!)", "Toggles perma death. Off requires man hair!", function()
+	if getgenv().Reanimation == "PermaDeath" then
+		getgenv().Reanimation = "Simple"
+	elseif getgenv().Reanimation == "Simple"
+		getgenv().Reanimation = "PermaDeath"	
+	end
+end)
 
 
 local Players = game:GetService("Players")
-
-
-
--- Animation ID Player
-
-
 
 -- Script Buttons
 
