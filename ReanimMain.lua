@@ -74,7 +74,7 @@ elseif Reanimation == "Simple" then
 	local hat1 = game:GetService("Workspace").ExProReanimate[game.Players.LocalPlayer.Name]["Hat1"].Handle.Mesh
     hat1:Destroy()
 	Fling.Transparency = .5
-	Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(9223372036854775807,9223372036854775807,9223372036854775807)
+	Fling.BodyAngularVelocity.AngularVelocity = Vector3.new(999999999999999999999999999999999999,999999999999999999999999999999999999,999999999999999999999999999999999999)
 	
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	--game["Run Service"].Heartbeat:Connect(function(delta)
