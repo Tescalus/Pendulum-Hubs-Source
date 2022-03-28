@@ -347,7 +347,7 @@ txtlb.Size = UDim2.new(1,0,0.25,0)
 txtlb.TextXAlignment = "Left"
 txtlb.Position = UDim2.new(0,0,0.75 + 1,0)
 local txtlb2 = Instance.new("TextLabel",scrg)
-txtlb2.Text = plr.Name.."The hot sexy Pendulum Hub user totally not an easter egg."
+txtlb2.Text = plr.Name..--        we dont need this                      "The hot sexy Pendulum Hub user totally not an easter egg."
 txtlb2.Font = "Antique"
 txtlb2.TextColor3 = Color3.new(0,0,0)
 txtlb2.TextStrokeTransparency = 0
@@ -9616,3 +9616,4 @@ local Player = game:GetService("Players").LocalPlayer
             h,t=Mouse.Hit,Mouse.Target
 		end
 	end
+   
