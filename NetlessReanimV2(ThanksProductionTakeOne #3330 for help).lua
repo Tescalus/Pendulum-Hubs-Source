@@ -24,10 +24,10 @@ if getgenv.Network == nil then getgenv.Network = true end
 if getgenv.Netless2 == nil then getgenv.Netless2 = false end
 if getgenv.Claim2 == nil then getgenv.Claim2 = false end
 if getgenv.Notification == nil then getgenv.Notification = true end
-if getgenv.DynamicVelocity == nil then getgenv.DynamicVelocity = false end
+if getgenv.DynamicVelocity == nil then getgenv.DynamicVelocity = true end
 if getgenv.DynamicVelocityExperimental == nil then getgenv.DynamicVelocityExperimental = false end
-if getgenv.AntiSleep == nil then getgenv.AntiSleep = false end
-if getgenv.MovementVelocity == nil then getgenv.MovementVelocity = false end
+if getgenv.AntiSleep == nil then getgenv.AntiSleep = true end
+if getgenv.MovementVelocity == nil then getgenv.MovementVelocity = true end
 if getgenv.R6toR15 == nil then getgenv.R6toR15 = false end
 
 -- // Notification Module
