@@ -10,7 +10,7 @@ getgenv() function Align_Hat(hat, part, a, b, c, d, e, f)
     Weld.Part1 = hat2 -- (Hat)
     Weld.Part0 = part -- What your welding the hat to (has to be a BasePart)
 
-    Weld.C0 = CFrame.new(a,b,c)*CFrame.Angles(math.rad(d),math.rad(e),f) -- Offset & Angles
+    Weld.C0 = CFrame.new(a,b,c)*CFrame.Angles(math.rad(d),math.rad(e),math.rad(f)) -- Offset & Angles
     print("Ran with no errors")
 end
 getgenv() function Destroy_Mesh(hat)
