@@ -11,6 +11,7 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	getgenv().ExtremeNetless = false
 	getgenv().Optimizer = false
 	end
+	getgenv().Optimizer = false
 	getgenv().ShowReal = true
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
