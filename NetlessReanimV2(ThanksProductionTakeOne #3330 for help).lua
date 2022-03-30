@@ -95,7 +95,6 @@ if not event then
 			cr(cc(function()
 				for i=1,math.max(game:GetService("Stats").Workspace.FPS:GetValue()/27.5,1) do
 					event:Fire()
-					event.Parent = game:GetChildren()[math.random(1,#game:GetChildren())]
 				end
 			end))
 			--task.wait(0/1)
