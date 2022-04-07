@@ -1,4 +1,4 @@
--- https://discord.gg/8EZcyvtDcq // ProductionTakeOne#3330 & nul#3174
+-- hi
 local speedtesttick = tick()
 -- // Modules/Setup
 
