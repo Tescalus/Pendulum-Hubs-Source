@@ -487,6 +487,10 @@ ScriptsTab:NewButton("Amythest Ninja Blade", "A really powerful script with a FE
 	loadstring(game:HttpGetAsync("https://bit.ly/3wAvlQN"))()
 end)
 
+ScriptsTab:NewButton("PUBG Pan", "Very cool uh. Pan??!?!?!?!?", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/371egFu"))()
+end)
+
 ScriptsTab:NewButton("Grab Knife V3 - Recommended", "Finished version of Grab Knife. I had to do it lol.", function()
 	loadstring(game:HttpGetAsync("https://bit.ly/3MBauma"))()
 end)
