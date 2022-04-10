@@ -5,7 +5,7 @@ getgenv().Reanimation = "PermaDeath"
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shidemuri/scripts/main/ui_lib.lua"))()
-game:GetService("CoreGui").ScreenGui.Name = "Pendulum Hub"
+game:GetService("CoreGui"):WaitForChild("ScreenGui").Name = "Pendulum Hub"
 
 local Pendulum = Library:New("Pendulum Hub")
 local UserInputService = game:GetService("UserInputService")
