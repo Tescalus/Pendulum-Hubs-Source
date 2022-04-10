@@ -1,5 +1,4 @@
 --By Ruffles14
-getgenv().Reanimation = "Simple"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 mouse = game.Players.LocalPlayer:GetMouse()
 local rhandclone = game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Clone()
