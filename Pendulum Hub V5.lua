@@ -288,10 +288,6 @@ ScriptsTab:NewButton("Sakura Blade", "Barely any jitter in these animations.", f
 	loadstring(game:HttpGetAsync("https://bit.ly/3pLoShL"))()
 end)
 
-ScriptsTab:NewButton("Lightning Cannon", "Shoots Lightning. Skids 101.", function()
-	loadstring(game:HttpGetAsync("https://bit.ly/3pKEh1C"))()
-end)
-
 ScriptsTab:NewButton("M41451", "Rainbow AK47 needed join the discord for hat.", function()
 	loadstring(game:HttpGetAsync("https://bit.ly/35FwKKT"))()
 end)
