@@ -515,6 +515,51 @@ end)
 
 -- Shift + L Hides Gui
 
+local noclipping = nil
+clip = true
+
+
+SettingsTab:NewButton('Toggle Noclip', 'Allows you to phase through walls while reanimated', function()
+    if not workspace.non then return end
+    if clip == true then
+        print(1)
+        clip = false
+        noclipping = game:service('RunService').Stepped:Connect(function()
+            if clip == false and game.Players.LocalPlayer.Character then
+                for _,v in next, game.Players.LocalPlayer.Character:GetDescendants() do
+                    if v:IsA("BasePart") and v.CanCollide == true then
+                        v.CanCollide = false
+                    end
+                end
+            end
+        end)
+    else 
+        print(2)
+        if noclipping then noclipping:Disconnect() end
+        clip = true
+    end
+
+end)
+
+SettingsTab:NewButton('Show fling cube (Default is off!)', 'Shows a SelectionBox attached to the fling cube', function()
+    if not workspace.non then return end
+    if workspace.non:FindFirstChild('okayu uwu') then
+        workspace.non:FindFirstChild('okayu uwu'):Remove()
+    else
+        local epic = Instance.new('SelectionBox', workspace.non)
+        epic.Name = 'okayu uwu'
+        epic.Adornee = workspace.non:FindFirstChild(game.Players.LocalPlayer.Name) and workspace.non:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart or workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart
+        epic.LineThickness = 0.05
+        local speed = 4
+        while epic do
+            for i = 0,1,0.001*speed do
+                epic.Color3 = Color3.fromHSV(i,1,1)
+                task.wait()
+            end
+        end
+    end
+end)
+
 local Enabled = true
 UserInputService.InputBegan:Connect(function(Input,Typing)
 	if Input.KeyCode == Enum.KeyCode.L and not Typing and UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
