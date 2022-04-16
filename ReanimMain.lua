@@ -2,18 +2,18 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
     if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 	getgenv().TorsoFling = true
 	getgenv().ExtremeNetless = true
-	getgenv().Velocity = -50
+	getgenv().Velocity = -25.05
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "HumanoidRootPart"
-	getgenv().Velocity = -30
+	getgenv().Velocity = -25.05
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().Optimizer = false
 	end
 	getgenv().Optimizer = false
 	getgenv().ShowReal = true
-	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
+	loadstring(game:HttpGet("https://bit.ly/3vkrbKM"))()
 	task.wait()
 	local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
 	Fling.Transparency = 1
@@ -45,11 +45,11 @@ elseif Reanimation == "Simple" then
         if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 	getgenv().TorsoFling = true
 	getgenv().ExtremeNetless = true
-	getgenv().Velocity = -50
+	getgenv().Velocity = -25.05
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "Right Arm"
-	getgenv().Velocity = -30
+	getgenv().Velocity = -25.05
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().GodMode = false
@@ -57,7 +57,7 @@ elseif Reanimation == "Simple" then
 	end
 	getgenv().ShowReal = true
 	getgenv().Optimizer = false
-	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
+	loadstring(game:HttpGet("https://bit.ly/3vkrbKM"))()
 	task.wait()
 	local plr = game.Players.LocalPlayer
     local chr = plr.Character
