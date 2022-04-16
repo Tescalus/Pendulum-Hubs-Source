@@ -102,5 +102,7 @@ elseif Reanimation == "Simple" then
 	    
 end
 
-
+pcall(function()
+local face = Instance.new("Decal", game.Players.LocalPlayer.Character.Head)
+end)
 	
