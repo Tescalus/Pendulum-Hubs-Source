@@ -104,5 +104,6 @@ end
 
 pcall(function()
 local face = Instance.new("Decal", game.Players.LocalPlayer.Character.Head)
+face.Name = "face"
 end)
 	
