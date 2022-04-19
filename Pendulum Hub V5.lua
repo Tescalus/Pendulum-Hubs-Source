@@ -513,8 +513,8 @@ anim:NewButton('Play','it plays the id you just put above yay', function()
 
 	local NeededAssets = game:GetObjects(aaa)[1]
 	local TweenService = game:GetService'TweenService'
-	game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
-	game.Players.LocalPlayer.Character.Animate:Destroy()
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
 	local Joints = {
 	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
 	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
