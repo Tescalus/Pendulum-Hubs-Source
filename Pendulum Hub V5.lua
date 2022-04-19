@@ -496,7 +496,57 @@ ScriptsTab:NewButton("Grab Knife V4", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!
 	loadstring(game:HttpGetAsync("https://bit.ly/35zXBIm"))()
 end)
 
+local anim = Pendulum:NewTab('Animation ID Player')
+local id = anim:NewTextBar('Animation ID', 'Enter the animation ID you want to play')
+anim:NewButton('Play','it plays the id you just put above yay', function()
+	local number = id:GetText()
 
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. id:GetText()
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+	game.Players.LocalPlayer.Character.Animate:Destroy()
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/60)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/60)
+	until getgenv().dancing == false
+
+end)
+
+anim:NewButton('Stop','Stops the animation', function()
+	if getgenv().dancing and getgenv().dancing == true then getgenv().dancing = false end
+end)
 
 
 -- Credits
