@@ -6,13 +6,13 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "HumanoidRootPart"
-	getgenv().Velocity = -30
+	getgenv().Velocity = -25.05
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().Optimizer = false
 	end
 	getgenv().Optimizer = false
-	getgenv().ShowReal = false
+	getgenv().ShowReal = true
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
 	local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
@@ -49,13 +49,13 @@ elseif Reanimation == "Simple" then
 	else
 	getgenv().TorsoFling = false
 	getgenv().Fling = "Right Arm"
-	getgenv().Velocity = -30
+	getgenv().Velocity = -25.05
 	getgenv().AntiSleep = true
 	getgenv().ExtremeNetless = false
 	getgenv().GodMode = false
 	getgenv().Optimizer = false
 	end
-	getgenv().ShowReal = false
+	getgenv().ShowReal = true
 	getgenv().Optimizer = false
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
