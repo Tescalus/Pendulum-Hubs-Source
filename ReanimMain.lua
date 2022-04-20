@@ -12,7 +12,7 @@ if getgenv().Reanimation == "PermaDeath" or getgenv().Reanimation == nil then
 	getgenv().Optimizer = false
 	end
 	getgenv().Optimizer = false
-	getgenv().ShowReal = true
+	getgenv().ShowReal = false
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
 	local Fling = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("LowerTorso") or game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name].HumanoidRootPart
@@ -55,7 +55,7 @@ elseif Reanimation == "Simple" then
 	getgenv().GodMode = false
 	getgenv().Optimizer = false
 	end
-	getgenv().ShowReal = true
+	getgenv().ShowReal = false
 	getgenv().Optimizer = false
 	loadstring(game:HttpGet("https://bit.ly/34mO4Uc"))()
 	task.wait()
