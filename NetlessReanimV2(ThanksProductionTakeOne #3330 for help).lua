@@ -20,7 +20,7 @@ if getgenv.Tools == nil then getgenv.Tools = true end
 if getgenv.Velocity == nil then getgenv.Velocity = -25.05 end
 if getgenv.Collisions == nil then getgenv.Collisions = true end
 if getgenv.CheckForDeath == nil then getgenv.CheckForDeath = true end
-if getgenv.Network == nil then getgenv.Network = true end
+if getgenv.Network == nil then getgenv.Network = false end
 if getgenv.Netless2 == nil then getgenv.Netless2 = false end
 if getgenv.Claim2 == nil then getgenv.Claim2 = false end
 if getgenv.Notification == nil then getgenv.Notification = true end
