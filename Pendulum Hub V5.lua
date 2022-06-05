@@ -11,6 +11,7 @@ local Pendulum = Library:New("Pendulum Hub")
 local UserInputService = game:GetService("UserInputService")
 local SettingsTab = Pendulum:NewTab("Settings")
 local CreditsTab = Pendulum:NewTab("Credits")
+local OMGFESEX = Pendulum:NewTab("Sex 😏")
 local ScriptsTab = Pendulum:NewTab("Scripts")
 SettingsTab:NewButton("Toggle Perma Death (Default is pd on!)", "Toggles perma death. Off requires man hair!", function()
 	if getgenv().Reanimation == "PermaDeath" then
@@ -496,6 +497,233 @@ ScriptsTab:NewButton("Grab Knife V4", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!
 	loadstring(game:HttpGetAsync("https://bit.ly/35zXBIm"))()
 end)
 
+OMGFESEX:NewButton("Basic Bang", "Boy sex", function()
+	local number = "4966833843"
+
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. number
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/120)
+	until getgenv().dancing == false
+
+end)
+
+OMGFESEX:NewButton([["Pushups"]], "Actual sex", function()
+	local number = "4966881089"
+
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. number
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/120)
+	until getgenv().dancing == false
+
+end)
+OMGFESEX:NewButton("Bend Over", "Girl sex", function()
+	local number = "4966882047"
+
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. number
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/120)
+	until getgenv().dancing == false
+
+end)
+OMGFESEX:NewButton("Laydown Bang", "Girl sex", function()
+	local number = "4966879039"
+
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. number
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/120)
+	until getgenv().dancing == false
+
+end)
+OMGFESEX:NewButton("Blowjob", "Girl sex", function()
+	local number = "4963373273"
+
+	if getgenv().Dancing == true then
+		getgenv.Dancing = false
+	end
+	
+	local aaa = 'rbxassetid://' .. number
+
+	if (not getgenv().CloneRig) or game.Players.LocalPlayer.Character ~= getgenv().CloneRig then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+	end
+
+	local NeededAssets = game:GetObjects(aaa)[1]
+	local TweenService = game:GetService'TweenService'
+	if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Animate") then game.Players.LocalPlayer.Character:FindFirstChild("Animate"):Destroy() end
+	local Joints = {
+	["Torso"] = game.Players.LocalPlayer.Character.HumanoidRootPart["RootJoint"],
+	["Right Arm"] =  game.Players.LocalPlayer.Character.Torso["Right Shoulder"],
+	["Left Arm"] =  game.Players.LocalPlayer.Character.Torso["Left Shoulder"],
+	["Head"] =  game.Players.LocalPlayer.Character.Torso["Neck"],
+	["Left Leg"] =  game.Players.LocalPlayer.Character.Torso["Left Hip"],
+	["Right Leg"] =  game.Players.LocalPlayer.Character.Torso["Right Hip"]
+	}
+	getgenv().dancing = true
+	local speed = 1
+	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
+	repeat
+		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
+	print(tostring(duration))
+	if keyframes[ii-1] then
+	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
+	end
+	for i,v in pairs(frame:GetDescendants()) do -- get each part in the frame
+		if Joints[v.Name] then -- see if the part exists in the joint table
+		TweenService:Create(Joints[v.Name],TweenInfo.new(duration*speed),{Transform = v.CFrame}):Play()
+	end
+	end
+	end
+	task.wait(1/120)
+	until getgenv().dancing == false
+
+end)
+
 local anim = Pendulum:NewTab('Animation ID Player')
 local id = anim:NewTextBar('Animation ID', 'Enter the animation ID you want to play')
 anim:NewButton('Play','it plays the id you just put above yay', function()
@@ -528,7 +756,7 @@ anim:NewButton('Play','it plays the id you just put above yay', function()
 	local keyframes = NeededAssets:GetKeyframes() -- get keyframes, this is better then getchildren bc it gets the correct order 
 	repeat
 		for ii,frame in pairs(keyframes) do -- for i,v on each keyframe to get each individual frame
-	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/60)
+	local duration = keyframes[ii+1] and keyframes[ii+1].Time - frame.Time or task.wait(1/120)
 	print(tostring(duration))
 	if keyframes[ii-1] then
 	task.wait((frame.Time - keyframes[ii-1].Time)*speed)
@@ -539,7 +767,7 @@ anim:NewButton('Play','it plays the id you just put above yay', function()
 	end
 	end
 	end
-	task.wait(1/60)
+	task.wait(1/120)
 	until getgenv().dancing == false
 
 end)
