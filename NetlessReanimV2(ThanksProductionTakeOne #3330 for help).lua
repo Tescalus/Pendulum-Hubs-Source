@@ -212,7 +212,7 @@ settings().Physics.ForceCSGv2 = false
 settings().Physics.DisableCSGv2 = true
 settings().Physics.UseCSGv2 = false
 settings().Physics.ThrottleAdjustTime = math.huge
-workspace.InterpolationThrottling = "Disabled"
+
 
 -- // Variables
 local PhysicsService = game:GetService("PhysicsService")
