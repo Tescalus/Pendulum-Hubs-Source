@@ -497,6 +497,11 @@ ScriptsTab:NewButton("Grab Knife V4", "EXTREMELY UNSTABLE! YOU HAVE BEEN WARNED!
 	loadstring(game:HttpGetAsync("https://bit.ly/35zXBIm"))()
 end)
 
+ScriptsTab:NewButton("Studio Dummy V3", "Omg public studio dummy v3 in pendulum free!?!?!!?!?!?!?!?!!?!?!?!?!?!?!?!!?!?!?!?!?!?!?!?!?!?!?!", function()
+	loadstring(game:HttpGetAsync("https://bit.ly/3QQiKAu"))()
+end)
+
+
 OMGFESEX:NewButton("Basic Bang", "Boy sex", function()
 	local number = "4966833843"
 
