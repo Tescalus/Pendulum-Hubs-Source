@@ -1,7 +1,7 @@
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
-getgenv().Reanimation = "PermaDeath"
+getgenv().Reanimation = getgenv().Reanimation or "PermaDeath"
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shidemuri/scripts/main/ui_lib.lua"))()
@@ -13,14 +13,20 @@ local SettingsTab = Pendulum:NewTab("Settings")
 local CreditsTab = Pendulum:NewTab("Credits")
 local OMGFESEX = Pendulum:NewTab("Sex 😏")
 local ScriptsTab = Pendulum:NewTab("Scripts")
-SettingsTab:NewButton("Toggle Perma Death (Default is pd on!)", "Toggles perma death. Off requires man hair!", function()
+local reanimtype = SettingsTab:NewLabel('Reanimation Type: ' .. getgenv().Reanimation)
+SettingsTab:NewButton("Toggle Perma Death", "PermaDeath / Simple", function()
 	if getgenv().Reanimation == "PermaDeath" then
 		getgenv().Reanimation = "Simple"
+		getgenv().Fling = 'Right Arm'
+		reanimtype.Text = 'Reanimation Type: Simple'
 	elseif getgenv().Reanimation == "Simple" then
-		getgenv().Reanimation = "PermaDeath"	
+		getgenv().Reanimation = "PermaDeath"
+		getgenv().Fling = 'HumanoidRootPart'
+		reanimtype.Text = 'Reanimation Type: PermaDeath'
 	end
-end)
+end, true)
 
+getgenv()._reanimate = loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/reanim.lua'))()
 
 local Players = game:GetService("Players")
 
@@ -785,9 +791,10 @@ end)
 -- Credits
 
 CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
+CreditsTab:NewLabel("Credits to padero#3957 for the Coffeeware tab")
 CreditsTab:NewLabel("Ty ProductionTakeOne#3330 for help with new reanimation")
 CreditsTab:NewLabel("Old ui was made by charli#4616")
-CreditsTab:NewLabel("New ui was made by padero#0001")
+CreditsTab:NewLabel("New ui was made by padero#3957")
 
 
 CreditsTab:NewButton("\67\111\112\121\32\68\105\115\99\111\114\100\32\73\110\118\105\116\101", "\67\111\112\105\101\115\32\116\104\101\32\105\110\118\105\116\101\46.", function()
@@ -798,50 +805,41 @@ end)
 
 -- Shift + L Hides Gui
 
-local noclipping = nil
-clip = true
-
-
-SettingsTab:NewButton('Toggle Noclip', 'Allows you to phase through walls while reanimated', function()
-    if not workspace.non then return end
-    if clip == true then
-        print(1)
-        clip = false
-        noclipping = game:service('RunService').Stepped:Connect(function()
-            if clip == false and game.Players.LocalPlayer.Character then
-                for _,v in next, game.Players.LocalPlayer.Character:GetDescendants() do
-                    if v:IsA("BasePart") and v.CanCollide == true then
-                        v.CanCollide = false
-                    end
-                end
-            end
-        end)
-    else 
-        print(2)
-        if noclipping then noclipping:Disconnect() end
-        clip = true
-    end
-
-end)
-
-SettingsTab:NewButton('Show fling cube (Default is off!)', 'Shows a SelectionBox attached to the fling cube', function()
-    if not workspace.non then return end
-    if workspace.non:FindFirstChild('okayu uwu') then
-        workspace.non:FindFirstChild('okayu uwu'):Remove()
-    else
-        local epic = Instance.new('SelectionBox', workspace.non)
-        epic.Name = 'okayu uwu'
-        epic.Adornee = workspace.non:FindFirstChild(game.Players.LocalPlayer.Name) and workspace.non:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart or workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart
-        epic.LineThickness = 0.05
-        local speed = 4
-        while epic do
-            for i = 0,1,0.001*speed do
-                epic.Color3 = Color3.fromHSV(i,1,1)
-                task.wait()
-            end
-        end
-    end
-end)
+local cwScriptsTab = Pendulum:NewTab('Coffeeware')
+cwScriptsTab:NewButton('funny script!!!!!!!! **', 'everyone got the script for this', function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/secks.lua'))() 
+ end)
+ 
+ cwScriptsTab:NewButton('Neko V4 *', 'yes it has clientsided appearance', function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/nekov4.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton('Road Rogue **', 'vroom vroom', function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/Driveby_Simplifier.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton('Katanarist **', 'he gonna slice yo pp', function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/katanarist.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton('Assassin **', 'hes got a whole ass inventory on wtf', function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/assassin.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton('Strato Glitcher **', 'its just spinning swords yet its cool',function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/strato_glitcher.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton('Stando Power (REJOIN TO REEXEC)**', (function() local str=''for _=0,200 do str = str .. 'ora ' end return str end)(), function() 
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/Standopower.lua'))()
+ end)
+ 
+ cwScriptsTab:NewButton("Studio Dummy V3", '"i should make antideath by making a fake char" 🤓', function()
+	 loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/sdv3.lua'))()
+ end)
+ 
+ 
+ cwScriptsTab:NewSearchBar()
 
 local Enabled = true
 UserInputService.InputBegan:Connect(function(Input,Typing)
@@ -859,3 +857,19 @@ end)
 Pendulum:SetMainTab(CreditsTab)
 Pendulum:SetFooter('Current version: V5')
 game:GetService("CoreGui"):WaitForChild("ScreenGui").Name = "Pendulum Hub"
+local g=Instance.new("BlurEffect",game:service'Lighting')
+g.Size=1;
+spawn(function() 
+	repeat task.wait() g.Size=g.Size+0.5 until g.Size==40
+	wait(2)
+	repeat task.wait() g.Size=g.Size-1 until g.Size==0
+end)
+spawn(function()
+	local h=70;
+	local i={FieldOfView=h-15}
+	local j=TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut)
+	local k=game:GetService("TweenService"):Create(game.Workspace.CurrentCamera,j,i)
+	k:Play()
+	wait(3.5)
+	game:GetService("TweenService"):Create(game.Workspace.CurrentCamera,j,{FieldOfView=h}):Play()
+end)
