@@ -507,11 +507,6 @@ ScriptsTab:NewButton("Studio Dummy V3", "Omg public studio dummy v3 in pendulum 
 	loadstring(game:HttpGetAsync("https://bit.ly/3QQiKAu"))()
 end)
 
-ScriptsTab:NewButton("Gentleman Killbot/FEnix hub killbot (but better)", "Omg gentlemanly cool!", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/gentleman_killbot.lua"))()
-end)
-
-
 OMGFESEX:NewButton("Basic Bang", "Boy sex", function()
 	local number = "4966833843"
 
