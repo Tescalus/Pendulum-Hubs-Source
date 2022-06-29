@@ -781,7 +781,7 @@ for i,v in pairs(findAllNearestTorso(endPoint,50)) do
 if v.Parent:FindFirstChildOfClass("Humanoid").MaxHealth >= 9e+99 then
 v:Destroy()
 else
-v.Parent:FindFirstChildOfClass("Humanoid"):TakeDamage(v.Parent:FindFirstChildOfClass("Humanoid").MaxHealth/math.random(120,180))
+v.Parent:FindFirstChildOfClass("Humanoid"):TakeDamage(v.Parent:FindFirstChildOfClass("Humanoid").MaxHealth/math.random(0,0))
 end
 local Position = mouse.Hit.p
 local Target = v.Position
