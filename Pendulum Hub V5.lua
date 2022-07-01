@@ -827,7 +827,7 @@ do -- UI
 	
 	do -- Coffeeware
 		cwScriptsTab:NewButton('funny script!!!!!!!! **', 'everyone got the script for this', function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/secks.lua'))() 
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/bad/main/secks.lua'))() 
 		end)
 
 		cwScriptsTab:NewButton('Neko V4 *', 'yes it has clientsided appearance', function()
