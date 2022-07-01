@@ -879,10 +879,3 @@ do -- UI
 		TweenService:Create(Camera,TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{FieldOfView=FOV}):Play()
 	end)
 end
-
-
-game:GetService("RunService").Heartbeat:Connect(function()
-	pcall(function()
-		workspace.ExProReanimate.Name = "non"
-	end)
-end)
