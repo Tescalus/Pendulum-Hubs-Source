@@ -1,7 +1,7 @@
 game:GetService("RunService").Heartbeat:Connect(function()
     workspace.FallenPartsDestroyHeight = -math.huge
 end)
-
+getgenv()._reanimate = function()
 	-- for some reason game:IsLoaded() broke so yeah
 	if getgenv().__isloadedhook ~= true then 
 		local old;
@@ -168,3 +168,5 @@ end)
 			end)
 		end
 	end
+end
+getgenv()._reanimate()
