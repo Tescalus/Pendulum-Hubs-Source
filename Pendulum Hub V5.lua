@@ -29,6 +29,7 @@ do -- UI
 	local ScriptsTab = Pendulum:NewTab("Scripts")
 	local reanimtype = SettingsTab:NewLabel('Reanimation type: ' .. Global.Reanimation)
 	local flingtype = SettingsTab:NewLabel('Fling type: ' .. Global.FlingType)
+	SettingsTab:NewLabel('Remember: HumanoidRootPart fling only works after permadeath is on')
 	local anim = Pendulum:NewTab('Animation ID Player')
 	local cwScriptsTab = Pendulum:NewTab('Coffeeware')
 	
