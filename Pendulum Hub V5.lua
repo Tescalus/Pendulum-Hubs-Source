@@ -27,8 +27,8 @@ do -- UI
 	local CreditsTab = Pendulum:NewTab("Credits")
 	local OMGFESEX = Pendulum:NewTab("Sex 😏")
 	local ScriptsTab = Pendulum:NewTab("Scripts")
-	local reanimtype = SettingsTab:NewLabel('Reanimation Type: ' .. Global.Reanimation)
-	local flingtype = SettingsTab:NewLabel('Fling Type: ' .. Global.FlingType)
+	local reanimtype = SettingsTab:NewLabel('Reanimation type: ' .. Global.Reanimation)
+	local flingtype = SettingsTab:NewLabel('Fling type: ' .. Global.FlingType)
 	local anim = Pendulum:NewTab('Animation ID Player')
 	local cwScriptsTab = Pendulum:NewTab('Coffeeware')
 	
@@ -63,6 +63,7 @@ do -- UI
 			elseif Global.FlingType == 'Click only' then
 				Global.FlingType = 'Mixed'
 			end
+			flingtype.Text = 'Fling type: '.. Global.FlingType
 		end,true)
 	end
 	
