@@ -1,6 +1,7 @@
 local Global = getgenv and getgenv() or _G
 local setclipboard = setclipboard or print
 Global.Reanimation = Global.Reanimation or "PermaDeath"
+Global.FlingType = Global.FlingType or 'Mixed'
 
 local Enabled = true
 
@@ -27,6 +28,7 @@ do -- UI
 	local OMGFESEX = Pendulum:NewTab("Sex 😏")
 	local ScriptsTab = Pendulum:NewTab("Scripts")
 	local reanimtype = SettingsTab:NewLabel('Reanimation Type: ' .. Global.Reanimation)
+	local flingtype = SettingsTab:NewLabel('Fling Type: ' .. Global.FlingType)
 	local anim = Pendulum:NewTab('Animation ID Player')
 	local cwScriptsTab = Pendulum:NewTab('Coffeeware')
 	
@@ -53,6 +55,15 @@ do -- UI
 				reanimtype.Text = 'Reanimation Type: PermaDeath'
 			end
 		end, true)
+		SettingsTab:NewButton("Toggle Fling Type", "Prediction only / Click only / Mixed", function()
+			if Global.FlingType == 'Mixed' then
+				Global.FlingType = 'Prediction only'
+			elseif Global.FlingType == 'Prediction only' then
+				Global.FlingType = 'Click only'
+			elseif Global.FlingType == 'Click only' then
+				Global.FlingType = 'Mixed'
+			end
+		end,true)
 	end
 	
 	do -- ScriptsTab Buttons
