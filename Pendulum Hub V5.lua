@@ -839,31 +839,35 @@ do -- UI
 	end
 	
 	do -- Coffeeware
-		cwScriptsTab:NewButton('funny script!!!!!!!! **', 'everyone got the script for this', function()
+		cwScriptsTab:NewButton('funny script!!!!!!!!', 'everyone got the script for this', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/bad/main/secks.lua'))() 
 		end)
 
-		cwScriptsTab:NewButton('Neko V4 *', 'yes it has clientsided appearance', function()
+		cwScriptsTab:NewButton('Neko V4', 'yes it has clientsided appearance', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/nekov4.lua'))()
 		end)
+		
+		cwScriptsTab:NewButton('Neko V5', 'v4 but no naked (but a better catgirl)', function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/nekov5.lua'))()	
+		end)
 
-		cwScriptsTab:NewButton('Road Rogue **', 'vroom vroom', function()
+		cwScriptsTab:NewButton('Road Rogue', 'vroom vroom', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/Driveby_Simplifier.lua'))()
 		end)
 
-		cwScriptsTab:NewButton('Katanarist **', 'he gonna slice yo pp', function()
+		cwScriptsTab:NewButton('Katanarist', 'he gonna slice yo pp', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/katanarist.lua'))()
 		end)
 
-		cwScriptsTab:NewButton('Assassin **', 'hes got a whole ass inventory on wtf', function()
+		cwScriptsTab:NewButton('Assassin', 'hes got a whole ass inventory on wtf', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/assassin.lua'))()
 		end)
 
-		cwScriptsTab:NewButton('Strato Glitcher **', 'its just spinning swords yet its cool',function()
+		cwScriptsTab:NewButton('Strato Glitcher', 'its just spinning swords yet its cool',function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/strato_glitcher.lua'))()
 		end)
 
-		cwScriptsTab:NewButton('Stando Power (REJOIN TO REEXEC)**', (function() local str=''for _=0,200 do str = str .. 'ora ' end return str end)(), function() 
+		cwScriptsTab:NewButton('Stando Power (REJOIN TO REEXEC)', (function() local str=''for _=0,200 do str = str .. 'ora ' end return str end)(), function() 
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/Standopower.lua'))()
 		end)
 
