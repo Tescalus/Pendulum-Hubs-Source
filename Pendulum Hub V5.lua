@@ -29,7 +29,7 @@ do -- UI
 	local ScriptsTab = Pendulum:NewTab("Scripts")
 	local reanimtype = SettingsTab:NewLabel('Reanimation type: ' .. Global.Reanimation)
 	local flingtype = SettingsTab:NewLabel('Fling type: ' .. Global.FlingType)
-	SettingsTab:NewLabel('Remember: HumanoidRootPart fling only works after permadeath is on')
+	SettingsTab:NewLabel('Note: HumanoidRootPart fling only works after permadeath is on')
 	local anim = Pendulum:NewTab('Animation ID Player')
 	local cwScriptsTab = Pendulum:NewTab('Coffeeware')
 	
@@ -839,7 +839,7 @@ do -- UI
 	end
 	
 	do -- Coffeeware
-		cwScriptsTab:NewButton('funny script!!!!!!!!', 'everyone got the script for this', function()
+		cwScriptsTab:NewButton('funny script!!!!!!!!', 'get everyones attention with this', function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/bad/main/secks.lua'))() 
 		end)
 
