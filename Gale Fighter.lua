@@ -101,7 +101,7 @@ ArtificialHB = Instance.new("BindableEvent", script)
 ArtificialHB.Name = "Heartbeat"
 script:WaitForChild("Heartbeat")
 
-frame = 1 / 90
+frame = 1 / 60
 tf = 0
 allowframeloss = false
 tossremainder = false
@@ -111,7 +111,7 @@ lastframe = tick()
 script.Heartbeat:Fire()
 
 
-game:GetService("RunService").Heartbeat:connect(function(s, p)
+local hb = game:GetService("RunService").Heartbeat:connect(function(s, p)
 	tf = tf + s
 	if tf >= frame then
 		if allowframeloss then
@@ -130,6 +130,7 @@ game:GetService("RunService").Heartbeat:connect(function(s, p)
 		end
 	end
 end)
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()hb:Disconnect()end)
 -------------------------------------------------------
 --End HeartBeat--
 -------------------------------------------------------
@@ -261,10 +262,10 @@ end))
 -------------------------------------------------------
 function swait(num)
 	if num == 0 or num == nil then
-		game:service("RunService").Stepped:wait(0)
+		script.Heartbeat.Event:Wait()
 	else
 		for i = 0, num do
-			game:service("RunService").Stepped:wait(0)
+			script.Heartbeat.Event:Wait()
 		end
 	end
 end
@@ -1725,7 +1726,14 @@ LH.C1 = CF(-0.5 * Player_Size, 1 * Player_Size, 0 * Player_Size) * angles(Rad(0)
 --hat.Parent = Character
 end
 ----------------------------------------------------------------------------------
-local SONG = 900817147 --900817147
+
+coroutine.wrap(function()
+if not isfile('p-valkyria_nofx.mp3') then
+    writefile('p-valkyria_nofx.mp3', game:HttpGet('https://github.com/shidemuri/scripts/blob/main/p-valkyria_nofx.mp3?raw=true'))
+end
+repeat task.wait() until isfile('p-valkyria_nofx.mp3')
+end)()
+local SONG = syn and getsynasset('p-valkyria_nofx.mp3') or getcustomasset('p-valkyria_nofx.mp3')
 local SONG2 = 0
 local Music = Instance.new("Sound",tors)
 Music.Volume = 0.7
@@ -1924,7 +1932,7 @@ function attackthree()
       end
     
     con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 
@@ -1994,7 +2002,7 @@ function attackfour()
 
 
 con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2051,7 +2059,7 @@ function quickkick()
     
     
 con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 
@@ -2175,7 +2183,7 @@ local Cracking = Cso("292536356", tors, 10, 1)
 
 
 con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2228,7 +2236,7 @@ end)
       
       
       con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2282,7 +2290,7 @@ end)
       
       
       con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2358,7 +2366,7 @@ function Galekicks()
 for i = 1, 17 do
     
           con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2444,7 +2452,7 @@ so("http://roblox.com/asset/?id=146094803",hed,1,1.2)
 for i = 1, 65 do
     --Aura(5, 0.15, "Add" , root.CFrame * CF(Mrandom(-12, 12), -6, Mrandom(-12, 12)) * angles(Rad(90 + Mrandom(-12, 12)), 0, 0), 1.5, 1.5, 10, -0.015, BrickC"Really red", 0, "Brick")
           con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2518,7 +2526,7 @@ for i = 0, 1.65, 0.1 do
       end
 
 con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 coroutine.resume(coroutine.create(function()
@@ -2570,7 +2578,7 @@ end)
         
         
         con5=hum.Touched:connect(function(hit)
-if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+if hit.Parent:FindFirstChildOfClass("Humanoid") ~= nil and not hit:IsDescendantOf(char) then
 if attackdebounce == false then
 attackdebounce = true  
 
@@ -2827,7 +2835,7 @@ while true do
 			end
 		end
 	end
-	Music.SoundId = "rbxassetid://"..SONG
+	Music.SoundId = SONG--"rbxassetid://"..SONG
 	Music.Looped = true
 	Music.Pitch = 1
 	Music.Volume = 0.7
