@@ -5206,11 +5206,11 @@ kan.Pitch = 1.01
 coroutine.wrap(function()
     if not isfile('UNIEL-Beat-Eat-nest.mp3') then
         writefile('UNIEL-Beat-Eat-nest.mp3',game:HttpGet('https://github.com/shidemuri/scripts/blob/main/UNIEL-Beat-Eat-nest.mp3?raw=true'))
+        repeat task.wait() until isfile('UNIEL-Beat-Eat-nest.mp3')
     end
-    repeat task.wait() until isfile('UNIEL-Beat-Eat-nest.mp3')
-    task.wait(0.5)
+    repeat pcall(function() kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3') end) until pcall(function() kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3') end)
 end)()
-kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3') --"rbxassetid://1873219898" 525289865,1873219898,381991270
+--kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3') --"rbxassetid://1873219898" 525289865,1873219898,381991270
 kan.Name = "nepnepnep"
 kan.Looped = true
 kan:Play()
