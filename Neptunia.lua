@@ -5203,7 +5203,14 @@ end
 kan.TimePosition = 0
 kan.PlaybackSpeed = 1.01
 kan.Pitch = 1.01
-kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
+coroutine.wrap(function()
+    if not isfile('UNIEL-Beat-Eat-nest.mp3') then
+        writefile('UNIEL-Beat-Eat-nest.mp3',game:HttpGet('https://github.com/shidemuri/scripts/blob/main/UNIEL-Beat-Eat-nest.mp3?raw=true'))
+    end
+    repeat task.wait() until isfile('UNIEL-Beat-Eat-nest.mp3')
+    task.wait(0.5)
+end)()
+kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3') --"rbxassetid://1873219898" 525289865,1873219898,381991270
 kan.Name = "nepnepnep"
 kan.Looped = true
 kan:Play()
@@ -5762,15 +5769,54 @@ end
  
 local Color1=Torso.BrickColor
 
+
+
+
 local bodvel=Instance.new("BodyVelocity")
 local bg=Instance.new("BodyGyro")
+ArtificialHB = Instance.new("BindableEvent", script)
+ArtificialHB.Name = "Heartbeat"
+script:WaitForChild("Heartbeat")
+
+frame = 1 / 60
+tf = 0
+allowframeloss = false
+tossremainder = false
+
+
+lastframe = tick()
+script.Heartbeat:Fire()
+
+
+local hb = game:GetService("RunService").Heartbeat:connect(function(s, p)
+	tf = tf + s
+	if tf >= frame then
+		if allowframeloss then
+			script.Heartbeat:Fire()
+			lastframe = tick()
+		else
+			for i = 1, math.floor(tf / frame) do
+				script.Heartbeat:Fire()
+			end
+			lastframe = tick()
+		end
+		if tossremainder then
+			tf = 0
+		else
+			tf = tf - frame * math.floor(tf / frame)
+		end
+	end
+end)
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()hb:Disconnect()end)
+
+
 
 function swait(num)
 if num==0 or num==nil then
-game:service'RunService'.Stepped:wait(0)
+    script.Heartbeat.Event:Wait()
 else
 for i=0,num do
-game:service'RunService'.Stepped:wait(0)
+    script.Heartbeat.Event:Wait()
 end
 end
 end
@@ -7470,7 +7516,7 @@ kan.Volume = 0
 end
 kan.PlaybackSpeed = ORPIT
 kan.Pitch = ORPIT
-kan.SoundId = "rbxassetid://" ..ORGID
+kan.SoundId = syn and getsynasset('UNIEL-Beat-Eat-nest.mp3') or getcustomasset('UNIEL-Beat-Eat-nest.mp3')
 kan.Looped = true
 kan.Parent = char
 kan:Resume()
