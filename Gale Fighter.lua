@@ -1727,15 +1727,16 @@ LH.C1 = CF(-0.5 * Player_Size, 1 * Player_Size, 0 * Player_Size) * angles(Rad(0)
 end
 ----------------------------------------------------------------------------------
 
+local Music = Instance.new("Sound",tors)
 coroutine.wrap(function()
 if not isfile('p-valkyria_nofx.mp3') then
     writefile('p-valkyria_nofx.mp3', game:HttpGet('https://github.com/shidemuri/scripts/blob/main/p-valkyria_nofx.mp3?raw=true'))
+    repeat task.wait() until isfile('p-valkyria_nofx.mp3')
 end
-repeat task.wait() until isfile('p-valkyria_nofx.mp3')
+repeat pcall(function() Music.SoundId = syn and getsynasset('p-valkyria_nofx.mp3') or getcustomasset('p-valkyria_nofx.mp3') end) until pcall(function() Music.SoundId = syn and getsynasset('p-valkyria_nofx.mp3') or getcustomasset('p-valkyria_nofx.mp3') end)
 end)()
-local SONG = syn and getsynasset('p-valkyria_nofx.mp3') or getcustomasset('p-valkyria_nofx.mp3')
+local SONG --= syn and getsynasset('p-valkyria_nofx.mp3') or getcustomasset('p-valkyria_nofx.mp3')
 local SONG2 = 0
-local Music = Instance.new("Sound",tors)
 Music.Volume = 0.7
 Music.Looped = true
 Music.Pitch = 1 --Pitcher
@@ -2835,7 +2836,7 @@ while true do
 			end
 		end
 	end
-	Music.SoundId = SONG--"rbxassetid://"..SONG
+	--Music.SoundId = SONG--"rbxassetid://"..SONG
 	Music.Looped = true
 	Music.Pitch = 1
 	Music.Volume = 0.7
