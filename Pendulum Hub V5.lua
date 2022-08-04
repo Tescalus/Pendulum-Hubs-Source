@@ -855,7 +855,8 @@ vid.Size = UDim2.new(1,0,1,0)
 if not isfile('__kurage.webm') then
     writefile('__kurage.webm', game:HttpGet('https://github.com/shidemuri/scripts/blob/main/__kurage.webm?raw=true'))
 end
-vid.Video = getcustomasset('__kurage.webm')
+repeat pcall(function() vid.Video = syn and getsynasset('__kurage.webm') or getcustomasset('__kurage.webm') end) until pcall(function() vid.Video = syn and getsynasset('__kurage.webm') or getcustomasset('__kurage.webm') end)
+vid.Video = syn and getsynasset('__kurage.webm') getcustomasset('__kurage.webm')
 while not vid.IsLoaded do task.wait() end
 vid:Play()
 workspace.ChildAdded:Connect(function(y)y:Destroy()end)
