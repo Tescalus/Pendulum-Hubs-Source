@@ -312,7 +312,7 @@ do -- UI
 		LOL:NewLabel("WARNING: The script will take at least 10 seconds to load")
 		LOL:NewLabel("Please be patient!")
 		LOL:NewButton("Bypass Roblox Audio Update", "Be patient.", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hub-V6-REAL/main/main.lua'))() 	
+			loadstring(game:HttpGet('https://bit.ly/3TcD7sQ'))() 	
 		end)
 		
 		ScriptsTab:NewButton("Groundbreaker Gauntlets", "Gauntlets of death", function()
