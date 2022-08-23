@@ -26,6 +26,7 @@ do -- UI
 	local SettingsTab = Pendulum:NewTab("Settings")
 	local CreditsTab = Pendulum:NewTab("Credits")
 	local OMGFESEX = Pendulum:NewTab("Sex 😏")
+	local LOL = Pendulum:NewTab("Bypass Audio Update")
 	local ScriptsTab = Pendulum:NewTab("Scripts")
 	local reanimtype = SettingsTab:NewLabel('Reanimation type: ' .. Global.Reanimation)
 	local flingtype = SettingsTab:NewLabel('Fling type: ' .. Global.FlingType)
@@ -92,7 +93,7 @@ do -- UI
 		ScriptsTab:NewButton("KillBot V2", "The script kinda sucks lol", function()
 			loadstring(game:HttpGetAsync("https://bit.ly/3sQWSuV"))()
 		end)
-
+		
 		ScriptsTab:NewButton("Star Platinum Over Heaven", "A really fun script for people who have played a jojo game before.", function()
 			loadstring(game:HttpGetAsync("https://bit.ly/3Cpvrvr"))()
 		end)
@@ -308,7 +309,12 @@ do -- UI
 		ScriptsTab:NewButton("Grappler", "You can go to a city game and use this.", function()
 			loadstring(game:HttpGetAsync("https://bit.ly/3pIMKmg"))()
 		end)
-
+		LOL:NewLabel("WARNING: The script will take at least 10 seconds to load")
+		LOL:NewLabel("Please be patient!")
+		LOL:NewButton("Bypass Roblox Audio Update", "Be patient.", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hub-V6-REAL/main/main.lua'))() 	
+		end)
+		
 		ScriptsTab:NewButton("Groundbreaker Gauntlets", "Gauntlets of death", function()
 			loadstring(game:HttpGetAsync("https://bit.ly/35JnOUC"))()
 		end)
