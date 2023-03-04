@@ -840,7 +840,7 @@ do -- UI
 		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
 		CreditsTab:NewLabel("Check the discord server for more information")
 		CreditsTab:NewLabel("Thank you all for going with us in this journey :D")
-		CreditsTab:NewButton("(this button definitely doesnt do anything)")
+		CreditsTab:NewButton("(this button definitely doesnt do anything)","( - x0o0x_)",function()setclipboard("https://www.youtube.com/watch?v=XrHTI04i9yk")end)
 		CreditsTab:NewLabel("Credits to Tescalus#3758 for making the entire hub")
 		CreditsTab:NewLabel("Credits to padero#3957 for the Coffeeware tab")
 		CreditsTab:NewLabel("Ty ProductionTakeOne#3330 for help with new reanimation")
