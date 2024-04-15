@@ -833,11 +833,23 @@ do -- UI
 	end
 	
 	do -- Credits
+		CreditsTab:NewLabel("THIS SCRIPT DOESNT WORK ANYMORE")
+		CreditsTab:NewLabel("THIS SCRIPT DOESNT WORK ANYMORE")
+		CreditsTab:NewLabel("THIS SCRIPT DOESNT WORK ANYMORE")
+		CreditsTab:NewLabel("THIS SCRIPT DOESNT WORK ANYMORE")
 		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
-		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
-		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
-		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
-		CreditsTab:NewLabel("THIS SCRIPT IS DISCONTINUED")
+		CreditsTab:NewLabel("READ BELOW FOR MORE INFORMATION")
+		CreditsTab:NewLabel("Roblox added a new workspace property called")
+		CreditsTab:NewLabel('"RejectCharacterDeletions" in Feb 2023"')
+		CreditsTab:NewLabel("(fully rolled out by May 2023)")
+		CreditsTab:NewLabel("which fully patches reanimates by not letting them do their thing")
+		CreditsTab:NewLabel("(removing the local player character's welds to replicate anims)")
+		CreditsTab:NewLabel("(they also added a FFlag around the same time which")
+		CreditsTab:NewLabel("fully patched permadeath, DFFlagTransferOwnershipToServerOnJointBreak)")
+		CreditsTab:NewLabel("NONE OF THESE SCRIPTS WORK ANYMORE, DONT COME TO OUR SERVER JUST TO")
+		CreditsTab:NewLabel("SAY THAT THEY DONT WORK, WE KNOW IT DOESNT WORK AND WILL NEVER DO")
+		CreditsTab:NewLabel("EVER AGAIN.")
+		
 		CreditsTab:NewLabel("Check the discord server for more information")
 		CreditsTab:NewLabel("Thank you all for going with us in this journey :D")
 		CreditsTab:NewButton("(this button definitely doesnt do anything)","( - x0o0x_)",function()setclipboard("https://www.youtube.com/watch?v=XrHTI04i9yk")end)
